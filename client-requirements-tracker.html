@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GoTeam Client Requirements Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand-primary:#1e3a8a;--brand-secondary:#3b82f6;--brand-accent:#22d3ee;--brand-purple:#7c5cff;
+    --bg:#f5f7fc;--panel:#ffffff;--panel-2:#f8f9fc;--border:#e4e8f0;
+    --text:#1f2a44;--muted:#7a86a3;--primary:#1e3a8a;--primary-2:#172a66;
+    --header-1:#0a1f4d;--header-2:#1e3a8a;--header-3:#3b82f6;
+    --tableHeader:#0a1f4d;--tableHeaderText:#ffffff;
+    --morning:#f59e0b;--night:#7c5cff;--total:#1e3a8a;--bad:#ef4444;--good:#22c55e;--warn:#f59e0b;--star:#fbbf24;
+        --status-new:#3b82f6;--status-new-bg:#dbeafe;--status-new-text:#1e40af;
+    --status-setup:#f59e0b;--status-setup-bg:#fef3c7;--status-setup-text:#92400e;
+    --status-active:#22c55e;--status-active-bg:#dcfce7;--status-active-text:#166534;
+    --status-hold:#f97316;--status-hold-bg:#ffedd5;--status-hold-text:#9a3412;
+    --status-off:#6b7280;--status-off-bg:#f3f4f6;--status-off-text:#374151;
+    --shadow:0 1px 3px rgba(20,30,60,.05), 0 1px 2px rgba(20,30,60,.04);
+    --shadow-md:0 4px 12px rgba(20,30,60,.08);
+    --shadow-lg:0 12px 32px rgba(20,30,60,.10);
+    --input-bg:#ffffff;--row-hover:#f8f9fc;--modal-bg:#ffffff;
+    --shift-morning-bg:#fef3c7;--shift-morning-text:#92400e;
+    --shift-night-bg:#ede9fe;--shift-night-text:#5b21b6;
+    --edit-bg:#eff6ff;--edit-text:#1e3a8a;--edit-border:#dbeafe;
+    --danger-bg:#fef2f2;--danger-border:#fecaca;
+    --lock-bg:#fef3c7;--lock-text:#92400e;--lock-border:#fde68a;
+    --tag-bg:#dbeafe;--tag-text:#1e3a8a;
+    --locked-row:rgba(245,158,11,.05);--pinned-row:rgba(251,191,36,.06);
+    --view-bg:#f0f9ff;--view-text:#0369a1;--view-border:#bae6fd;
+    --restore-bg:#f0fdf4;--restore-text:#15803d;--restore-border:#bbf7d0;
+    --trash-row:rgba(239,68,68,.04);
+  }
+  html[data-theme="dark"]{
+    --bg:#0b1020;--panel:#151c3b;--panel-2:#1b2347;--border:#2a3361;
+    --text:#e6e9f5;--muted:#9aa3c7;--primary:#7c5cff;--primary-2:#5b3fd1;
+    --header-1:#0f1444;--header-2:#1e1b4b;--header-3:#312e81;
+    --tableHeader:#1b2347;--tableHeaderText:#e6e9f5;--total:#7c5cff;
+    --shadow:0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+    --status-new-bg:rgba(59,130,246,.18);--status-new-text:#93c5fd;
+    --status-setup-bg:rgba(245,158,11,.18);--status-setup-text:#fbbf24;
+    --status-active-bg:rgba(34,197,94,.18);--status-active-text:#86efac;
+    --status-hold-bg:rgba(249,115,22,.18);--status-hold-text:#fdba74;
+    --status-off-bg:rgba(107,114,128,.22);--status-off-text:#d1d5db;
+    --shadow-md:0 4px 16px rgba(0,0,0,.45);--shadow-lg:0 12px 36px rgba(0,0,0,.55);
+    --input-bg:#1b2347;--row-hover:rgba(124,92,255,.08);--modal-bg:#151c3b;
+    --shift-morning-bg:rgba(245,158,11,.18);--shift-morning-text:#fbbf24;
+    --shift-night-bg:rgba(124,92,255,.22);--shift-night-text:#c4b5fd;
+    --edit-bg:rgba(124,92,255,.15);--edit-text:#c4b5fd;--edit-border:rgba(124,92,255,.3);
+    --danger-bg:rgba(239,68,68,.1);--danger-border:rgba(239,68,68,.35);
+    --lock-bg:rgba(245,158,11,.18);--lock-text:#fbbf24;--lock-border:rgba(245,158,11,.35);
+    --tag-bg:rgba(124,92,255,.18);--tag-text:#c4b5fd;
+    --locked-row:rgba(245,158,11,.05);--pinned-row:rgba(251,191,36,.06);
+    --view-bg:rgba(34,211,238,.1);--view-text:#67e8f9;--view-border:rgba(34,211,238,.3);
+    --restore-bg:rgba(34,197,94,.12);--restore-text:#86efac;--restore-border:rgba(34,197,94,.35);
+    --trash-row:rgba(239,68,68,.06);
+  }
+  html[data-theme="dark"] body{background:radial-gradient(1200px 600px at 10% -10%, #1a2150 0%, transparent 60%),radial-gradient(800px 500px at 100% 0%, #0e2a3a 0%, transparent 50%),var(--bg)}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  /* App layout: sidebar + main */
+  .app{display:flex;min-height:100vh;align-items:stretch}
+  .sidebar{width:260px;flex-shrink:0;background:linear-gradient(180deg, var(--header-1) 0%, var(--header-2) 60%, var(--header-3) 100%);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow:hidden;box-shadow:var(--shadow-md);z-index:10}
+  .sidebar::before{content:"";position:absolute;right:-60px;top:-40px;width:200px;height:200px;background:radial-gradient(circle, rgba(34,211,238,.18) 0%, transparent 70%);pointer-events:none}
+  .sidebar::after{content:"";position:absolute;top:0;bottom:0;right:0;width:3px;background:linear-gradient(180deg, var(--brand-accent), var(--brand-purple), transparent);opacity:.55}
+  .sidebar-inner{display:flex;flex-direction:column;flex:1;overflow-y:auto;padding:24px 18px;position:relative;z-index:1;gap:18px}
+  .sidebar-brand{display:flex;align-items:center;gap:12px}
+  .gt-logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3);flex-shrink:0;font-family:"Space Grotesk", "Inter", sans-serif;color:#fff;border:2px solid rgba(255,255,255,.15)}
+  .gt-logo .gt-go{font-size:18px;font-weight:700;letter-spacing:-1px;line-height:1}
+  .gt-logo .gt-stack{display:flex;flex-direction:column;align-items:center;gap:1px}
+  .gt-logo .gt-team{font-size:7px;font-weight:500;letter-spacing:1px;opacity:.95;line-height:1;margin-top:2px}
+  .sidebar-brand h1{margin:0;font-size:15px;font-weight:700;letter-spacing:-.2px;font-family:"Space Grotesk", "Inter", sans-serif;line-height:1.25}
+  .sidebar-brand .sub{opacity:.7;font-size:11px;margin-top:2px;line-height:1.3}
+  .sidebar-section-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);font-weight:600;padding:0 8px;margin-top:4px}
+  .sidebar-nav{display:flex;flex-direction:column;gap:3px}
+  .nav-item{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:10px;color:rgba(255,255,255,.82);font-size:13.5px;font-weight:500;cursor:pointer;background:transparent;border:1px solid transparent;text-align:left;font-family:inherit;transition:background .15s, border-color .15s, color .15s}
+  .nav-item:hover{background:rgba(255,255,255,.08);color:#fff}
+  .nav-item.active{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.18);color:#fff;font-weight:600}
+  .nav-item .nav-icon{font-size:15px;flex-shrink:0;width:18px;text-align:center}
+  .nav-item .nav-count{margin-left:auto;background:rgba(255,255,255,.18);padding:1px 8px;border-radius:999px;font-size:10.5px;font-weight:600;font-variant-numeric:tabular-nums}
+  .nav-item.danger .nav-count{background:rgba(239,68,68,.4);color:#fee2e2}
+  .sidebar-spacer{flex:1}
+  .sidebar-bottom{display:flex;flex-direction:column;gap:10px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12)}
+  .tech-stack{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;font-size:11px;color:rgba(255,255,255,.7);line-height:1.5}
+  .tech-stack .ts-title{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:5px}
+  .tech-stack .ts-row{display:flex;gap:6px;align-items:baseline}
+  .tech-stack .ts-row .ts-label{color:rgba(255,255,255,.55);font-weight:500;min-width:62px;font-size:10px;text-transform:uppercase;letter-spacing:.3px}
+  .tech-stack .ts-row .ts-value{color:#fff;font-weight:500;font-size:11px}
+  .save-indicator{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:6px 10px;width:fit-content}
+  .save-indicator .dot{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 6px rgba(34,197,94,.6)}
+  .save-indicator.saving .dot{background:var(--warn);box-shadow:0 0 6px rgba(245,158,11,.6);animation:pulse 1s infinite}
+  .who{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:5px 8px;color:#fff;font-size:12px}
+  .who label{opacity:.75;font-size:11px;font-weight:500}
+  .who input{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#fff;padding:5px 9px;border-radius:6px;font-size:12px;outline:none;font-family:inherit;flex:1;min-width:0}
+  .who input::placeholder{color:rgba(255,255,255,.55)}
+  .who input:focus{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45)}
+  .theme-switch{display:flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:2px;gap:1px;width:100%}
+  .theme-switch .tsbtn{flex:1;background:transparent !important;border:none !important;color:rgba(255,255,255,.78) !important;padding:6px 6px;border-radius:6px;font-size:11.5px;font-weight:500;cursor:pointer}
+  .theme-switch .tsbtn:hover{background:rgba(255,255,255,.08) !important;color:#fff !important}
+  .theme-switch .tsbtn.active{background:#fff !important;color:var(--header-1) !important;font-weight:600}
+  /* Main content area */
+  .main{flex:1;min-width:0;padding:24px 28px;max-width:none}
+  .page-header{margin-bottom:18px}
+  .page-header h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.3px;font-family:"Space Grotesk", "Inter", sans-serif;color:var(--text)}
+  .page-header .ph-sub{color:var(--muted);font-size:13px;margin-top:3px}
+  /* Hide old banner if present */
+  .container{display:contents}
+  .banner{display:none}
+  .who{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:5px 8px 5px 12px;color:#fff;font-size:13px}
+  .who label{opacity:.85;font-size:12px;font-weight:500}
+  .who input{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);color:#fff;padding:6px 10px;border-radius:7px;font-size:13px;outline:none;font-family:inherit;width:130px}
+  .who input::placeholder{color:rgba(255,255,255,.65)}
+  .who input:focus{background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.5)}
+  .save-indicator{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:7px 12px}
+  .save-indicator .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 6px rgba(34,197,94,.6)}
+  .save-indicator.saving .dot{background:var(--warn);box-shadow:0 0 6px rgba(245,158,11,.6);animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:22px}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 22px;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease}
+  .stat:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--total)}
+  .stat.morning::before{background:var(--morning)}
+  .stat.night::before{background:var(--night)}
+  .stat.config::before{background:var(--good)}
+  .stat.recent::before{background:var(--brand-accent)}
+  .stat .label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.8px;font-weight:600;display:flex;align-items:center;gap:6px}
+  .stat .value{font-size:30px;font-weight:700;margin-top:6px;color:var(--text);font-variant-numeric:tabular-nums;letter-spacing:-.5px;font-family:"Space Grotesk", "Inter", sans-serif}
+  .stat .meta{font-size:11px;color:var(--muted);margin-top:4px}
+  /* View mode tabs */
+  .view-tabs{display:none;background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:4px;gap:2px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .view-tabs .vt{background:transparent;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-family:inherit}
+  .view-tabs .vt:hover{color:var(--text)}
+  .view-tabs .vt.active{background:var(--panel);color:var(--text);font-weight:600;box-shadow:var(--shadow)}
+  .view-tabs .vt .vt-count{background:var(--tag-bg);color:var(--tag-text);padding:1px 8px;border-radius:999px;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums}
+  .view-tabs .vt.trash .vt-count{background:var(--danger-bg);color:var(--bad)}
+  .toolbar{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;box-shadow:var(--shadow)}
+  .toolbar input,.toolbar select{background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:10px;font-size:14px;outline:none;font-family:inherit;transition:border-color .15s ease, box-shadow .15s ease}
+  .toolbar input:focus,.toolbar select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,58,138,.15)}
+  .toolbar input{flex:1;min-width:240px}
+  .search-wrap{flex:1;min-width:240px;position:relative}
+  .search-wrap input{width:100%;padding-right:50px}
+  .search-wrap .kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:var(--panel-2);border:1px solid var(--border);border-radius:5px;padding:2px 6px;font-size:11px;color:var(--muted);font-family:ui-monospace, monospace;pointer-events:none}
+  .count{margin-left:auto;color:var(--muted);font-size:13px;white-space:nowrap}
+  button{cursor:pointer;border:1px solid var(--border);background:var(--input-bg);color:var(--text);padding:10px 16px;border-radius:10px;font-size:14px;transition:all .15s ease;font-weight:500;font-family:inherit}
+  button:hover:not(:disabled){background:var(--panel-2);border-color:var(--muted)}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  button.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+  button.primary:hover:not(:disabled){background:var(--primary-2);border-color:var(--primary-2)}
+  button.danger{background:var(--danger-bg);color:var(--bad);border-color:var(--danger-border)}
+  button.danger.solid{background:var(--bad);color:#fff;border-color:var(--bad)}
+  button.danger.solid:hover:not(:disabled){background:#dc2626;border-color:#dc2626}
+  button.edit{background:var(--edit-bg);color:var(--edit-text);border-color:var(--edit-border)}
+  button.lock{background:var(--lock-bg);color:var(--lock-text);border-color:var(--lock-border)}
+  button.view{background:var(--view-bg);color:var(--view-text);border-color:var(--view-border)}
+  button.restore{background:var(--restore-bg);color:var(--restore-text);border-color:var(--restore-border)}
+  .theme-switch{display:inline-flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:3px;gap:2px}
+  .theme-switch .tsbtn{background:transparent !important;border:none !important;color:rgba(255,255,255,.85) !important;padding:7px 14px;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer}
+  .theme-switch .tsbtn:hover{background:rgba(255,255,255,.1) !important;color:#fff !important}
+  .theme-switch .tsbtn.active{background:#fff !important;color:var(--header-1) !important;font-weight:600}
+  .table-wrap{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .table-scroll{overflow-x:auto}
+  table{width:100%;border-collapse:separate;border-spacing:0}
+  th,td{padding:16px 16px;text-align:left;font-size:14px;vertical-align:top}
+  th{background:var(--tableHeader);color:var(--tableHeaderText);text-transform:uppercase;letter-spacing:.6px;font-size:12px;font-weight:600;font-family:"Space Grotesk", "Inter", sans-serif}
+  th.sortable{cursor:pointer;user-select:none;white-space:nowrap}
+  th.sortable:hover{background:rgba(255,255,255,.1)}
+  th.sortable .sort-ind{display:inline-block;margin-left:6px;opacity:.45;font-size:10px}
+  th.sortable.active .sort-ind{opacity:1}
+  tbody tr{border-top:1px solid var(--border);animation:rowFadeIn .25s ease both}
+  @keyframes rowFadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+  tbody tr:first-child{border-top:none}
+  tbody tr:nth-child(even){background:rgba(127,134,163,.03)}
+  tbody tr.locked{background:var(--locked-row) !important}
+  tbody tr.pinned{background:var(--pinned-row) !important}
+  tbody tr.trash-row{background:var(--trash-row) !important}
+  tbody tr:hover{background:var(--row-hover)}
+  td.client-name{font-weight:600;min-width:240px;color:var(--text)}
+  td.client-name .name-row{display:flex;align-items:center;gap:8px}
+  td.client-name .star-btn{background:none;border:none;cursor:pointer;padding:0;font-size:16px;color:var(--muted);transition:transform .15s ease, color .15s ease}
+  td.client-name .star-btn:hover{transform:scale(1.2)}
+  td.client-name .star-btn.starred{color:var(--star)}
+  td.client-name .lock-mark{font-size:13px;margin-left:2px}
+  td.client-name .last-edit{display:block;font-weight:400;font-size:11px;color:var(--muted);margin-top:6px}
+  td.client-name .row-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  td.client-name .row-tags .tag-chip{background:var(--tag-bg);color:var(--tag-text);padding:2px 9px;border-radius:6px;font-size:11px;font-weight:500;text-transform:none;letter-spacing:0}
+  td.del-info{font-size:12px;color:var(--muted);min-width:200px;line-height:1.5}
+  td.del-info strong{color:var(--text);font-weight:600}
+  td.del-info .reason{display:block;margin-top:4px;font-style:italic;color:var(--muted)}
+  td.instr,td.apps-cell{color:var(--text);opacity:.94;line-height:1.5;min-width:220px;max-width:360px}
+  td.apps-cell{font-size:13px}
+  td.shift-cell{width:120px}
+  td.actions{width:170px;text-align:right;white-space:nowrap}
+  td .url-link{color:var(--primary);text-decoration:none;border-bottom:1px dashed var(--primary);word-break:break-all}
+  td .url-link:hover{border-bottom-style:solid}
+  td ul.cell-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+  td ul.cell-list li{position:relative;padding-left:18px;line-height:1.5}
+  td ul.cell-list li::before{content:"";position:absolute;left:5px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--primary);opacity:.65}
+  td ul.cell-list li strong.app-name{font-weight:600;color:var(--text)}
+  td .single-line{line-height:1.5}
+  td .empty-cell{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font-style:italic;font-size:12px}
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  .badge::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%}
+  .badge.morning{background:var(--shift-morning-bg);color:var(--shift-morning-text)}
+  .badge.morning::before{background:var(--morning)}
+  .badge.night{background:var(--shift-night-bg);color:var(--shift-night-text)}
+  .badge.night::before{background:var(--night)}
+  .row-actions{display:inline-flex;gap:5px}
+  .icon-only{padding:7px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px}
+  .icon-only svg{width:16px;height:16px;display:block}
+  .empty{padding:60px 20px;text-align:center;color:var(--muted);background:var(--panel)}
+  .empty-icon{font-size:42px;margin-bottom:8px;opacity:.5}
+  .pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-top:1px solid var(--border);background:var(--panel-2);flex-wrap:wrap}
+  .pagination .pinfo{color:var(--muted);font-size:13px}
+  .pagination .pages{display:inline-flex;gap:4px;flex-wrap:wrap}
+  .pagination .pbtn{padding:6px 12px;font-size:13px;border-radius:8px;background:var(--panel);border:1px solid var(--border);color:var(--text);cursor:pointer;min-width:36px;font-family:inherit}
+  .pagination .pbtn:hover:not(:disabled){background:var(--row-hover);border-color:var(--primary)}
+  .pagination .pbtn:disabled{opacity:.4;cursor:not-allowed}
+  .pagination .pbtn.active{background:var(--primary);color:#fff;border-color:var(--primary);font-weight:600}
+  .pagination .ellipsis{padding:6px 4px;color:var(--muted)}
+  .modal-bg{position:fixed;inset:0;background:rgba(15,23,42,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;animation:fadeIn .2s ease}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .modal-bg.active{display:flex}
+  .modal{background:var(--modal-bg);border:1px solid var(--border);border-radius:16px;padding:28px;max-width:680px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(15,23,42,.45);animation:slideUp .25s cubic-bezier(.2,.8,.2,1)}
+  @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .modal h2{margin:0 0 8px;font-size:22px;color:var(--text);font-family:"Space Grotesk", "Inter", sans-serif;font-weight:600;letter-spacing:-.3px}
+  .modal .modal-meta{font-size:12px;color:var(--muted);margin-bottom:18px}
+  .modal-warn{background:var(--danger-bg);border:1px solid var(--danger-border);color:var(--bad);border-radius:10px;padding:12px 14px;font-size:13px;margin-bottom:14px;line-height:1.5}
+  .modal-info{background:var(--view-bg);border:1px solid var(--view-border);color:var(--view-text);border-radius:10px;padding:12px 14px;font-size:13px;margin-bottom:14px;line-height:1.5}
+  .form-row{margin-bottom:16px}
+  .form-row label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .form-row input,.form-row select,.form-row textarea{width:100%;background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:10px;font-size:14px;outline:none;font-family:inherit}
+  .form-row textarea{min-height:70px;resize:vertical;line-height:1.5}
+  .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}
+  .hint{font-size:11px;color:var(--muted);margin-top:6px}
+  .qv-section{margin-bottom:18px}
+  .qv-section h3{margin:0 0 8px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+  .qv-section .content{color:var(--text);line-height:1.5;font-size:14px}
+  .qv-section .content ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+  .qv-section .content ul li{position:relative;padding-left:18px}
+  .qv-section .content ul li::before{content:"";position:absolute;left:5px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--primary);opacity:.7}
+  .qv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .qv-tags .tag-chip{background:var(--tag-bg);color:var(--tag-text);padding:3px 10px;border-radius:6px;font-size:12px;font-weight:500}
+  .toast-host{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:8px;z-index:100;pointer-events:none}
+  .toast{background:var(--panel);border:1px solid var(--border);border-left:4px solid var(--good);border-radius:10px;padding:12px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text);min-width:240px;max-width:380px;animation:toastIn .3s cubic-bezier(.2,.8,.2,1);pointer-events:auto}
+  .toast.error{border-left-color:var(--bad)}
+  .toast.warn{border-left-color:var(--warn)}
+  .toast.info{border-left-color:var(--brand-accent)}
+  .toast .toast-icon{flex-shrink:0;font-size:16px}
+  @keyframes toastIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+  .toast.removing{animation:toastOut .25s ease forwards}
+  @keyframes toastOut{to{transform:translateX(100%);opacity:0}}
+  .kbd-hint{position:fixed;bottom:80px;right:20px;font-size:11px;color:var(--muted);background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:8px 8px 8px 12px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:8px;z-index:40;max-width:calc(100vw - 40px);cursor:grab}
+  .kbd-hint:active{cursor:grabbing}
+  .kbd-hint code{background:var(--panel-2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-family:ui-monospace, monospace;font-size:10px;color:var(--text)}
+  .kbd-hint .kbd-close{background:transparent;border:none;color:var(--muted);font-size:16px;line-height:1;padding:2px 6px;border-radius:4px;cursor:pointer;margin-left:4px}
+  .kbd-hint .kbd-close:hover{background:var(--panel-2);color:var(--bad)}
+  .kbd-hint.hidden{display:none}
+  .kbd-reopen{position:fixed;bottom:80px;right:20px;width:34px;height:34px;border-radius:50%;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:15px;cursor:pointer;box-shadow:var(--shadow-md);display:none;align-items:center;justify-content:center;z-index:40;font-family:inherit;font-weight:600;padding:0;transition:transform .15s ease, color .15s ease, border-color .15s ease}
+  .kbd-reopen:hover{background:var(--panel-2);color:var(--primary);border-color:var(--primary);transform:scale(1.1)}
+  .kbd-reopen.visible{display:inline-flex}
+  @media (max-width:900px){.kbd-hint,.kbd-reopen{bottom:20px}}
+  .badge.status-new{background:var(--status-new-bg);color:var(--status-new-text)}
+  .badge.status-new::before{background:var(--status-new)}
+  .badge.status-setup{background:var(--status-setup-bg);color:var(--status-setup-text)}
+  .badge.status-setup::before{background:var(--status-setup)}
+  .badge.status-active{background:var(--status-active-bg);color:var(--status-active-text)}
+  .badge.status-active::before{background:var(--status-active)}
+  .badge.status-hold{background:var(--status-hold-bg);color:var(--status-hold-text)}
+  .badge.status-hold::before{background:var(--status-hold)}
+  .badge.status-off{background:var(--status-off-bg);color:var(--status-off-text)}
+  .badge.status-off::before{background:var(--status-off)}
+  td.status-cell{width:130px}
+  /* Analytics */
+  .analytics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:18px;margin-top:8px}
+  .analytics-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+  .analytics-card h3{margin:0 0 4px;font-size:14px;color:var(--text);font-family:"Space Grotesk", "Inter", sans-serif;font-weight:600}
+  .analytics-card .acsub{color:var(--muted);font-size:12px;margin-bottom:18px}
+  .chart-wrap{position:relative;width:100%;height:240px}
+  .chart-wrap.tall{height:300px}
+  .analytics-empty{padding:40px 16px;text-align:center;color:var(--muted);font-size:13px;font-style:italic}
+  .stat-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:8px}
+  .stat-mini{background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+  .stat-mini .lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .stat-mini .val{font-size:20px;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums;font-family:"Space Grotesk","Inter",sans-serif;margin-top:2px}
+  @media (max-width:900px){
+    .app{flex-direction:column}
+    .sidebar{width:100%;height:auto;position:relative;top:auto}
+    .sidebar-inner{padding:16px;gap:12px}
+    .sidebar-spacer{display:none}
+    .sidebar-nav{flex-direction:row;flex-wrap:wrap}
+    .nav-item{flex:1;min-width:140px}
+    .sidebar-bottom{flex-direction:row;flex-wrap:wrap;align-items:center}
+    .who{flex:1;min-width:140px}
+    .theme-switch{width:auto}
+    .main{padding:16px}
+    .kbd-hint{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-brand">
+        <div class="gt-logo" aria-hidden="true">
+          <div class="gt-stack">
+            <div class="gt-go">go</div>
+            <div class="gt-team">team</div>
+          </div>
+        </div>
+        <div>
+          <h1>GoTeam</h1>
+          <div class="sub">Client Requirements</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section-label">Views</div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <button class="nav-item" data-view="analytics"><span class="nav-icon">📊</span><span>Analytics</span></button>
+        <button class="nav-item active" data-view="active"><span class="nav-icon">📋</span><span>Active Clients</span><span class="nav-count" id="countActive">0</span></button>
+        <button class="nav-item danger" data-view="trash"><span class="nav-icon">🗑</span><span>Recycle Bin</span><span class="nav-count" id="countTrash">0</span></button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="sidebar-bottom">
+        <div class="save-indicator" id="saveIndicator" title="Auto-save status"><span class="dot"></span><span id="saveText">All changes saved</span></div>
+        <div class="who">
+          <label for="userName">You:</label>
+          <input type="text" id="userName" placeholder="Your name" />
+        </div>
+        <div class="theme-switch" role="group" aria-label="Theme">
+          <button class="tsbtn" data-mode="default" title="Follow system preference">Default</button>
+          <button class="tsbtn" data-mode="light" title="Light mode">Light</button>
+          <button class="tsbtn" data-mode="dark" title="Dark mode">Dark</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-header">
+      <h2 id="pageTitle">Active Clients</h2>
+      <div class="ph-sub" id="pageSubtitle">Track every client and the apps required for setup</div>
+    </div>
+
+  <div class="stats">
+    <div class="stat"><div class="label">Total Clients</div><div class="value" id="statTotal">0</div></div>
+    <div class="stat morning"><div class="label">Morning</div><div class="value" id="statMorning">0</div></div>
+    <div class="stat night"><div class="label">Night</div><div class="value" id="statNight">0</div></div>
+    <div class="stat config"><div class="label">Configured</div><div class="value" id="statConfig">0%</div><div class="meta" id="statConfigMeta">- of - have data</div></div>
+    <div class="stat recent"><div class="label">Edited This Week</div><div class="value" id="statRecent">0</div><div class="meta" id="statRecentMeta">in last 7 days</div></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search clients, apps, tags..." />
+      <span class="kbd">/</span>
+    </div>
+    <select id="filterShift">
+      <option value="">All Shifts</option>
+      <option value="Morning">Morning</option>
+      <option value="Night">Night</option>
+    </select>
+    <select id="filterTag"><option value="">All Tags</option></select>
+    <select id="filterStatusVal">
+      <option value="">All Statuses</option>
+      <option value="New">New</option>
+      <option value="In Setup">In Setup</option>
+      <option value="Active">Active</option>
+      <option value="On Hold">On Hold</option>
+      <option value="Offboarded">Offboarded</option>
+    </select>
+    <select id="filterStatus">
+      <option value="">All Clients</option>
+      <option value="starred">Starred only</option>
+      <option value="locked">Locked only</option>
+      <option value="empty">Missing data</option>
+      <option value="configured">Configured</option>
+    </select>
+    <button class="primary" id="addBtn" title="Add client (n)">+ Add Client</button>
+    <button id="autoTagBtn" title="Auto-categorize clients based on names">✨ Auto-tag</button>
+    <button id="exportXlsxBtn">Export Excel</button>
+    <button id="importXlsxBtn">Import Excel</button>
+    <button id="exportJsonBtn">Backup (JSON)</button>
+    <button id="importBtn">Restore (JSON)</button>
+    <button id="resetBtn">Reset</button>
+    <span class="count" id="resultCount"></span>
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table id="mainTable">
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div id="empty" class="empty" style="display:none">
+      <div class="empty-icon">🔍</div>
+      <div id="emptyText">No clients match your filters.</div>
+    </div>
+    <div class="pagination" id="pagination">
+      <div class="pinfo" id="pageInfo">-</div>
+      <div class="pages" id="pageButtons"></div>
+    </div>
+  </div>
+
+  <div id="analyticsView" style="display:none">
+    <div class="analytics-grid">
+      <div class="analytics-card">
+        <h3>Shift Distribution</h3>
+        <div class="acsub">Morning vs Night active clients</div>
+        <div class="chart-wrap"><canvas id="chartShift"></canvas></div>
+      </div>
+      <div class="analytics-card">
+        <h3>Status Breakdown</h3>
+        <div class="acsub">Where each client sits in your lifecycle</div>
+        <div class="chart-wrap"><canvas id="chartStatus"></canvas></div>
+      </div>
+      <div class="analytics-card">
+        <h3>Team Activity</h3>
+        <div class="acsub">Edits per team member (top 10)</div>
+        <div class="chart-wrap tall"><canvas id="chartTeam"></canvas></div>
+      </div>
+      <div class="analytics-card">
+        <h3>Edits Over Time</h3>
+        <div class="acsub">Activity in the last 30 days</div>
+        <div class="chart-wrap tall"><canvas id="chartEdits"></canvas></div>
+      </div>
+      <div class="analytics-card" style="grid-column:1 / -1">
+        <h3>Recycle Bin Activity</h3>
+        <div class="acsub">Who deleted what — full audit log</div>
+        <div class="stat-mini-grid">
+          <div class="stat-mini"><div class="lbl">In Bin</div><div class="val" id="rbCount">0</div></div>
+          <div class="stat-mini"><div class="lbl">Total Deletions</div><div class="val" id="rbTotal">0</div></div>
+          <div class="stat-mini"><div class="lbl">Last Deletion</div><div class="val" id="rbLast" style="font-size:13px;font-weight:500">—</div></div>
+          <div class="stat-mini"><div class="lbl">Top Deleter</div><div class="val" id="rbTopUser" style="font-size:13px;font-weight:500">—</div></div>
+        </div>
+        <div class="chart-wrap" style="margin-top:14px"><canvas id="chartDeleters"></canvas></div>
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <h2 id="modalTitle">Add Client</h2>
+    <div class="modal-meta" id="modalMeta"></div>
+    <div class="form-row"><label>Client Name *</label><input type="text" id="fName" placeholder="e.g. Acme Corporation" /></div>
+    <div class="form-row"><label>Shift *</label><select id="fShift"><option value="Morning">Morning</option><option value="Night">Night</option></select></div>
+    <div class="form-row"><label>Status *</label><select id="fStatus">
+      <option value="Active">Active</option>
+      <option value="New">New</option>
+      <option value="In Setup">In Setup</option>
+      <option value="On Hold">On Hold</option>
+      <option value="Offboarded">Offboarded</option>
+    </select></div>
+    <div class="form-row"><label>Tags (categories)</label><input type="text" id="fTags" placeholder="e.g. Real Estate, Healthcare, Finance" /><div class="hint">Separate tags with commas</div></div>
+    <div class="form-row"><label>Client Instructions</label><textarea id="fInstr" placeholder="Special setup steps, credentials, reminders..."></textarea><div class="hint">Multiple lines render as bullets in the table</div></div>
+    <div class="form-row"><label>App Requirements (Client-specific)</label><textarea id="fApps" placeholder="One app per line, or comma-separated"></textarea><div class="hint">Tip: 'AppName - https://download-url' formats the name in bold</div></div>
+    <div class="form-row"><label>GoTeam Pre-installed App</label><textarea id="fPre" placeholder="Standard GoTeam tools pre-installed"></textarea></div>
+    <div class="modal-actions"><button id="cancelBtn">Cancel</button><button class="primary" id="saveBtn">Save</button></div>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="modal-bg" id="viewModal">
+  <div class="modal">
+    <h2 id="viewTitle">Client</h2>
+    <div class="modal-meta" id="viewMeta"></div>
+    <div id="viewContent"></div>
+    <div class="modal-actions"><button id="viewCloseBtn">Close</button><button class="primary" id="viewEditBtn">Edit</button></div>
+  </div>
+</div>
+
+<!-- Soft Delete Modal -->
+<div class="modal-bg" id="deleteModal">
+  <div class="modal" style="max-width:560px">
+    <h2>Move to Recycle Bin?</h2>
+    <div class="modal-info">📥 This client will be moved to the Recycle Bin where you can restore it anytime. It won't be permanently deleted unless purged from the bin.</div>
+    <div class="form-row"><label>Your name (deleter) *</label><input type="text" id="deleteUserInput" placeholder="Required for accountability" /></div>
+    <div class="form-row"><label>Reason for deletion (optional, recommended)</label><textarea id="deleteReasonInput" placeholder="e.g. Duplicate of XYZ, Client offboarded, Test entry..."></textarea></div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:8px">To confirm, type the client name exactly:</div>
+    <div style="background:var(--panel-2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-weight:600;color:var(--text);margin-bottom:14px;font-size:14px;word-break:break-word" id="deleteClientName"></div>
+    <input type="text" id="deleteConfirmInput" placeholder="Type the client name to confirm" style="width:100%;background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:10px;font-size:14px;outline:none;font-family:inherit" />
+    <div class="modal-actions">
+      <button id="deleteCancelBtn">Cancel</button>
+      <button class="danger solid" id="deleteConfirmBtn" disabled>Move to Recycle Bin</button>
+    </div>
+  </div>
+</div>
+
+<!-- Permanent Purge Modal -->
+<div class="modal-bg" id="purgeModal">
+  <div class="modal" style="max-width:520px">
+    <h2 style="color:var(--bad)">Permanently delete?</h2>
+    <div class="modal-warn">⚠️ This is irreversible. The client and all its data will be gone forever, even from the audit log.</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Type the client name to permanently purge:</div>
+    <div style="background:var(--panel-2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-weight:600;color:var(--text);margin-bottom:14px;font-size:14px;word-break:break-word" id="purgeClientName"></div>
+    <input type="text" id="purgeConfirmInput" placeholder="Type the client name" style="width:100%;background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:10px;font-size:14px;outline:none;font-family:inherit" />
+    <div class="modal-actions">
+      <button id="purgeCancelBtn">Cancel</button>
+      <button class="danger solid" id="purgeConfirmBtn" disabled>Purge forever</button>
+    </div>
+  </div>
+</div>
+
+<!-- Generic Confirm Modal -->
+<div class="modal-bg" id="confirmModal">
+  <div class="modal" style="max-width:480px">
+    <h2 id="confirmTitle">Are you sure?</h2>
+    <div id="confirmBody" style="color:var(--text);font-size:14px;line-height:1.55;margin-bottom:8px"></div>
+    <div class="modal-actions">
+      <button id="confirmCancelBtn">Cancel</button>
+      <button class="primary" id="confirmOkBtn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-host" id="toastHost"></div>
+<div class="kbd-hint" id="kbdHint"><span>Press</span><code>/</code><span>to search</span><span>•</span><code>n</code><span>new client</span><span>•</span><code>Esc</code><span>close</span><button class="kbd-close" id="kbdCloseBtn" title="Hide shortcuts (you can bring them back)" aria-label="Hide">×</button></div>
+<button class="kbd-reopen" id="kbdReopenBtn" title="Show keyboard shortcuts" aria-label="Show shortcuts">?</button>
+
+<input type="file" id="importFile" accept=".json" style="display:none" />
+<input type="file" id="importXlsxFile" accept=".xlsx,.xls" style="display:none" />
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+(function(){
+  var STORAGE_KEY = "goteam_client_tracker_v3";
+  var THEME_KEY = "goteam_client_tracker_theme";
+  var USER_KEY = "goteam_client_tracker_user";
+  var SEED_DATA = [{"name": "Digital Dealer (Front End, Back End and Web Developer)", "shift": "Morning", "apps": "Git - https://gitforwindows.org/\nMicrosoft Visual Studio Code - https://code.visualstudio.com/download\nOracle VM Virtualbox 7.0.6 - https://www.virtualbox.org/wiki/Downloads\nVagrant -  https://www.vagrantup.com/Downloads\nSourcetree - https://www.sourcetreeapp.com/\nVS Code or Sublime\nMySQL Workbench\nSlack\nChrome (Firefox Developer Edition)\nDevBox\nUbuntu 20.04 LTS on Windows via Microsoft Store\nDocker:https://docs.docker.com/desktop/install/windows-install/", "instructions": "Devices should have admin account intended for Digital Dealer\nUN:  .\\Digital Dealer  PW:  Welcome1\nNeed to install the application required\nGOTEAM TOOLS and TERAMIND STEALTH", "preinstalled": ""}, {"name": "Digital Dealer (VA Role)", "shift": "Morning", "apps": "GoTeam Basic Tools\nSLACK AND CHROME\nTERAMIND STEALTH", "instructions": "SLACK AND CHROME", "preinstalled": ""}, {"name": "1 Medical", "shift": "Morning", "apps": "Client, IT will be the one to install the applications needed", "instructions": "Once the basic goteam tools are installed you will need to update the email of the IT client support they will install the applications needed", "preinstalled": ""}, {"name": "Wavelength", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "QATTRO", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "FST Media", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Olitek", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "EarthCheck", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Form Direct", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "The Eventful Group", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE ZOO REPUBLIC", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "STEP CHANGE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Prudential Real Estate - Michael Sullivan", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "The Community Co", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Hitch Advisory Pty Ltd", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "SIMPLERENT", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BOLINDA PUBLISHING", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Collab IT / Blue Zinc IT Australia", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Upbooks", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Market Track LLC (DBA Numerator)", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "PGV Consulting", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Macqperry Partners / McCarthy Salked", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Ashton Media", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Merlo Coffee", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Scentia", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BTA Sales", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ENERGY EASE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Prudential - Simon Perri", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Belinda Brosnan / Marketing Junction Pty", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Cloverdale", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE MARKETING LAB", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Volat Enterprise (The Marketing Lab)", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZENITH SEARCH", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "APRICUS AUSTRALIA", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "WILKEN SERVICE PTY LTD", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "NET FOCUS MEDIA LLC / VOCATIONAL MEDIA LLC", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CEO COACHING INTERNATIONAL", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "NAVIGATE FINANCIAL", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Brighton Office", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CONSTRUCTIVE COLLECTIVE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE ALTERNATIVE BOARD", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "RESEARCH-IP", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "RADIX GROUP", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE GROWTH FACULTY", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MINIMAX", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "LAING + SIMMONS", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "DNA MEDICAL RECRUITMENT", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BUILDERS OF ARCHITECTURE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "TSA MANAGEMENT", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "LYNX RECRUITMENT", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "AUSTRALIAN PREMIER LEAGUE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "INSKA", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Black Moth", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MAVEN DENTAL GROUP", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "RECMATE", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HSC Technology Group", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CLEANWORKS", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEN ONE SIX NINE LIMITED / BOB COONEY", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GEFCO", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Spring St Bondi Junction / LJ Hooker Bondi Junction", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "East From The City / LJ Hooker Bondi Junction", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "INNOVA SERVICES GROUP", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MIND STREET", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ARCADIA RECRUITMENT", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "AEROTRUTH", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE DETOX MARKET", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CONVERSION LOGIX", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "YPO", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MMS Group", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Mortgagehq", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Nuvho", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "REE Medical", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "The Wiggles Holdings Pty Ltd", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Alowishus Delicious", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Strata Sphere", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "United Ag & Turf", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "INFOSCOUT / NUMERATOR", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE SIMPLE FOLK", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "The General Store", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Bitt'n", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZMR Capital", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Hamilton Elevators", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Artemide Law - New Client", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GOA Billboards", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Femtek", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "SGC Constructions Specialties, LLC", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ONE10", "shift": "Morning", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CEO COACHING INTERNATIONAL", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "INCHARGE ELECTRICAL SERVICES, LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CONVERSIO", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ASHA SAXENA", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "SITE IMPACT", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "SCAN123", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "B & B", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "NUTEK", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "PREFERRED CFO", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "WORKPLACE SAFETY SCREENINGS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BETTS COMPANY", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "PREMIER PROTECTIVE SECURITY INC.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "JOHNSONS CONSULTING GROUP", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HGREG", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "WAREHOUSE CINEMAS & HIGHROCK", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GF IMMIGRATION LAW, PA.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "M&A CAPITAL", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "COMMERCIAL FLEET FINANCING", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE GREENSPAN CO. / ADJUSTERS INTERNATIONAL", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "NAKED NUTRITION", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE FRICKS COMPANY", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GLOBAL HOME FINANCE", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "E-FURNISHED / DACTYLON", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CAMP GLADIATOR", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "LOJISTICS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE NINJA ZONE", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "SANTE REALTY INVESTMENTS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CITY HEALTH URGENT CARE", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "POWER PERSONNEL", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "STAR BUILDING SUPPLIES", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BARSALA", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ASI SECURITY", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CONVERSION LOGIX", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HIREBETTER", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "PEERLESS EVENTS & TENTS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "PIVOT CULINARY", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "TOTAL NEGOTIATION GROUP UK", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "THE HERB BOX", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "E-FURNISHED / DACTYLON (Chrome Extensions)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "JACOBY & MEYERS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MASTERS WHOLESALE", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "METRO DG", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "OBERG & ASSO.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BARRATT ASSET MANAGEMENT", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "TANGRAM INSURANCE SERVICES", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "AIC VENTURES", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ADRETREAVER", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HALLECK VINEYARD", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "TERRA EXPORTS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BAM-UK", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MUUVMENT", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "FURNITUBES", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ACCOUNTING DEPARTMENT COM", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GENUINE FOODS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BELKORP AG", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "BCC ENGINEERING", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ELIZABETH COLE JEWELRY", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "AEROTRUTH", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "YPO", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "YPO PACIFIC WEST", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ASURE SOFTWARE", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MADDIEBRIT PRODUCTS, LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ONE WEEK BATH", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "RANDY'S (Slap N Tickle)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HEFFERNAN INSURANCE BROKERS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "HEFFERNAN INSURANCE BROKERS (Petaluma Benefits Dept.)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Heffernan Networks Insurance Brokers", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "JNF / JOHN N FEHLINGER", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "LINKAGE, INC.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ODELL STUDNER GROUP", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ROSE BATTERIES", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (ACCOUNT MANAGEMENT / B2B CORP SALES)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (ResEX)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (OWNER SUPPORT)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (QUALITY TEAM)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (BOOKINGS)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (CAPERS TEAM)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (CONTRACT COORDINATOR)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (OPS COORDINATOR)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (TRUST AND SAFETY)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (FINANCE)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (FINANCE - AP TEAM)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (FINANCE - AP/AR TEAM)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZEUS LIVING (FINANCE - AR TEAM)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Gaynor Minden", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Great Western Trailer", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Reveal Technology", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Trinity Packaging Supply", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Fuse Recruitment Pty Ltd", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Revelation Pharmacy LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Juara Skin Care", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Danny Wimmer Presents", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ONEPOINT FRANCHISE ACCOUNTING", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "National Flood Experts", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MSNW", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Legendairy Milk", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Exclusive Wireless Inc.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Water Resources Group Inc", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ZOVANTI", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "EKSO BIONICS", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Brilliant PR & M", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Tarlton and Son, Inc", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MILHAUS LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "CYBRA Corporation", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "One Technologies", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Schnackel Engineers, Inc.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Elite Team Offices", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MLJ Environmental", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Wild Electrical", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Schnackel Engineers Inc. (2024)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "DRG Technologies, Inc", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Letap Group, Inc. (LRE & Companies)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Cornerstone First Mortgage, LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "MUSE MODERN MARKETING", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Skycrest Roofing Co.", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Skycrest Roofing Co. (GSuite)", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Earth Cubs", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Imaco Underwriters", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "WING IT NORTH", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Fox Three Partners", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "High Bar Brands", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Summer Discovery", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "GEA Consulting Engineers", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Mavrix", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "ALPACADB, INC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "Katie White Consulting, LLC", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}, {"name": "The Halal Shack", "shift": "Night", "apps": "", "instructions": "", "preinstalled": ""}];
+  var PAGE_SIZE = 10;
+
+  var clients = [];
+  var editingId = null;
+  var deletingId = null;
+  var purgingId = null;
+  var viewingId = null;
+  var sortField = null;
+  var sortDir = 1;
+  var currentPage = 1;
+  var lastSavedAt = null;
+  var viewMode = "active"; // "active" or "trash"
+
+  function uid(){ return Math.random().toString(36).slice(2,10) + Date.now().toString(36).slice(-4); }
+  function getUser(){ try{ return localStorage.getItem(USER_KEY) || ""; }catch(e){ return ""; } }
+  function setUserName(name){ try{ localStorage.setItem(USER_KEY, name); }catch(e){} }
+  function nowStr(){
+    var d = new Date(), pad = function(n){ return n<10?"0"+n:""+n; };
+    return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())+" "+pad(d.getHours())+":"+pad(d.getMinutes());
+  }
+  function timeAgo(date){
+    if(!date) return "";
+    var diff = Math.floor((Date.now() - date.getTime())/1000);
+    if(diff < 5) return "just now";
+    if(diff < 60) return diff + " sec ago";
+    if(diff < 3600) return Math.floor(diff/60) + " min ago";
+    if(diff < 86400) return Math.floor(diff/3600) + " hr ago";
+    return Math.floor(diff/86400) + " day ago";
+  }
+
+  function toast(msg, type){
+    type = type || "success";
+    var host = document.getElementById("toastHost");
+    var el = document.createElement("div");
+    el.className = "toast " + type;
+    var icons = {success:"✓", error:"✕", warn:"!", info:"ℹ"};
+    el.innerHTML = '<span class="toast-icon">'+(icons[type]||"✓")+'</span><span>'+msg+'</span>';
+    host.appendChild(el);
+    setTimeout(function(){
+      el.classList.add("removing");
+      setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 250);
+    }, 3500);
+  }
+  // Reusable themed confirm dialog
+  var pendingConfirm = null;
+  function customConfirm(opts, cb){
+    pendingConfirm = cb;
+    document.getElementById("confirmTitle").textContent = opts.title || "Are you sure?";
+    document.getElementById("confirmBody").innerHTML = opts.body || "";
+    var okBtn = document.getElementById("confirmOkBtn");
+    okBtn.textContent = opts.okText || "Confirm";
+    okBtn.className = "primary";
+    if(opts.danger) okBtn.className = "danger solid";
+    document.getElementById("confirmCancelBtn").textContent = opts.cancelText || "Cancel";
+    document.getElementById("confirmModal").classList.add("active");
+    setTimeout(function(){ okBtn.focus(); }, 50);
+  }
+  function closeConfirm(result){
+    document.getElementById("confirmModal").classList.remove("active");
+    var cb = pendingConfirm;
+    pendingConfirm = null;
+    if(cb) cb(!!result);
+  }
+
+  function updateSaveIndicator(){
+    var el = document.getElementById("saveText"), wrap = document.getElementById("saveIndicator");
+    if(!el || !wrap) return;
+    if(!lastSavedAt){ el.textContent = "All changes saved"; wrap.classList.remove("saving"); return; }
+    el.textContent = "Saved " + timeAgo(lastSavedAt);
+    wrap.classList.remove("saving");
+  }
+  function flashSaving(){
+    var wrap = document.getElementById("saveIndicator"), el = document.getElementById("saveText");
+    if(wrap) wrap.classList.add("saving");
+    if(el) el.textContent = "Saving...";
+    setTimeout(function(){ lastSavedAt = new Date(); updateSaveIndicator(); }, 250);
+  }
+
+  function getStoredMode(){ try{ return localStorage.getItem(THEME_KEY) || "default"; }catch(e){ return "default"; } }
+  function resolveTheme(mode){
+    if(mode === "light") return "light";
+    if(mode === "dark") return "dark";
+    try{ return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }catch(e){ return "light"; }
+  }
+  function applyMode(mode){
+    document.documentElement.setAttribute("data-theme", resolveTheme(mode));
+    var btns = document.querySelectorAll(".theme-switch .tsbtn");
+    for(var i=0;i<btns.length;i++) btns[i].classList.toggle("active", btns[i].getAttribute("data-mode") === mode);
+  }
+  function setMode(mode){ try{ localStorage.setItem(THEME_KEY, mode); }catch(e){} applyMode(mode); if(viewMode === "analytics") renderAnalytics(); }
+  applyMode(getStoredMode());
+  try{ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(){ if(getStoredMode() === "default") applyMode("default"); }); }catch(e){}
+
+  function normalizeAppList(s){
+    if(Array.isArray(s)) return s.map(function(x){return String(x).trim();}).filter(Boolean);
+    if(!s) return [];
+    return String(s).split(/[\n,;]+/).map(function(x){return x.trim();}).filter(Boolean);
+  }
+  function normalizeTagList(s){
+    if(Array.isArray(s)) return s.map(function(x){return String(x).trim();}).filter(Boolean);
+    if(!s) return [];
+    return String(s).split(/[,;]+/).map(function(x){return x.trim();}).filter(Boolean);
+  }
+  var STATUS_OPTIONS = ["New", "In Setup", "Active", "On Hold", "Offboarded"];
+  function normalizeStatus(s){
+    if(!s) return "Active";
+    var t = String(s).trim();
+    for(var i=0;i<STATUS_OPTIONS.length;i++) if(STATUS_OPTIONS[i].toLowerCase() === t.toLowerCase()) return STATUS_OPTIONS[i];
+    return "Active";
+  }
+  function statusSlug(s){
+    return ({"New":"new","In Setup":"setup","Active":"active","On Hold":"hold","Offboarded":"off"})[s] || "active";
+  }
+  function statusBadge(s){
+    var slug = statusSlug(s);
+    return '<span class="badge status-'+slug+'">'+escapeHtml(s)+'</span>';
+  }
+  function normalizeClient(c){
+    return {
+      id: c.id || uid(),
+      name: c.name || "",
+      shift: c.shift || "Morning",
+      status: normalizeStatus(c.status),
+      apps: normalizeAppList(c.apps),
+      instructions: c.instructions || "",
+      preinstalled: normalizeAppList(c.preinstalled),
+      tags: normalizeTagList(c.tags),
+      locked: !!c.locked,
+      starred: !!c.starred,
+      lastEditedBy: c.lastEditedBy || "",
+      lastEditedAt: c.lastEditedAt || "",
+      deleted: !!c.deleted,
+      deletedBy: c.deletedBy || "",
+      deletedAt: c.deletedAt || "",
+      deletedReason: c.deletedReason || ""
+    };
+  }
+  var TAG_RULES = [
+    {tag:"Real Estate", patterns:[/\brealty\b/i,/\breal estate\b/i,/\bhooker\b/i,/\bproperty\b/i,/\bmortgage\b/i,/\bzeus living/i,/\bbarsala\b/i,/\bmilhaus\b/i,/\bsante realty\b/i,/\bcornerstone first\b/i,/\bstrata sphere\b/i,/\bbrighton office\b/i,/\baic ventures\b/i,/\bletap group\b/i,/\bspring st bondi\b/i,/\bcloverdale\b/i,/\bbarratt asset\b/i]},
+    {tag:"Finance", patterns:[/\bfinance\b/i,/\bfinancial\b/i,/\baccounting\b/i,/\bcfo\b/i,/\bcapital\b/i,/\bupbooks\b/i,/\bbelkorp\b/i,/\bm&a capital\b/i,/\bzmr capital\b/i,/\bonepoint franchise\b/i,/\bnavigate financial\b/i,/\bgreenspan\b/i,/\bcommercial fleet financing\b/i,/\bglobal home finance\b/i]},
+    {tag:"Tech", patterns:[/\btech\b/i,/\bsoftware\b/i,/\bdigital dealer\b/i,/\bdeveloper\b/i,/\bweb developer\b/i,/\balphadb\b/i,/\balpacadb\b/i,/\bcybra\b/i,/\breveal technology\b/i,/\bdrg technologies\b/i,/\bone technologies\b/i,/\basure software\b/i,/\bekso bionics\b/i,/\baerotruth\b/i,/\bmultiplai\b/i,/\bcollab it\b/i,/\bblue zinc it\b/i,/\bhsc technology\b/i,/\bzovanti\b/i]},
+    {tag:"Healthcare", patterns:[/\bmedical\b/i,/\bhealth\b/i,/\bdental\b/i,/\bclinic\b/i,/\bskin care\b/i,/\bnutrition\b/i,/\bpharmacy\b/i,/\bpharma\b/i,/\bbionics\b/i,/\bree medical\b/i,/\b1 medical\b/i,/\bcity health\b/i,/\bmaven dental\b/i,/\bjuara\b/i,/\bnaked nutrition\b/i,/\brevelation pharmacy\b/i,/\blegendairy milk\b/i]},
+    {tag:"Legal", patterns:[/\blaw\b/i,/\blegal\b/i,/\bjacoby & meyers\b/i,/\bartemide\b/i,/\bimmigration\b/i,/\boberg & asso\b/i,/\bjnf\b/i,/\bfehlinger\b/i]},
+    {tag:"Insurance", patterns:[/\binsurance\b/i,/\bunderwriters\b/i,/\btangram insurance\b/i,/\bheffernan\b/i,/\bodell studner\b/i,/\bimaco\b/i]},
+    {tag:"Recruitment", patterns:[/\brecruitment\b/i,/\brecruiting\b/i,/\bhirebetter\b/i,/\bzenith search\b/i,/\bpower personnel\b/i,/\blynx recruitment\b/i,/\barcadia recruitment\b/i,/\bdna medical recruitment\b/i,/\bfuse recruitment\b/i,/\brecmate\b/i,/\blinkage\b/i]},
+    {tag:"Marketing", patterns:[/\bmarketing\b/i,/\bmedia\b/i,/\bbillboards\b/i,/\bbrilliant pr\b/i,/\bsite impact\b/i,/\badretreaver\b/i,/\bconversion logix\b/i,/\bconversio\b/i,/\bmuse modern\b/i,/\bzoo republic\b/i,/\bmind street\b/i,/\bashton media\b/i,/\bfst media\b/i,/\bnet focus media\b/i,/\bvocational media\b/i,/\bdanny wimmer\b/i,/\bgoa billboards\b/i]},
+    {tag:"Consulting", patterns:[/\bconsulting\b/i,/\badvisory\b/i,/\bcoaching\b/i,/\balternative board\b/i,/\bstep change\b/i,/\btotal negotiation\b/i,/\basha saxena\b/i,/\bgefco\b/i,/\bhitch advisory\b/i,/\bpgv\b/i,/\bcommunity co\b/i,/\bresearch-ip\b/i,/\bradix group\b/i,/\bgrowth faculty\b/i,/\bjohnsons consulting\b/i,/\bypo\b/i,/\bschnackel\b/i,/\bgea consulting\b/i,/\bktwhite consulting\b/i,/\bkatie white\b/i]},
+    {tag:"Construction", patterns:[/\bconstruct\b/i,/\bengineer\b/i,/\bbuilders\b/i,/\barchitecture\b/i,/\belectric\b/i,/\broofing\b/i,/\belevators\b/i,/\bmlj environmental\b/i,/\btarlton and son\b/i,/\bsgc construct\b/i,/\bbcc engineering\b/i,/\bschnackel engineers\b/i,/\bskycrest\b/i,/\bwing it north\b/i,/\bwild electrical\b/i,/\bhamilton elevators\b/i,/\bmilhaus\b/i,/\bpremier protective\b/i,/\binCharge electrical\b/i]},
+    {tag:"Education", patterns:[/\beducation\b/i,/\bschool\b/i,/\bsummer discovery\b/i,/\bgrowth faculty\b/i,/\bwiggles\b/i,/\bearth cubs\b/i,/\bninja zone\b/i,/\bcamp gladiator\b/i]},
+    {tag:"Food & Beverage", patterns:[/\bcoffee\b/i,/\bnutrition\b/i,/\bherb box\b/i,/\bhalal\b/i,/\bculinary\b/i,/\bvineyard\b/i,/\bgenuine foods\b/i,/\bmerlo\b/i,/\bbittn\b/i,/\balowishus\b/i]},
+    {tag:"Retail", patterns:[/\bjewelry\b/i,/\bfurniture\b/i,/\bfurnit\b/i,/\bfurnished\b/i,/\bdactylon\b/i,/\bmaddiebrit\b/i,/\bsimplerent\b/i,/\belite team offices\b/i,/\belizabeth cole\b/i,/\bhigh bar brands\b/i]},
+    {tag:"Logistics", patterns:[/\blojistics\b/i,/\blogistics\b/i,/\btrailer\b/i,/\bpackaging\b/i,/\bexports\b/i,/\bwholesale\b/i,/\bmsnw\b/i,/\bnutek\b/i,/\bbetts company\b/i]},
+    {tag:"Security", patterns:[/\bsecurity\b/i,/\bsafety\b/i,/\bworkplace safety\b/i,/\basi security\b/i]},
+    {tag:"Energy", patterns:[/\benergy\b/i,/\bsolar\b/i,/\bapricus\b/i,/\bbatteries\b/i,/\brose batteries\b/i,/\bnational flood experts\b/i,/\bwater resources\b/i]},
+    {tag:"Hospitality", patterns:[/\bhospitality\b/i,/\bhotel\b/i,/\bcinemas\b/i,/\beventful group\b/i,/\bzeus living\b/i,/\bbarsala\b/i,/\bone week bath\b/i]},
+    {tag:"Manufacturing", patterns:[/\bmanufactur\b/i,/\bbuilding supplies\b/i,/\bag & turf\b/i,/\bnumerator\b/i,/\binfoscout\b/i,/\bturf\b/i,/\bminimax\b/i]},
+    {tag:"Beauty", patterns:[/\bbeauty\b/i,/\bdetox\b/i,/\bsalon\b/i,/\bjuara\b/i,/\bsimple folk\b/i,/\bdetox market\b/i]},
+    {tag:"Sports & Fitness", patterns:[/\bgladiator\b/i,/\bfitness\b/i,/\bninja zone\b/i,/\baustralian premier league\b/i]},
+    {tag:"Publishing & Events", patterns:[/\bpublishing\b/i,/\bbolinda\b/i,/\beventful\b/i,/\bmavrix\b/i,/\bpeerless events\b/i]}
+  ];
+  function autoTag(){
+    if(!confirm("Auto-categorize active clients based on their names?\nExisting tags will be kept. Locked rows will be skipped.")) return;
+    var added = 0, skipped = 0;
+    clients.forEach(function(c){
+      if(c.deleted) return;
+      if(c.locked){ skipped++; return; }
+      var existing = (c.tags || []).map(function(t){return t.toLowerCase();});
+      var newTags = [];
+      TAG_RULES.forEach(function(rule){
+        if(existing.indexOf(rule.tag.toLowerCase()) >= 0) return;
+        for(var i=0;i<rule.patterns.length;i++){
+          if(rule.patterns[i].test(c.name)){ newTags.push(rule.tag); existing.push(rule.tag.toLowerCase()); break; }
+        }
+      });
+      if(newTags.length){ c.tags = (c.tags || []).concat(newTags); added++; }
+    });
+    save(); render();
+    toast("Auto-tagged " + added + " clients" + (skipped ? " (" + skipped + " locked skipped)" : ""), "success");
+  }
+  function load(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if(raw){
+        var parsed = JSON.parse(raw);
+        clients = parsed.map(normalizeClient);
+        return;
+      }
+    }catch(e){}
+    seedFromEmbedded();
+  }
+  function seedFromEmbedded(){
+    clients = SEED_DATA.map(normalizeClient);
+    save();
+  }
+  function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(clients)); flashSaving(); }
+
+  function escapeHtml(s){
+    return String(s==null?"":s).replace(/[&<>"']/g, function(m){
+      return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[m];
+    });
+  }
+  function linkifyHtml(s){
+    if(s == null) return "";
+    var str = String(s), re = /(https?:\/\/[^\s<>"']+)/g, out = "", lastIdx = 0, m;
+    while((m = re.exec(str)) !== null){
+      out += escapeHtml(str.substring(lastIdx, m.index));
+      var url = m[0], trail = "";
+      var trailMatch = url.match(/[),.;:!?]+$/);
+      if(trailMatch){ trail = trailMatch[0]; url = url.substring(0, url.length - trail.length); }
+      var safeUrl = escapeHtml(url);
+      out += '<a class="url-link" href="'+safeUrl+'" target="_blank" rel="noopener noreferrer">'+safeUrl+'</a>'+escapeHtml(trail);
+      lastIdx = m.index + m[0].length;
+    }
+    out += escapeHtml(str.substring(lastIdx));
+    return out;
+  }
+  function shiftBadge(s){
+    var cls = s==="Night"?"night":"morning";
+    return '<span class="badge '+cls+'">'+escapeHtml(s)+'</span>';
+  }
+  function appsHtml(arr){
+    if(!arr || !arr.length) return '<span class="empty-cell">📭 not set</span>';
+    if(arr.length === 1) return '<div class="single-line">'+linkifyHtml(arr[0])+'</div>';
+    var items = arr.map(function(a){
+      var m = String(a).match(/^([^:\-]+?)\s*[\-:]\s*(https?:\/\/.+)$/);
+      if(m){ return '<li><strong class="app-name">'+escapeHtml(m[1].trim())+'</strong> &middot; '+linkifyHtml(m[2].trim())+'</li>'; }
+      return '<li>'+linkifyHtml(a)+'</li>';
+    });
+    return '<ul class="cell-list">'+items.join("")+'</ul>';
+  }
+  function instructionsHtml(s){
+    if(!s) return '<span class="empty-cell">📝 no notes</span>';
+    var lines = String(s).split(/\r?\n/).map(function(x){return x.trim();}).filter(Boolean);
+    if(lines.length <= 1) return '<div class="single-line">'+linkifyHtml(s)+'</div>';
+    return '<ul class="cell-list">'+lines.map(function(l){return '<li>'+linkifyHtml(l)+'</li>';}).join("")+'</ul>';
+  }
+  function lastEditHtml(c){
+    if(!c.lastEditedBy && !c.lastEditedAt) return "";
+    var who = c.lastEditedBy ? escapeHtml(c.lastEditedBy) : "unknown";
+    var when = c.lastEditedAt ? escapeHtml(c.lastEditedAt) : "";
+    var sep = (when ? " &middot; " : "");
+    return '<span class="last-edit">Last edited by '+who+sep+when+'</span>';
+  }
+  function tagsHtml(tags){
+    if(!tags || !tags.length) return "";
+    return '<div class="row-tags">'+tags.map(function(t){return '<span class="tag-chip">'+escapeHtml(t)+'</span>';}).join("")+'</div>';
+  }
+  function isConfigured(c){
+    return (c.apps && c.apps.length) || (c.instructions && c.instructions.trim()) || (c.preinstalled && c.preinstalled.length);
+  }
+  function isRecentlyEdited(c){
+    if(!c.lastEditedAt) return false;
+    var d = new Date(c.lastEditedAt.replace(" ", "T"));
+    if(isNaN(d.getTime())) return false;
+    return (Date.now() - d.getTime()) < (7 * 24 * 60 * 60 * 1000);
+  }
+
+  function sortValue(c, field){
+    var v;
+    if(field === "apps") v = (c.apps||[]).join(" ");
+    else if(field === "preinstalled") v = (c.preinstalled||[]).join(" ");
+    else v = c[field] || "";
+    return String(v).toLowerCase();
+  }
+  function setSort(field){
+    if(sortField === field){
+      if(sortDir === 1) sortDir = -1;
+      else { sortField = null; sortDir = 1; }
+    } else { sortField = field; sortDir = 1; }
+    currentPage = 1;
+    render();
+  }
+  function goToPage(p){
+    currentPage = p;
+    render();
+    var tw = document.querySelector(".table-wrap");
+    if(tw && tw.scrollIntoView) tw.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  function renderPagination(page, totalPages, total, startIdx, endIdx){
+    document.getElementById("pageInfo").textContent = "Showing " + (startIdx+1) + "-" + endIdx + " of " + total;
+    var btns = document.getElementById("pageButtons");
+    function btn(label, target, disabled, active){
+      var b = document.createElement("button");
+      b.className = "pbtn" + (active ? " active" : "");
+      b.textContent = label;
+      if(disabled) b.disabled = true;
+      else b.addEventListener("click", function(){ goToPage(target); });
+      return b;
+    }
+    btns.innerHTML = "";
+    btns.appendChild(btn("Prev", page-1, page<=1, false));
+    var pages = [];
+    if(totalPages <= 7){ for(var i=1;i<=totalPages;i++) pages.push(i); }
+    else {
+      pages.push(1);
+      if(page > 3) pages.push("DOTS");
+      var s = Math.max(2, page-1), e = Math.min(totalPages-1, page+1);
+      for(var j=s;j<=e;j++) pages.push(j);
+      if(page < totalPages-2) pages.push("DOTS");
+      pages.push(totalPages);
+    }
+    pages.forEach(function(p){
+      if(p === "DOTS"){ var el = document.createElement("span"); el.className = "ellipsis"; el.textContent = "..."; btns.appendChild(el); }
+      else { btns.appendChild(btn(String(p), p, false, p === page)); }
+    });
+    btns.appendChild(btn("Next", page+1, page>=totalPages, false));
+  }
+
+  function refreshTagFilter(){
+    var sel = document.getElementById("filterTag");
+    var current = sel.value;
+    var allTags = {};
+    clients.forEach(function(c){ if(!c.deleted) (c.tags||[]).forEach(function(t){ allTags[t] = (allTags[t]||0) + 1; }); });
+    var keys = Object.keys(allTags).sort(function(a,b){ return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    sel.innerHTML = '<option value="">All Tags</option>' + keys.map(function(k){
+      return '<option value="'+escapeHtml(k)+'">'+escapeHtml(k)+' ('+allTags[k]+')</option>';
+    }).join("");
+    if(keys.indexOf(current) >= 0) sel.value = current;
+  }
+
+  function setViewMode(mode){
+    viewMode = mode;
+    currentPage = 1;
+    var navItems = document.querySelectorAll(".sidebar-nav .nav-item");
+    for(var i=0;i<navItems.length;i++){
+      navItems[i].classList.toggle("active", navItems[i].getAttribute("data-view") === mode);
+    }
+    var titles = {
+      active: {h:"Active Clients", s:"Track every client and the apps required for setup"},
+      trash: {h:"Recycle Bin", s:"Deleted clients you can restore or purge permanently"},
+      analytics: {h:"Analytics", s:"Live insights from your client data"}
+    };
+    var t = titles[mode] || titles.active;
+    document.getElementById("pageTitle").textContent = t.h;
+    document.getElementById("pageSubtitle").textContent = t.s;
+    var addBtn = document.getElementById("addBtn");
+    var autoBtn = document.getElementById("autoTagBtn");
+    var tableWrap = document.querySelector(".table-wrap");
+    var toolbar = document.querySelector(".toolbar");
+    var analyticsView = document.getElementById("analyticsView");
+    var stats = document.querySelector(".stats");
+    if(mode === "analytics"){
+      tableWrap.style.display = "none";
+      toolbar.style.display = "none";
+      stats.style.display = "none";
+      analyticsView.style.display = "block";
+      renderAnalytics();
+    } else {
+      tableWrap.style.display = "";
+      toolbar.style.display = "";
+      stats.style.display = "";
+      analyticsView.style.display = "none";
+      if(mode === "trash"){ addBtn.style.display = "none"; autoBtn.style.display = "none"; }
+      else { addBtn.style.display = ""; autoBtn.style.display = ""; }
+      render();
+    }
+  }
+
+  function buildHead(){
+    var thead = document.getElementById("thead");
+    if(viewMode === "trash"){
+      thead.innerHTML = '<tr>'+
+        '<th class="sortable" data-sort="name">Client Name<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="shift">Shift<span class="sort-ind">▲▼</span></th>'+
+        '<th>Deletion Info</th>'+
+        '<th class="sortable" data-sort="instructions">Client Instructions<span class="sort-ind">▲▼</span></th>'+
+        '<th style="text-align:right">Actions</th>'+
+      '</tr>';
+    } else {
+      thead.innerHTML = '<tr>'+
+        '<th class="sortable" data-sort="name">Client Name<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="shift">Shift<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="status">Status<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="instructions">Client Instructions<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="apps">App Requirements<span class="sort-ind">▲▼</span></th>'+
+        '<th class="sortable" data-sort="preinstalled">Pre-installed<span class="sort-ind">▲▼</span></th>'+
+        '<th style="text-align:right">Actions</th>'+
+      '</tr>';
+    }
+    // wire up sort
+    var sortHeaders = thead.querySelectorAll("th.sortable");
+    for(var sh=0;sh<sortHeaders.length;sh++){
+      (function(h){ h.addEventListener("click", function(){ setSort(h.getAttribute("data-sort")); }); })(sortHeaders[sh]);
+    }
+  }
+
+  function render(){
+    refreshTagFilter();
+    buildHead();
+    var q = document.getElementById("searchInput").value.trim().toLowerCase();
+    var fs = document.getElementById("filterShift").value;
+    var ft = document.getElementById("filterTag").value;
+    var fst = document.getElementById("filterStatus").value;
+    var inTrash = viewMode === "trash";
+    var pool = clients.filter(function(c){ return inTrash ? !!c.deleted : !c.deleted; });
+    var filtered = pool.filter(function(c){
+      if(fs && c.shift !== fs) return false;
+      if(ft && (!c.tags || c.tags.indexOf(ft) < 0)) return false;
+      if(!inTrash){
+        if(fst === "starred" && !c.starred) return false;
+        if(fst === "locked" && !c.locked) return false;
+        if(fst === "empty" && isConfigured(c)) return false;
+        if(fst === "configured" && !isConfigured(c)) return false;
+        var fStatus = document.getElementById("filterStatusVal").value;
+        if(fStatus && (c.status||"Active") !== fStatus) return false;
+      }
+      if(!q) return true;
+      var blob = [c.name, c.shift, (c.apps||[]).join(" "), c.instructions, (c.preinstalled||[]).join(" "), (c.tags||[]).join(" "), c.lastEditedBy||"", c.deletedBy||"", c.deletedReason||""].join(" ").toLowerCase();
+      return blob.indexOf(q) >= 0;
+    });
+    if(inTrash){
+      // Sort: most recently deleted first by default, otherwise by sortField
+      filtered.sort(function(a,b){
+        if(sortField){
+          var av = sortValue(a, sortField), bv = sortValue(b, sortField);
+          if(av < bv) return -1 * sortDir;
+          if(av > bv) return 1 * sortDir;
+        }
+        return (b.deletedAt||"").localeCompare(a.deletedAt||"");
+      });
+    } else {
+      filtered.sort(function(a,b){
+        if(a.starred && !b.starred) return -1;
+        if(!a.starred && b.starred) return 1;
+        if(sortField){
+          var av = sortValue(a, sortField), bv = sortValue(b, sortField);
+          if(av < bv) return -1 * sortDir;
+          if(av > bv) return 1 * sortDir;
+        }
+        return 0;
+      });
+    }
+
+    // Stats (always over active)
+    var active = clients.filter(function(c){return !c.deleted;});
+    var deleted = clients.filter(function(c){return c.deleted;});
+    var total = active.length;
+    var morningCount = active.filter(function(c){return c.shift==="Morning";}).length;
+    var nightCount = active.filter(function(c){return c.shift==="Night";}).length;
+    var configuredCount = active.filter(isConfigured).length;
+    var configPct = total ? Math.round((configuredCount/total)*100) : 0;
+    var recentCount = active.filter(isRecentlyEdited).length;
+    document.getElementById("statTotal").textContent = total;
+    document.getElementById("statMorning").textContent = morningCount;
+    document.getElementById("statNight").textContent = nightCount;
+    document.getElementById("statConfig").textContent = configPct + "%";
+    document.getElementById("statConfigMeta").textContent = configuredCount + " of " + total + " have data";
+    document.getElementById("statRecent").textContent = recentCount;
+    document.getElementById("statRecentMeta").textContent = "in last 7 days";
+    document.getElementById("countActive").textContent = active.length;
+    document.getElementById("countTrash").textContent = deleted.length;
+    document.getElementById("resultCount").textContent = filtered.length + " of " + (inTrash ? deleted.length : active.length);
+    document.getElementById("emptyText").textContent = inTrash ? "🗑 The Recycle Bin is empty." : "No clients match your filters.";
+
+    var ths = document.querySelectorAll("th.sortable");
+    for(var ti=0;ti<ths.length;ti++){
+      var th = ths[ti];
+      var isActive = th.getAttribute("data-sort") === sortField;
+      th.classList.toggle("active", isActive);
+      var ind = th.querySelector(".sort-ind");
+      if(ind) ind.textContent = isActive ? (sortDir === 1 ? "▲" : "▼") : "▲▼";
+    }
+
+    var tbody = document.getElementById("tbody");
+    var empty = document.getElementById("empty");
+    var pagWrap = document.getElementById("pagination");
+    if(filtered.length === 0){
+      tbody.innerHTML = "";
+      empty.style.display = "block";
+      pagWrap.style.display = "none";
+      return;
+    }
+    empty.style.display = "none";
+    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if(currentPage > totalPages) currentPage = totalPages;
+    if(currentPage < 1) currentPage = 1;
+    var startIdx = (currentPage - 1) * PAGE_SIZE;
+    var endIdx = Math.min(startIdx + PAGE_SIZE, filtered.length);
+    var pageRows = filtered.slice(startIdx, endIdx);
+    pagWrap.style.display = filtered.length > PAGE_SIZE ? "flex" : "none";
+    renderPagination(currentPage, totalPages, filtered.length, startIdx, endIdx);
+
+    var lockSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+    var unlockSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>';
+    var editSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>';
+    var trashSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>';
+    var eyeSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+    var restoreSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>';
+
+    if(inTrash){
+      tbody.innerHTML = pageRows.map(function(c){
+        var delInfo = '<strong>'+escapeHtml(c.deletedBy||"unknown")+'</strong><br>'+escapeHtml(c.deletedAt||"-");
+        if(c.deletedReason) delInfo += '<span class="reason">"'+escapeHtml(c.deletedReason)+'"</span>';
+        var restoreBtn = '<button class="icon-only restore" data-restore="'+c.id+'" title="Restore client">'+restoreSvg+'</button>';
+        var purgeBtn = '<button class="icon-only danger" data-purge="'+c.id+'" title="Purge permanently">'+trashSvg+'</button>';
+        var viewBtn = '<button class="icon-only view" data-view="'+c.id+'" title="Quick view">'+eyeSvg+'</button>';
+        return '<tr class="trash-row">'
+          + '<td class="client-name">'+escapeHtml(c.name)+tagsHtml(c.tags)+'</td>'
+          + '<td class="shift-cell">'+shiftBadge(c.shift)+'</td>'
+          + '<td class="del-info">'+delInfo+'</td>'
+          + '<td class="instr">'+instructionsHtml(c.instructions)+'</td>'
+          + '<td class="actions"><div class="row-actions">'+viewBtn+restoreBtn+purgeBtn+'</div></td>'
+          + '</tr>';
+      }).join("");
+    } else {
+      tbody.innerHTML = pageRows.map(function(c){
+        var locked = !!c.locked, pinned = !!c.starred;
+        var rowCls = (locked ? "locked " : "") + (pinned ? "pinned" : "");
+        var star = pinned ? "★" : "☆";
+        var starCls = pinned ? "star-btn starred" : "star-btn";
+        var editBtn = locked
+          ? '<button class="icon-only edit" disabled title="Unlock to edit">'+editSvg+'</button>'
+          : '<button class="icon-only edit" data-edit="'+c.id+'" title="Edit">'+editSvg+'</button>';
+        var lockBtn = '<button class="icon-only lock" data-lock="'+c.id+'" title="'+(locked?"Unlock":"Lock")+'">'+(locked?lockSvg:unlockSvg)+'</button>';
+        var delBtn = locked
+          ? '<button class="icon-only danger" disabled title="Unlock to delete">'+trashSvg+'</button>'
+          : '<button class="icon-only danger" data-del="'+c.id+'" title="Move to Recycle Bin">'+trashSvg+'</button>';
+        var viewBtn = '<button class="icon-only view" data-view="'+c.id+'" title="Quick view">'+eyeSvg+'</button>';
+        return '<tr class="'+rowCls+'">'
+          + '<td class="client-name">'
+          + '<div class="name-row">'
+          + '<button class="'+starCls+'" data-star="'+c.id+'" title="'+(pinned?"Unpin":"Pin to top")+'">'+star+'</button>'
+          + '<span>'+escapeHtml(c.name)+'</span>'
+          + (locked?'<span class="lock-mark">🔒</span>':'')
+          + '</div>'
+          + lastEditHtml(c)+tagsHtml(c.tags)+'</td>'
+          + '<td class="shift-cell">'+shiftBadge(c.shift)+'</td>'
+          + '<td class="status-cell">'+statusBadge(c.status||"Active")+'</td>'
+          + '<td class="instr">'+instructionsHtml(c.instructions)+'</td>'
+          + '<td class="apps-cell">'+appsHtml(c.apps)+'</td>'
+          + '<td class="apps-cell">'+appsHtml(c.preinstalled)+'</td>'
+          + '<td class="actions"><div class="row-actions">'+viewBtn+editBtn+lockBtn+delBtn+'</div></td>'
+          + '</tr>';
+      }).join("");
+    }
+    var bind = function(attr, handler){
+      var btns = tbody.querySelectorAll("["+attr+"]");
+      for(var i=0;i<btns.length;i++){
+        (function(b){ b.addEventListener("click", function(){ handler(b.getAttribute(attr)); }); })(btns[i]);
+      }
+    };
+    bind("data-edit", openModal);
+    bind("data-del", openDeleteModal);
+    bind("data-lock", toggleLock);
+    bind("data-star", toggleStar);
+    bind("data-view", openViewModal);
+    bind("data-restore", restoreClient);
+    bind("data-purge", openPurgeModal);
+  }
+
+  function findClient(id){
+    for(var k=0;k<clients.length;k++) if(clients[k].id===id) return clients[k];
+    return null;
+  }
+
+  // ===== Analytics =====
+  var charts = {};
+  function destroyCharts(){
+    Object.keys(charts).forEach(function(k){ if(charts[k]){ try{ charts[k].destroy(); }catch(e){} charts[k]=null; } });
+  }
+  function brandColors(){
+    var s = getComputedStyle(document.documentElement);
+    function v(n, fb){ return (s.getPropertyValue(n)||"").trim() || fb; }
+    return {
+      morning: v("--morning","#f59e0b"),
+      night: v("--night","#7c5cff"),
+      panel: v("--panel-2","#f8f9fc"),
+      text: v("--text","#1f2a44"),
+      muted: v("--muted","#7a86a3"),
+      primary: v("--primary","#1e3a8a"),
+      good: v("--good","#22c55e"),
+      bad: v("--bad","#ef4444"),
+      accent: v("--brand-accent","#22d3ee"),
+      sNew: v("--status-new","#3b82f6"),
+      sSetup: v("--status-setup","#f59e0b"),
+      sActive: v("--status-active","#22c55e"),
+      sHold: v("--status-hold","#f97316"),
+      sOff: v("--status-off","#6b7280")
+    };
+  }
+  function renderAnalytics(){
+    if(typeof Chart === "undefined"){
+      setTimeout(renderAnalytics, 200);
+      return;
+    }
+    destroyCharts();
+    var col = brandColors();
+    var active = clients.filter(function(c){return !c.deleted;});
+    var deleted = clients.filter(function(c){return c.deleted;});
+    Chart.defaults.color = col.muted;
+    Chart.defaults.font.family = '"Inter", sans-serif';
+    Chart.defaults.font.size = 12;
+
+    // Shift donut
+    var morning = active.filter(function(c){return c.shift==="Morning";}).length;
+    var night = active.filter(function(c){return c.shift==="Night";}).length;
+    charts.shift = new Chart(document.getElementById("chartShift"), {
+      type: "doughnut",
+      data: { labels: ["Morning", "Night"], datasets: [{ data: [morning, night], backgroundColor: [col.morning, col.night], borderColor: col.panel, borderWidth: 3 }] },
+      options: { responsive:true, maintainAspectRatio:false, cutout:"55%", plugins: { legend: { position: "bottom", labels: { padding: 14 } } } }
+    });
+
+    // Status donut
+    var statusCounts = {};
+    STATUS_OPTIONS.forEach(function(s){ statusCounts[s] = 0; });
+    active.forEach(function(c){ var s = normalizeStatus(c.status); statusCounts[s] = (statusCounts[s]||0) + 1; });
+    var statusColors = {"New": col.sNew, "In Setup": col.sSetup, "Active": col.sActive, "On Hold": col.sHold, "Offboarded": col.sOff};
+    var slabels = STATUS_OPTIONS.filter(function(s){ return statusCounts[s] > 0; });
+    var sdata = slabels.map(function(s){ return statusCounts[s]; });
+    var scolors = slabels.map(function(s){ return statusColors[s]; });
+    if(sdata.length === 0){ sdata = [active.length]; slabels = ["Active (default)"]; scolors = [col.sActive]; }
+    charts.status = new Chart(document.getElementById("chartStatus"), {
+      type: "doughnut",
+      data: { labels: slabels, datasets: [{ data: sdata, backgroundColor: scolors, borderColor: col.panel, borderWidth: 3 }] },
+      options: { responsive:true, maintainAspectRatio:false, cutout:"55%", plugins: { legend: { position: "bottom", labels: { padding: 12, font:{size:11} } } } }
+    });
+
+    // Team Activity bar (top 10 editors by edits count)
+    var editorCounts = {};
+    clients.forEach(function(c){ if(c.lastEditedBy){ editorCounts[c.lastEditedBy] = (editorCounts[c.lastEditedBy]||0) + 1; } });
+    var editors = Object.keys(editorCounts).map(function(k){return {name:k, count:editorCounts[k]};}).sort(function(a,b){return b.count-a.count;}).slice(0, 10);
+    if(editors.length === 0){ editors = [{name:"(no edits yet)", count:0}]; }
+    charts.team = new Chart(document.getElementById("chartTeam"), {
+      type: "bar",
+      data: { labels: editors.map(function(e){return e.name;}), datasets: [{ label: "Clients edited", data: editors.map(function(e){return e.count;}), backgroundColor: col.primary, borderRadius:6 }] },
+      options: { responsive:true, maintainAspectRatio:false, indexAxis:"y", plugins: { legend: { display:false } }, scales: { x: { beginAtZero:true, ticks:{precision:0} } } }
+    });
+
+    // Edits over last 30 days
+    var days = [];
+    var dayCounts = {};
+    var todayD = new Date(); todayD.setHours(0,0,0,0);
+    for(var i=29;i>=0;i--){
+      var d = new Date(todayD); d.setDate(d.getDate() - i);
+      var key = d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+      days.push(key); dayCounts[key] = 0;
+    }
+    clients.forEach(function(c){
+      if(!c.lastEditedAt) return;
+      var key = c.lastEditedAt.slice(0,10);
+      if(dayCounts[key] !== undefined) dayCounts[key]++;
+    });
+    var dayLabels = days.map(function(d){
+      var parts = d.split("-");
+      return parts[1]+"/"+parts[2];
+    });
+    charts.edits = new Chart(document.getElementById("chartEdits"), {
+      type: "bar",
+      data: { labels: dayLabels, datasets: [{ label: "Edits", data: days.map(function(d){return dayCounts[d];}), backgroundColor: col.accent, borderRadius:4 }] },
+      options: { responsive:true, maintainAspectRatio:false, plugins: { legend: { display:false } }, scales: { y: { beginAtZero:true, ticks:{precision:0} }, x: { ticks:{maxRotation:0, autoSkip:true, maxTicksLimit:10} } } }
+    });
+
+    // Recycle Bin
+    document.getElementById("rbCount").textContent = deleted.length;
+    document.getElementById("rbTotal").textContent = deleted.length;
+    var lastDel = deleted.slice().sort(function(a,b){return (b.deletedAt||"").localeCompare(a.deletedAt||"");})[0];
+    document.getElementById("rbLast").textContent = lastDel ? (lastDel.deletedAt + " by " + (lastDel.deletedBy||"unknown")) : "—";
+    var deleterCounts = {};
+    deleted.forEach(function(c){ var k = c.deletedBy || "unknown"; deleterCounts[k] = (deleterCounts[k]||0) + 1; });
+    var deleters = Object.keys(deleterCounts).map(function(k){return {name:k, count:deleterCounts[k]};}).sort(function(a,b){return b.count-a.count;}).slice(0, 10);
+    document.getElementById("rbTopUser").textContent = deleters[0] ? (deleters[0].name + " (" + deleters[0].count + ")") : "—";
+    if(deleters.length === 0){ deleters = [{name:"(no deletions)", count:0}]; }
+    charts.deleters = new Chart(document.getElementById("chartDeleters"), {
+      type: "bar",
+      data: { labels: deleters.map(function(d){return d.name;}), datasets: [{ label: "Deletions", data: deleters.map(function(d){return d.count;}), backgroundColor: col.bad, borderRadius:4 }] },
+      options: { responsive:true, maintainAspectRatio:false, plugins: { legend: { display:false } }, scales: { y: { beginAtZero:true, ticks:{precision:0} } } }
+    });
+  }
+
+  function openViewModal(id){
+    var c = findClient(id); if(!c) return;
+    viewingId = id;
+    document.getElementById("viewTitle").textContent = c.name + (c.deleted ? " (in Recycle Bin)" : "");
+    var meta = (c.lastEditedBy || c.lastEditedAt) ? "Last edited by " + (c.lastEditedBy||"unknown") + (c.lastEditedAt?" on "+c.lastEditedAt:"") : "No edit history yet";
+    if(c.deleted) meta = "Deleted by " + (c.deletedBy||"unknown") + (c.deletedAt?" on "+c.deletedAt:"") + (c.deletedReason?" — Reason: "+c.deletedReason:"");
+    document.getElementById("viewMeta").textContent = meta;
+    var html = "";
+    html += '<div class="qv-section"><h3>Shift</h3><div class="content">'+shiftBadge(c.shift)+'</div></div>';
+    html += '<div class="qv-section"><h3>Status</h3><div class="content">'+statusBadge(c.status||"Active")+'</div></div>';
+    if(c.tags && c.tags.length){
+      html += '<div class="qv-section"><h3>Tags</h3><div class="qv-tags">'+c.tags.map(function(t){return '<span class="tag-chip">'+escapeHtml(t)+'</span>';}).join("")+'</div></div>';
+    }
+    html += '<div class="qv-section"><h3>Client Instructions</h3><div class="content">'+(c.instructions ? instructionsHtml(c.instructions) : '<span style="color:var(--muted);font-style:italic">No instructions yet</span>')+'</div></div>';
+    html += '<div class="qv-section"><h3>App Requirements</h3><div class="content">'+appsHtml(c.apps)+'</div></div>';
+    html += '<div class="qv-section"><h3>GoTeam Pre-installed</h3><div class="content">'+appsHtml(c.preinstalled)+'</div></div>';
+    if(c.locked){ html += '<div class="modal-warn" style="background:var(--lock-bg);color:var(--lock-text);border-color:var(--lock-border)">🔒 This row is locked.</div>'; }
+    if(c.deleted){ html += '<div class="modal-warn">🗑 This client is in the Recycle Bin. Restore it to edit again.</div>'; }
+    document.getElementById("viewContent").innerHTML = html;
+    var editBtn = document.getElementById("viewEditBtn");
+    editBtn.style.display = c.deleted ? "none" : "";
+    document.getElementById("viewModal").classList.add("active");
+  }
+  function closeViewModal(){ document.getElementById("viewModal").classList.remove("active"); viewingId = null; }
+
+  function openModal(id){
+    editingId = id || null;
+    document.getElementById("modalTitle").textContent = id ? "Edit Client" : "Add Client";
+    var c = id ? findClient(id) : { name:"", shift:"Morning", apps:[], instructions:"", preinstalled:[], tags:[], locked:false, starred:false, lastEditedBy:"", lastEditedAt:"" };
+    if(!c) return;
+    if(c.locked){ toast("This row is locked. Unlock it first.", "warn"); return; }
+    if(c.deleted){ toast("This client is in the Recycle Bin. Restore it first.", "warn"); return; }
+    var meta = document.getElementById("modalMeta");
+    if(c.lastEditedBy || c.lastEditedAt){
+      meta.textContent = "Last edited by " + (c.lastEditedBy || "unknown") + (c.lastEditedAt ? " on " + c.lastEditedAt : "");
+      meta.style.display = "block";
+    } else {
+      meta.textContent = id ? "No edit history yet" : "";
+      meta.style.display = id ? "block" : "none";
+    }
+    document.getElementById("fName").value = c.name||"";
+    document.getElementById("fShift").value = c.shift||"Morning";
+    document.getElementById("fStatus").value = normalizeStatus(c.status);
+    document.getElementById("fTags").value = (c.tags||[]).join(", ");
+    document.getElementById("fApps").value = (c.apps||[]).join("\n");
+    document.getElementById("fInstr").value = c.instructions||"";
+    document.getElementById("fPre").value = (c.preinstalled||[]).join("\n");
+    document.getElementById("modal").classList.add("active");
+    setTimeout(function(){document.getElementById("fName").focus();},50);
+  }
+  function closeModal(){ document.getElementById("modal").classList.remove("active"); editingId=null; }
+  function saveClient(){
+    var name = document.getElementById("fName").value.trim();
+    if(!name){ toast("Client name is required.", "error"); return; }
+    var user = (document.getElementById("userName").value || getUser() || "").trim();
+    if(!user){
+      var ask = prompt("Please enter your name (so we can track who made changes):", "");
+      if(!ask){ toast("A name is required to save changes.", "error"); return; }
+      user = ask.trim();
+      setUserName(user);
+      document.getElementById("userName").value = user;
+    } else { setUserName(user); }
+    var existing = editingId ? findClient(editingId) : null;
+    var data = {
+      id: editingId || uid(), name: name,
+      shift: document.getElementById("fShift").value,
+      status: normalizeStatus(document.getElementById("fStatus").value),
+      tags: normalizeTagList(document.getElementById("fTags").value),
+      apps: normalizeAppList(document.getElementById("fApps").value),
+      instructions: document.getElementById("fInstr").value.trim(),
+      preinstalled: normalizeAppList(document.getElementById("fPre").value),
+      locked: existing ? !!existing.locked : false,
+      starred: existing ? !!existing.starred : false,
+      lastEditedBy: user, lastEditedAt: nowStr(),
+      deleted: false, deletedBy: "", deletedAt: "", deletedReason: ""
+    };
+    var wasEditing = !!editingId;
+    if(editingId){
+      var i = -1;
+      for(var k=0;k<clients.length;k++) if(clients[k].id===editingId){ i=k; break; }
+      if(i>=0) clients[i] = data;
+    } else { clients.push(data); }
+    save(); render(); closeModal();
+    toast(wasEditing ? "Client updated" : "Client added", "success");
+  }
+
+  // Soft delete
+  function openDeleteModal(id){
+    var c = findClient(id); if(!c) return;
+    if(c.locked){ toast("This row is locked. Unlock it first.", "warn"); return; }
+    deletingId = id;
+    document.getElementById("deleteClientName").textContent = c.name;
+    var input = document.getElementById("deleteConfirmInput");
+    var btn = document.getElementById("deleteConfirmBtn");
+    var userInput = document.getElementById("deleteUserInput");
+    var reasonInput = document.getElementById("deleteReasonInput");
+    input.value = ""; btn.disabled = true;
+    userInput.value = (document.getElementById("userName").value || getUser() || "").trim();
+    reasonInput.value = "";
+    document.getElementById("deleteModal").classList.add("active");
+    setTimeout(function(){ if(!userInput.value) userInput.focus(); else input.focus(); }, 50);
+  }
+  function closeDeleteModal(){ document.getElementById("deleteModal").classList.remove("active"); deletingId = null; }
+  function checkDeleteEnabled(){
+    var c = findClient(deletingId); if(!c) return;
+    var typedName = document.getElementById("deleteConfirmInput").value;
+    var typedUser = document.getElementById("deleteUserInput").value.trim();
+    document.getElementById("deleteConfirmBtn").disabled = !(typedName === c.name && typedUser);
+  }
+  function confirmDelete(){
+    if(!deletingId) return;
+    var c = findClient(deletingId); if(!c) return;
+    var typedName = document.getElementById("deleteConfirmInput").value;
+    var user = document.getElementById("deleteUserInput").value.trim();
+    var reason = document.getElementById("deleteReasonInput").value.trim();
+    if(typedName !== c.name) return;
+    if(!user){ toast("Please enter your name for accountability.", "error"); return; }
+    setUserName(user);
+    document.getElementById("userName").value = user;
+    c.deleted = true;
+    c.deletedBy = user;
+    c.deletedAt = nowStr();
+    c.deletedReason = reason;
+    save(); render(); closeDeleteModal();
+    toast("Moved to Recycle Bin: " + c.name + " (by " + user + ")", "info");
+  }
+
+  function restoreClient(id){
+    var c = findClient(id); if(!c) return;
+    var meta = c.deletedBy ? '<div style="color:var(--muted);font-size:12px;margin-top:8px">Originally deleted by <strong>'+escapeHtml(c.deletedBy)+'</strong> on '+escapeHtml(c.deletedAt||"-")+(c.deletedReason?'<br>Reason: <em>"'+escapeHtml(c.deletedReason)+'"</em>':"")+'</div>' : "";
+    customConfirm({
+      title: "Restore client?",
+      body: 'Bring <strong>'+escapeHtml(c.name)+'</strong> back into Active Clients?'+meta,
+      okText: "Restore"
+    }, function(ok){
+      if(!ok) return;
+      var user = (document.getElementById("userName").value || getUser() || "").trim();
+      c.deleted = false;
+      c.deletedBy = ""; c.deletedAt = ""; c.deletedReason = "";
+      if(user){ c.lastEditedBy = user; c.lastEditedAt = nowStr(); }
+      save(); render();
+      toast("Restored: " + c.name, "success");
+    });
+  }
+
+  function openPurgeModal(id){
+    var c = findClient(id); if(!c) return;
+    purgingId = id;
+    document.getElementById("purgeClientName").textContent = c.name;
+    var input = document.getElementById("purgeConfirmInput");
+    var btn = document.getElementById("purgeConfirmBtn");
+    input.value = ""; btn.disabled = true;
+    document.getElementById("purgeModal").classList.add("active");
+    setTimeout(function(){ input.focus(); }, 50);
+  }
+  function closePurgeModal(){ document.getElementById("purgeModal").classList.remove("active"); purgingId = null; }
+  function confirmPurge(){
+    if(!purgingId) return;
+    var c = findClient(purgingId); if(!c) return;
+    if(document.getElementById("purgeConfirmInput").value !== c.name) return;
+    var name = c.name;
+    clients = clients.filter(function(x){return x.id!==purgingId;});
+    save(); render(); closePurgeModal();
+    toast("Purged forever: " + name, "warn");
+  }
+
+  function toggleLock(id){
+    var i = -1;
+    for(var k=0;k<clients.length;k++) if(clients[k].id===id){ i=k; break; }
+    if(i < 0) return;
+    var c = clients[i];
+    var nowLocked = !c.locked;
+    var doIt = function(){
+      c.locked = nowLocked;
+      var user = (document.getElementById("userName").value || getUser() || "").trim();
+      if(user){ c.lastEditedBy = user; c.lastEditedAt = nowStr(); }
+      save(); render();
+      toast(nowLocked ? "Locked: " + c.name : "Unlocked: " + c.name, "info");
+    };
+    if(nowLocked){ doIt(); return; }
+    customConfirm({
+      title: "Unlock client?",
+      body: 'This will allow editing and deletion of <strong>'+escapeHtml(c.name)+'</strong> again.',
+      okText: "Unlock"
+    }, function(ok){ if(ok) doIt(); });
+  }
+  function toggleStar(id){
+    var i = -1;
+    for(var k=0;k<clients.length;k++) if(clients[k].id===id){ i=k; break; }
+    if(i < 0) return;
+    var c = clients[i];
+    c.starred = !c.starred;
+    save(); render();
+    toast(c.starred ? "⭐ Pinned: " + c.name : "Unpinned: " + c.name, "info");
+  }
+
+  function exportJson(){
+    var blob = new Blob([JSON.stringify(clients,null,2)], {type:"application/json"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "goteam-client-tracker-backup-"+new Date().toISOString().slice(0,10)+".json";
+    a.click(); URL.revokeObjectURL(url);
+    toast("Backup downloaded (includes Recycle Bin)", "success");
+  }
+  function importJson(file){
+    var r = new FileReader();
+    r.onload = function(e){
+      try{
+        var data = JSON.parse(e.target.result);
+        if(!Array.isArray(data)) throw new Error("Invalid file");
+        if(confirm("Replace current "+clients.length+" client(s) with "+data.length+" from file?")){
+          clients = data.map(normalizeClient);
+          currentPage = 1; save(); render();
+          toast("Imported " + data.length + " clients", "success");
+        }
+      }catch(err){ toast("Could not import: "+err.message, "error"); }
+    };
+    r.readAsText(file);
+  }
+  function resetData(){
+    customConfirm({
+      title: "Reset all data?",
+      body: 'This will restore the original 215 clients and discard <strong>all</strong> your custom edits and the entire Recycle Bin. This cannot be undone.<br><br><span style="color:var(--muted);font-size:12px">Tip: click "Backup (JSON)" first if you want to keep a copy.</span>',
+      okText: "Reset everything",
+      danger: true
+    }, function(ok){
+      if(!ok) return;
+      seedFromEmbedded(); currentPage = 1; render();
+      toast("Reset to defaults", "info");
+    });
+  }
+  function exportXlsx(){
+    if(typeof XLSX === "undefined"){ toast("Excel library still loading. Try again.", "warn"); return; }
+    var active = clients.filter(function(c){return !c.deleted;});
+    var deleted = clients.filter(function(c){return c.deleted;});
+    var rowsActive = [
+      ["GoTeam Client Requirements Tracker", "", "", "", "", "", "", "", "", "", "", ""],
+      ["#", "Client Name", "Shift", "Status", "Tags", "Client App Requirements", "Client Instructions", "GoTeam Pre-installed App", "Starred", "Locked", "Last Edited By", "Last Edited At"]
+    ];
+    active.forEach(function(c, i){
+      rowsActive.push([
+        i+1, c.name||"", c.shift||"", c.status||"Active", (c.tags||[]).join(", "),
+        (c.apps||[]).join("\n"), c.instructions||"", (c.preinstalled||[]).join("\n"),
+        c.starred ? "Yes" : "", c.locked ? "Yes" : "",
+        c.lastEditedBy||"", c.lastEditedAt||""
+      ]);
+    });
+    var ws1 = XLSX.utils.aoa_to_sheet(rowsActive);
+    ws1["!merges"] = [{s:{r:0,c:0}, e:{r:0,c:11}}];
+    ws1["!cols"] = [{wch:6},{wch:42},{wch:10},{wch:12},{wch:24},{wch:38},{wch:38},{wch:30},{wch:8},{wch:8},{wch:18},{wch:18}];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws1, "Active Clients");
+
+    var rowsBin = [
+      ["GoTeam Client Tracker — Recycle Bin / Audit Log", "", "", "", "", "", "", "", "", "", ""],
+      ["#", "Client Name", "Shift", "Tags", "Client Instructions", "App Requirements", "Pre-installed", "Deleted By", "Deleted At", "Reason", "Was Last Edited By"]
+    ];
+    deleted.forEach(function(c, i){
+      rowsBin.push([
+        i+1, c.name||"", c.shift||"", (c.tags||[]).join(", "),
+        c.instructions||"", (c.apps||[]).join("\n"), (c.preinstalled||[]).join("\n"),
+        c.deletedBy||"", c.deletedAt||"", c.deletedReason||"", c.lastEditedBy||""
+      ]);
+    });
+    var ws2 = XLSX.utils.aoa_to_sheet(rowsBin);
+    ws2["!merges"] = [{s:{r:0,c:0}, e:{r:0,c:10}}];
+    ws2["!cols"] = [{wch:6},{wch:36},{wch:10},{wch:24},{wch:36},{wch:36},{wch:28},{wch:18},{wch:18},{wch:36},{wch:18}];
+    XLSX.utils.book_append_sheet(wb, ws2, "Recycle Bin");
+
+    XLSX.writeFile(wb, "GoTeam_Client_Requirements_Tracker_" + new Date().toISOString().slice(0,10) + ".xlsx");
+    toast("Excel exported (with Recycle Bin sheet)", "success");
+  }
+  function importXlsx(file){
+    if(typeof XLSX === "undefined"){ toast("Excel library still loading.", "warn"); return; }
+    var r = new FileReader();
+    r.onload = function(e){
+      try{
+        var wb = XLSX.read(e.target.result, {type:"array"});
+        var imported = [];
+        function readSheet(sheetName, isBin){
+          var ws = wb.Sheets[sheetName]; if(!ws) return;
+          var rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:""});
+          var headerRow = -1;
+          for(var j=0;j<Math.min(rows.length, 10);j++){
+            var rowL = rows[j].map(function(x){return String(x).toLowerCase().trim();});
+            if(rowL.indexOf("client name") >= 0){ headerRow = j; break; }
+          }
+          if(headerRow < 0) return;
+          var headers = rows[headerRow].map(function(x){return String(x).trim().toLowerCase();});
+          function colIdx(){
+            for(var k=0;k<arguments.length;k++){
+              var idx = headers.indexOf(arguments[k]);
+              if(idx >= 0) return idx;
+            }
+            return -1;
+          }
+          var iName = colIdx("client name");
+          var iShift = colIdx("shift");
+          var iApps = colIdx("client app requirements", "app requirements", "apps");
+          var iInstr = colIdx("client instructions", "instructions");
+          var iPre = colIdx("goteam pre-installed app", "pre-installed app", "pre-installed", "preinstalled");
+          var iTags = colIdx("tags", "category", "categories");
+          var iStar = colIdx("starred", "star", "pinned");
+          var iLocked = colIdx("locked", "lock");
+          var iEditBy = colIdx("last edited by", "edited by", "editor", "was last edited by");
+          var iEditAt = colIdx("last edited at", "edited at", "edit date");
+          var iStatus = colIdx("status");
+          var iDelBy = colIdx("deleted by");
+          var iDelAt = colIdx("deleted at");
+          var iReason = colIdx("reason", "deleted reason");
+          function yes(v){ var s = String(v||"").trim().toLowerCase(); return s==="yes" || s==="true" || s==="1"; }
+          for(var r2=headerRow+1;r2<rows.length;r2++){
+            var row2 = rows[r2];
+            if(!row2 || (iName >= 0 && !String(row2[iName]||"").trim())) continue;
+            imported.push({
+              id: uid(),
+              name: iName>=0 ? String(row2[iName]||"").trim() : "",
+              shift: iShift>=0 ? (String(row2[iShift]||"").trim() || "Morning") : "Morning",
+              status: iStatus>=0 ? normalizeStatus(row2[iStatus]) : "Active",
+              apps: normalizeAppList(iApps>=0 ? row2[iApps] : ""),
+              instructions: iInstr>=0 ? String(row2[iInstr]||"").trim() : "",
+              preinstalled: normalizeAppList(iPre>=0 ? row2[iPre] : ""),
+              tags: normalizeTagList(iTags>=0 ? row2[iTags] : ""),
+              starred: iStar>=0 ? yes(row2[iStar]) : false,
+              locked: iLocked>=0 ? yes(row2[iLocked]) : false,
+              lastEditedBy: iEditBy>=0 ? String(row2[iEditBy]||"").trim() : "",
+              lastEditedAt: iEditAt>=0 ? String(row2[iEditAt]||"").trim() : "",
+              deleted: !!isBin,
+              deletedBy: iDelBy>=0 ? String(row2[iDelBy]||"").trim() : "",
+              deletedAt: iDelAt>=0 ? String(row2[iDelAt]||"").trim() : "",
+              deletedReason: iReason>=0 ? String(row2[iReason]||"").trim() : ""
+            });
+          }
+        }
+        // Try to find sheets
+        var hasActive = wb.SheetNames.indexOf("Active Clients") >= 0;
+        var hasBin = wb.SheetNames.indexOf("Recycle Bin") >= 0;
+        if(hasActive){ readSheet("Active Clients", false); }
+        if(hasBin){ readSheet("Recycle Bin", true); }
+        if(!hasActive && !hasBin){
+          // Single sheet fallback - find first one with Client Name header
+          for(var i=0;i<wb.SheetNames.length;i++){
+            readSheet(wb.SheetNames[i], false);
+            if(imported.length) break;
+          }
+        }
+        if(!imported.length){ toast("No client rows found.", "error"); return; }
+        if(confirm("Replace current "+clients.length+" client(s) with "+imported.length+" from the Excel file?")){
+          clients = imported; currentPage = 1; save(); render();
+          toast("Imported " + imported.length + " clients", "success");
+        }
+      }catch(err){ toast("Excel import failed: "+err.message, "error"); }
+    };
+    r.readAsArrayBuffer(file);
+  }
+
+  // Wire up
+  document.getElementById("addBtn").addEventListener("click", function(){ openModal(null); });
+  document.getElementById("autoTagBtn").addEventListener("click", autoTag);
+  document.getElementById("cancelBtn").addEventListener("click", closeModal);
+  document.getElementById("saveBtn").addEventListener("click", saveClient);
+  document.getElementById("modal").addEventListener("click", function(e){ if(e.target.id==="modal") closeModal(); });
+  document.getElementById("viewCloseBtn").addEventListener("click", closeViewModal);
+  document.getElementById("viewEditBtn").addEventListener("click", function(){
+    var id = viewingId; closeViewModal(); if(id) openModal(id);
+  });
+  document.getElementById("viewModal").addEventListener("click", function(e){ if(e.target.id==="viewModal") closeViewModal(); });
+  document.getElementById("deleteCancelBtn").addEventListener("click", closeDeleteModal);
+  document.getElementById("deleteConfirmBtn").addEventListener("click", confirmDelete);
+  document.getElementById("deleteModal").addEventListener("click", function(e){ if(e.target.id==="deleteModal") closeDeleteModal(); });
+  document.getElementById("deleteConfirmInput").addEventListener("input", checkDeleteEnabled);
+  document.getElementById("deleteUserInput").addEventListener("input", checkDeleteEnabled);
+  document.getElementById("confirmCancelBtn").addEventListener("click", function(){ closeConfirm(false); });
+  document.getElementById("confirmOkBtn").addEventListener("click", function(){ closeConfirm(true); });
+  document.getElementById("confirmModal").addEventListener("click", function(e){ if(e.target.id==="confirmModal") closeConfirm(false); });
+  document.getElementById("purgeCancelBtn").addEventListener("click", closePurgeModal);
+  document.getElementById("purgeConfirmBtn").addEventListener("click", confirmPurge);
+  document.getElementById("purgeModal").addEventListener("click", function(e){ if(e.target.id==="purgeModal") closePurgeModal(); });
+  document.getElementById("purgeConfirmInput").addEventListener("input", function(e){
+    var c = findClient(purgingId);
+    document.getElementById("purgeConfirmBtn").disabled = !c || e.target.value !== c.name;
+  });
+  document.getElementById("searchInput").addEventListener("input", function(){ currentPage = 1; render(); });
+  document.getElementById("filterShift").addEventListener("change", function(){ currentPage = 1; render(); });
+  document.getElementById("filterTag").addEventListener("change", function(){ currentPage = 1; render(); });
+  document.getElementById("filterStatus").addEventListener("change", function(){ currentPage = 1; render(); });
+  document.getElementById("filterStatusVal").addEventListener("change", function(){ currentPage = 1; render(); });
+  document.getElementById("exportJsonBtn").addEventListener("click", exportJson);
+  document.getElementById("importBtn").addEventListener("click", function(){ document.getElementById("importFile").click(); });
+  document.getElementById("importFile").addEventListener("change", function(e){ if(e.target.files[0]) importJson(e.target.files[0]); e.target.value=""; });
+  document.getElementById("exportXlsxBtn").addEventListener("click", exportXlsx);
+  document.getElementById("importXlsxBtn").addEventListener("click", function(){ document.getElementById("importXlsxFile").click(); });
+  document.getElementById("importXlsxFile").addEventListener("change", function(e){ if(e.target.files[0]) importXlsx(e.target.files[0]); e.target.value=""; });
+  document.getElementById("resetBtn").addEventListener("click", resetData);
+  document.getElementById("userName").value = getUser();
+  document.getElementById("userName").addEventListener("input", function(e){ setUserName(e.target.value.trim()); });
+  var navBtns = document.querySelectorAll(".sidebar-nav .nav-item");
+  for(var v=0;v<navBtns.length;v++){
+    (function(b){ b.addEventListener("click", function(){ setViewMode(b.getAttribute("data-view")); }); })(navBtns[v]);
+  }
+  var tsBtns = document.querySelectorAll(".theme-switch .tsbtn");
+  for(var ti=0;ti<tsBtns.length;ti++){
+    (function(b){ b.addEventListener("click", function(){ setMode(b.getAttribute("data-mode")); }); })(tsBtns[ti]);
+  }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key==="Escape"){ closeModal(); closeDeleteModal(); closeViewModal(); closePurgeModal(); closeConfirm(false); return; }
+    var t = e.target;
+    var typing = t && (t.tagName==="INPUT" || t.tagName==="TEXTAREA" || t.isContentEditable);
+    if(typing) return;
+    if(e.key === "/"){ e.preventDefault(); document.getElementById("searchInput").focus(); }
+    else if(e.key === "n" || e.key === "N"){ e.preventDefault(); openModal(null); }
+  });
+
+  // Keyboard hint show/hide (persistent) + dragging
+  var KBD_KEY = "goteam_client_tracker_kbd_hidden";
+  var KBD_POS_KEY = "goteam_client_tracker_kbd_pos";
+  function applyKbdHintState(){
+    var hidden = false;
+    try{ hidden = localStorage.getItem(KBD_KEY) === "1"; }catch(e){}
+    document.getElementById("kbdHint").classList.toggle("hidden", hidden);
+    document.getElementById("kbdReopenBtn").classList.toggle("visible", hidden);
+  }
+  function restoreKbdPos(){
+    try{
+      var raw = localStorage.getItem(KBD_POS_KEY);
+      if(!raw) return;
+      var p = JSON.parse(raw);
+      if(p && typeof p.left === "number" && typeof p.top === "number"){
+        ["kbdHint","kbdReopenBtn"].forEach(function(id){
+          var el = document.getElementById(id);
+          el.style.left = p.left + "px";
+          el.style.top = p.top + "px";
+          el.style.right = "auto";
+          el.style.bottom = "auto";
+        });
+      }
+    }catch(e){}
+  }
+  document.getElementById("kbdCloseBtn").addEventListener("click", function(e){
+    e.stopPropagation();
+    try{ localStorage.setItem(KBD_KEY, "1"); }catch(e2){}
+    applyKbdHintState();
+  });
+  document.getElementById("kbdReopenBtn").addEventListener("click", function(e){
+    if(this._dragMoved){ this._dragMoved = false; return; }
+    try{ localStorage.setItem(KBD_KEY, "0"); }catch(e2){}
+    applyKbdHintState();
+  });
+
+  function makeDraggable(el){
+    var dragging = false, sx = 0, sy = 0, ox = 0, oy = 0, moved = false;
+    el.addEventListener("mousedown", function(e){
+      if(e.target.classList && e.target.classList.contains("kbd-close")) return;
+      dragging = true; moved = false;
+      var rect = el.getBoundingClientRect();
+      ox = rect.left; oy = rect.top;
+      sx = e.clientX; sy = e.clientY;
+      el.style.transition = "none";
+      e.preventDefault();
+    });
+    document.addEventListener("mousemove", function(e){
+      if(!dragging) return;
+      var nx = ox + (e.clientX - sx);
+      var ny = oy + (e.clientY - sy);
+      var maxX = window.innerWidth - el.offsetWidth - 4;
+      var maxY = window.innerHeight - el.offsetHeight - 4;
+      nx = Math.max(4, Math.min(maxX, nx));
+      ny = Math.max(4, Math.min(maxY, ny));
+      el.style.left = nx + "px";
+      el.style.top = ny + "px";
+      el.style.right = "auto";
+      el.style.bottom = "auto";
+      if(Math.abs(e.clientX - sx) > 3 || Math.abs(e.clientY - sy) > 3) moved = true;
+    });
+    document.addEventListener("mouseup", function(){
+      if(!dragging) return;
+      dragging = false;
+      el.style.transition = "";
+      if(moved){
+        el._dragMoved = true;
+        try{
+          var rect = el.getBoundingClientRect();
+          localStorage.setItem(KBD_POS_KEY, JSON.stringify({left:rect.left, top:rect.top}));
+          ["kbdHint","kbdReopenBtn"].forEach(function(id){
+            var other = document.getElementById(id);
+            other.style.left = rect.left + "px";
+            other.style.top = rect.top + "px";
+            other.style.right = "auto";
+            other.style.bottom = "auto";
+          });
+        }catch(e){}
+      }
+    });
+  }
+  makeDraggable(document.getElementById("kbdHint"));
+  makeDraggable(document.getElementById("kbdReopenBtn"));
+  restoreKbdPos();
+  applyKbdHintState();
+
+  setInterval(updateSaveIndicator, 10000);
+  load();
+  render();
+  updateSaveIndicator();
+})();
+</script>
+</body>
+</html>
