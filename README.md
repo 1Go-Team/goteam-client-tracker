@@ -5,7 +5,7 @@ A web dashboard for tracking GoTeam's client app requirements, installation inst
 ## Live dashboard
 
 Once GitHub Pages is enabled, the dashboard is available at:
-**https://championshiv.github.io/goteam-client-tracker/**
+**https://1go-team.github.io/goteam-client-tracker/**
 
 ## Features
 
