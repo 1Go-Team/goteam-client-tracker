@@ -102,8 +102,8 @@
   .who input::placeholder{color:rgba(255,255,255,.55)}
   .who input:focus{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45)}
   .theme-switch{display:flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:2px;gap:1px;width:100%}
-  .theme-switch .tsbtn{flex:1;background:transparent !important;border:none !important;color:rgba(255,255,255,.78) !important;padding:6px 8px;border-radius:6px;font-size:11.5px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px}
-  .theme-switch .tsbtn svg{width:13px;height:13px;flex-shrink:0}
+  .theme-switch .tsbtn{flex:1;background:transparent !important;border:none !important;color:rgba(255,255,255,.78) !important;padding:6px 4px;border-radius:6px;font-size:10.5px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:4px;min-width:0;white-space:nowrap}
+  .theme-switch .tsbtn svg{width:11px;height:11px;flex-shrink:0}
   .theme-switch .tsbtn:hover{background:rgba(255,255,255,.08) !important;color:#fff !important}
   .theme-switch .tsbtn.active{background:#fff !important;color:var(--header-1) !important;font-weight:600}
   /* Main content area */
@@ -257,6 +257,34 @@
   @keyframes toastIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
   .toast.removing{animation:toastOut .25s ease forwards}
   @keyframes toastOut{to{transform:translateX(100%);opacity:0}}
+  /* Sign-in gate */
+  .signin-gate{position:fixed;inset:0;background:linear-gradient(135deg, #0a1f4d 0%, #1e3a8a 50%, #3b82f6 100%);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+  .signin-gate.active{display:flex}
+  .signin-gate::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle, rgba(34,211,238,.2) 0%, transparent 70%);pointer-events:none}
+  .signin-gate::after{content:"";position:absolute;left:-50px;bottom:-50px;width:300px;height:300px;background:radial-gradient(circle, rgba(124,92,255,.18) 0%, transparent 70%);pointer-events:none}
+  .signin-box{background:var(--modal-bg);border:1px solid var(--border);border-radius:18px;padding:40px 36px;max-width:440px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;z-index:1;animation:slideUp .3s cubic-bezier(.2,.8,.2,1)}
+  .signin-box .gt-logo{margin:0 auto 18px;width:64px;height:64px}
+  .signin-box .gt-logo .gt-go{font-size:24px}
+  .signin-box .gt-logo .gt-team{font-size:9px}
+  .signin-box h2{margin:0 0 8px;font-size:22px;color:var(--text);text-align:center;font-family:"Space Grotesk","Inter",sans-serif;font-weight:700;letter-spacing:-.3px}
+  .signin-box .subtitle{color:var(--muted);font-size:13px;text-align:center;margin-bottom:24px;line-height:1.55}
+  .signin-box .form-row{margin-bottom:14px}
+  .signin-box label{display:block;font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .signin-box input{width:100%;background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;outline:none;font-family:inherit;transition:border-color .15s ease, box-shadow .15s ease}
+  .signin-box input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,58,138,.15)}
+  .gate-error{background:var(--danger-bg);border:1px solid var(--danger-border);color:var(--bad);border-radius:8px;padding:9px 12px;font-size:12.5px;margin-bottom:12px;line-height:1.5}
+  .signin-btn{width:100%;padding:12px;font-size:14px;font-weight:600;margin-top:6px}
+  .signin-footer{color:var(--muted);font-size:11px;text-align:center;margin-top:18px;line-height:1.55;padding-top:18px;border-top:1px solid var(--border)}
+  .signin-footer strong{color:var(--text)}
+  /* Signed-in user display in sidebar */
+  .who.signed-in{flex-direction:column;align-items:stretch;gap:6px}
+  .who.signed-in .who-info{display:flex;align-items:center;gap:8px;padding:2px 4px}
+  .who.signed-in .who-avatar{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--brand-accent),var(--brand-purple));color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;text-transform:uppercase}
+  .who.signed-in .who-details{flex:1;min-width:0}
+  .who.signed-in .who-name{font-size:12px;font-weight:600;color:#fff;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .who.signed-in .who-email{font-size:10px;color:rgba(255,255,255,.6);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .signout-btn{background:rgba(255,255,255,.08) !important;color:rgba(255,255,255,.8) !important;border:1px solid rgba(255,255,255,.15) !important;padding:5px 8px;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:4px;width:100%}
+  .signout-btn:hover{background:rgba(255,255,255,.15) !important;color:#fff !important}
   .kbd-hint{position:fixed;bottom:80px;right:20px;font-size:11px;color:var(--muted);background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:8px 8px 8px 12px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:8px;z-index:40;max-width:calc(100vw - 40px);cursor:grab}
   .kbd-hint:active{cursor:grabbing}
   .kbd-hint code{background:var(--panel-2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-family:ui-monospace, monospace;font-size:10px;color:var(--text)}
@@ -333,9 +361,16 @@
 
       <div class="sidebar-bottom">
         <div class="save-indicator" id="saveIndicator" title="Auto-save status"><span class="dot"></span><span id="saveText">All changes saved</span></div>
-        <div class="who">
-          <label for="userName">You:</label>
-          <input type="text" id="userName" placeholder="Your name" />
+        <div class="who signed-in" id="whoCard">
+          <div class="who-info">
+            <div class="who-avatar" id="whoAvatar">?</div>
+            <div class="who-details">
+              <div class="who-name" id="whoName">Not signed in</div>
+              <div class="who-email" id="whoEmail">—</div>
+            </div>
+          </div>
+          <button class="signout-btn" id="signOutBtn" title="Sign out">Sign out</button>
+          <input type="hidden" id="userName" value="" />
         </div>
         <div class="theme-switch" role="group" aria-label="Theme">
           <button class="tsbtn" data-mode="default" title="Follow system preference"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg><span>System</span></button>
@@ -527,6 +562,33 @@
   </div>
 </div>
 
+<div class="signin-gate" id="signInGate">
+  <div class="signin-box">
+    <div class="gt-logo" aria-hidden="true">
+      <div class="gt-stack">
+        <div class="gt-go">go</div>
+        <div class="gt-team">team</div>
+      </div>
+    </div>
+    <h2>GoTeam Client Tracker</h2>
+    <div class="subtitle">Please identify yourself to continue.<br>Only <strong>@1go.team</strong> accounts can sign in.</div>
+    <div class="form-row">
+      <label>Full Name *</label>
+      <input type="text" id="gateName" placeholder="e.g. Christian Esaga" autocomplete="name" />
+    </div>
+    <div class="form-row">
+      <label>GoTeam Email *</label>
+      <input type="email" id="gateEmail" placeholder="firstname.lastname@1go.team" autocomplete="email" />
+    </div>
+    <div class="gate-error" id="gateError" style="display:none"></div>
+    <button class="primary signin-btn" id="gateSubmitBtn">Sign In</button>
+    <div class="signin-footer">
+      Every action you take will be <strong>recorded with your identity</strong>.<br>
+      Only access this dashboard if authorized by GoTeam IT.
+    </div>
+  </div>
+</div>
+
 <div class="toast-host" id="toastHost"></div>
 <div class="kbd-hint" id="kbdHint"><span>Press</span><code>/</code><span>to search</span><span>•</span><code>n</code><span>new client</span><span>•</span><code>Esc</code><span>close</span><button class="kbd-close" id="kbdCloseBtn" title="Hide shortcuts (you can bring them back)" aria-label="Hide">×</button></div>
 <button class="kbd-reopen" id="kbdReopenBtn" title="Show keyboard shortcuts" aria-label="Show shortcuts">?</button>
@@ -558,6 +620,92 @@
   function uid(){ return Math.random().toString(36).slice(2,10) + Date.now().toString(36).slice(-4); }
   function getUser(){ try{ return localStorage.getItem(USER_KEY) || ""; }catch(e){ return ""; } }
   function setUserName(name){ try{ localStorage.setItem(USER_KEY, name); }catch(e){} }
+
+  // ===== Sign-in gate (soft identification, honor-system) =====
+  var GATE_USER_KEY = "goteam_client_tracker_signed_in_user";
+  var ALLOWED_DOMAIN = "@1go.team";
+
+  function getSignedInUser(){
+    try{
+      var raw = localStorage.getItem(GATE_USER_KEY);
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+    return null;
+  }
+  function setSignedInUser(user){
+    try{ localStorage.setItem(GATE_USER_KEY, JSON.stringify(user)); }catch(e){}
+  }
+  function clearSignedInUser(){
+    try{ localStorage.removeItem(GATE_USER_KEY); }catch(e){}
+  }
+  function updateWhoCard(){
+    var user = getSignedInUser();
+    var nameEl = document.getElementById("whoName");
+    var emailEl = document.getElementById("whoEmail");
+    var avatarEl = document.getElementById("whoAvatar");
+    var hidden = document.getElementById("userName");
+    if(user){
+      nameEl.textContent = user.name;
+      emailEl.textContent = user.email;
+      avatarEl.textContent = (user.name||"?").charAt(0).toUpperCase();
+      hidden.value = user.name;
+      setUserName(user.name);
+    } else {
+      nameEl.textContent = "Not signed in";
+      emailEl.textContent = "—";
+      avatarEl.textContent = "?";
+      hidden.value = "";
+    }
+  }
+  function showSignInGate(){
+    document.getElementById("signInGate").classList.add("active");
+    setTimeout(function(){
+      var n = document.getElementById("gateName");
+      if(n) n.focus();
+    }, 100);
+  }
+  function hideSignInGate(){
+    document.getElementById("signInGate").classList.remove("active");
+  }
+  function showGateError(msg){
+    var e = document.getElementById("gateError");
+    e.textContent = msg;
+    e.style.display = "block";
+  }
+  function attemptSignIn(){
+    var name = document.getElementById("gateName").value.trim();
+    var email = document.getElementById("gateEmail").value.trim().toLowerCase();
+    if(!name){ showGateError("Please enter your full name."); return; }
+    if(name.length < 2){ showGateError("Please enter your full name (at least 2 characters)."); return; }
+    if(!email){ showGateError("Please enter your @1go.team email address."); return; }
+    var emailRe = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    if(!emailRe.test(email)){ showGateError("Please enter a valid email address."); return; }
+    if(!email.endsWith(ALLOWED_DOMAIN)){
+      showGateError("Only " + ALLOWED_DOMAIN + " email addresses can access this dashboard.");
+      return;
+    }
+    setSignedInUser({name: name, email: email, signedInAt: nowStr()});
+    updateWhoCard();
+    hideSignInGate();
+    toast("Welcome, " + name + "!", "success");
+  }
+  function signOut(){
+    customConfirm({
+      title: "Sign out?",
+      body: "You'll be asked to identify yourself again to use the dashboard.<br><br><span style=\"color:var(--muted);font-size:12px\">Your dashboard data stays intact — only your identity is cleared.</span>",
+      okText: "Sign out"
+    }, function(ok){
+      if(!ok) return;
+      clearSignedInUser();
+      updateWhoCard();
+      showSignInGate();
+      toast("Signed out.", "info");
+    });
+  }
+  function ensureSignedIn(){
+    if(!getSignedInUser()){ showSignInGate(); return false; }
+    return true;
+  }
   function nowStr(){
     var d = new Date(), pad = function(n){ return n<10?"0"+n:""+n; };
     return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())+" "+pad(d.getHours())+":"+pad(d.getMinutes());
@@ -1605,8 +1753,12 @@
   document.getElementById("importXlsxBtn").addEventListener("click", function(){ document.getElementById("importXlsxFile").click(); });
   document.getElementById("importXlsxFile").addEventListener("change", function(e){ if(e.target.files[0]) importXlsx(e.target.files[0]); e.target.value=""; });
   document.getElementById("resetBtn").addEventListener("click", resetData);
-  document.getElementById("userName").value = getUser();
-  document.getElementById("userName").addEventListener("input", function(e){ setUserName(e.target.value.trim()); });
+  // Sign-in gate wire-up
+  document.getElementById("gateSubmitBtn").addEventListener("click", attemptSignIn);
+  document.getElementById("gateName").addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); document.getElementById("gateEmail").focus(); } });
+  document.getElementById("gateEmail").addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); attemptSignIn(); } });
+  document.getElementById("signOutBtn").addEventListener("click", signOut);
+  updateWhoCard();
   var navBtns = document.querySelectorAll(".sidebar-nav .nav-item");
   for(var v=0;v<navBtns.length;v++){
     (function(b){ b.addEventListener("click", function(){ setViewMode(b.getAttribute("data-view")); }); })(navBtns[v]);
@@ -1715,6 +1867,9 @@
   load();
   render();
   updateSaveIndicator();
+
+  // Show sign-in gate on first load if not signed in
+  if(!getSignedInUser()) showSignInGate();
 })();
 </script>
 </body>
