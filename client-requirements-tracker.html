@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<script src="https://alcdn.msauth.net/browser/2.38.4/js/msal-browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.18.0/lib/msal-browser.min.js" crossorigin="anonymous"></script>
 <style>
   :root{
     --brand-primary:#1e3a8a;--brand-secondary:#3b82f6;--brand-accent:#22d3ee;--brand-purple:#7c5cff;
@@ -637,9 +637,18 @@
     }
   };
   var msalInstance = null;
+  var msalInitAttempts = 0;
   function initMsal(){
     if(typeof msal === "undefined"){
-      console.error("MSAL library not loaded");
+      msalInitAttempts++;
+      if(msalInitAttempts > 50){
+        console.error("MSAL library failed to load after 5 seconds");
+        showGateError("Could not load Microsoft sign-in library. Please check your internet connection and refresh the page.");
+        showSignInGate();
+        return;
+      }
+      // MSAL not loaded yet, retry in 100ms
+      setTimeout(initMsal, 100);
       return;
     }
     try{
@@ -647,12 +656,18 @@
       if(msalInstance.initialize){
         msalInstance.initialize().then(function(){
           handleMsalReady();
+        }).catch(function(err){
+          console.error("MSAL initialize() failed:", err);
+          showGateError("Microsoft sign-in failed to initialize: " + (err.message || err));
+          showSignInGate();
         });
       } else {
         handleMsalReady();
       }
     }catch(err){
-      console.error("MSAL init failed:", err);
+      console.error("MSAL setup failed:", err);
+      showGateError("Microsoft sign-in setup error: " + (err.message || err));
+      showSignInGate();
     }
   }
   function handleMsalReady(){
