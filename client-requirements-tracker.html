@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://alcdn.msauth.net/browser/2.38.4/js/msal-browser.min.js"></script>
 <style>
   :root{
     --brand-primary:#1e3a8a;--brand-secondary:#3b82f6;--brand-accent:#22d3ee;--brand-purple:#7c5cff;
@@ -274,6 +275,10 @@
   .signin-box input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,58,138,.15)}
   .gate-error{background:var(--danger-bg);border:1px solid var(--danger-border);color:var(--bad);border-radius:8px;padding:9px 12px;font-size:12.5px;margin-bottom:12px;line-height:1.5}
   .signin-btn{width:100%;padding:12px;font-size:14px;font-weight:600;margin-top:6px}
+  .ms-signin-btn{width:100%;padding:13px;font-size:14px;font-weight:600;margin-top:6px;background:#2f2f2f;color:#fff;border:1px solid #2f2f2f;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;font-family:inherit;transition:background .15s ease}
+  .ms-signin-btn:hover:not(:disabled){background:#1a1a1a}
+  .ms-signin-btn:disabled{opacity:.6;cursor:wait}
+  .ms-signin-btn svg{flex-shrink:0}
   .signin-footer{color:var(--muted);font-size:11px;text-align:center;margin-top:18px;line-height:1.55;padding-top:18px;border-top:1px solid var(--border)}
   .signin-footer strong{color:var(--text)}
   /* Signed-in user display in sidebar */
@@ -571,20 +576,15 @@
       </div>
     </div>
     <h2>GoTeam Client Tracker</h2>
-    <div class="subtitle">Please identify yourself to continue.<br>Only <strong>@1go.team</strong> accounts can sign in.</div>
-    <div class="form-row">
-      <label>Full Name *</label>
-      <input type="text" id="gateName" placeholder="e.g. Christian Esaga" autocomplete="name" />
-    </div>
-    <div class="form-row">
-      <label>GoTeam Email *</label>
-      <input type="email" id="gateEmail" placeholder="firstname.lastname@1go.team" autocomplete="email" />
-    </div>
+    <div class="subtitle">Sign in with your <strong>@go.team</strong> Microsoft 365 account to continue.</div>
     <div class="gate-error" id="gateError" style="display:none"></div>
-    <button class="primary signin-btn" id="gateSubmitBtn">Sign In</button>
+    <button class="ms-signin-btn" id="msSignInBtn">
+      <svg width="20" height="20" viewBox="0 0 21 21"><rect x="1" y="1" width="9" height="9" fill="#f25022"/><rect x="11" y="1" width="9" height="9" fill="#7fba00"/><rect x="1" y="11" width="9" height="9" fill="#00a4ef"/><rect x="11" y="11" width="9" height="9" fill="#ffb900"/></svg>
+      <span>Sign in with Microsoft</span>
+    </button>
     <div class="signin-footer">
-      Every action you take will be <strong>recorded with your identity</strong>.<br>
-      Only access this dashboard if authorized by GoTeam IT.
+      Every action will be <strong>recorded with your Microsoft 365 identity</strong>.<br>
+      Only <strong>@go.team</strong> accounts are allowed (verified by Microsoft).
     </div>
   </div>
 </div>
@@ -621,9 +621,93 @@
   function getUser(){ try{ return localStorage.getItem(USER_KEY) || ""; }catch(e){ return ""; } }
   function setUserName(name){ try{ localStorage.setItem(USER_KEY, name); }catch(e){} }
 
-  // ===== Sign-in gate (soft identification, honor-system) =====
+  // ===== Microsoft 365 Sign-in (MSAL.js) =====
   var GATE_USER_KEY = "goteam_client_tracker_signed_in_user";
-  var ALLOWED_DOMAIN = "@1go.team";
+  var ALLOWED_DOMAIN = "@go.team";
+  var MSAL_CONFIG = {
+    auth: {
+      clientId: "324a671d-0373-46eb-a397-79334e86a8fb",
+      authority: "https://login.microsoftonline.com/23dfa179-96b2-40f6-abd4-7fea317f0af6",
+      redirectUri: window.location.origin + window.location.pathname,
+      navigateToLoginRequestUrl: false
+    },
+    cache: {
+      cacheLocation: "localStorage",
+      storeAuthStateInCookie: false
+    }
+  };
+  var msalInstance = null;
+  function initMsal(){
+    if(typeof msal === "undefined"){
+      console.error("MSAL library not loaded");
+      return;
+    }
+    try{
+      msalInstance = new msal.PublicClientApplication(MSAL_CONFIG);
+      if(msalInstance.initialize){
+        msalInstance.initialize().then(function(){
+          handleMsalReady();
+        });
+      } else {
+        handleMsalReady();
+      }
+    }catch(err){
+      console.error("MSAL init failed:", err);
+    }
+  }
+  function handleMsalReady(){
+    msalInstance.handleRedirectPromise().then(function(response){
+      if(response && response.account){ acceptMsalAccount(response.account); return; }
+      var accounts = msalInstance.getAllAccounts();
+      if(accounts && accounts.length > 0){
+        // Auto-accept previously signed-in account if domain still matches
+        var a = accounts[0];
+        if(a.username && a.username.toLowerCase().endsWith(ALLOWED_DOMAIN)){
+          acceptMsalAccount(a);
+          return;
+        }
+      }
+      // Not signed in
+      if(!getSignedInUser()) showSignInGate();
+    }).catch(function(err){
+      console.error("Redirect handling failed:", err);
+      if(!getSignedInUser()) showSignInGate();
+    });
+  }
+  function acceptMsalAccount(account){
+    if(!account) return;
+    var email = (account.username || "").toLowerCase();
+    if(!email.endsWith(ALLOWED_DOMAIN)){
+      showGateError("Only " + ALLOWED_DOMAIN + " accounts are allowed. Signed-in email: " + email);
+      try{ msalInstance.logoutPopup({account: account}); }catch(e){}
+      return;
+    }
+    var user = {
+      name: account.name || account.username,
+      email: email,
+      tenantId: account.tenantId || "",
+      signedInAt: nowStr(),
+      authMethod: "microsoft"
+    };
+    setSignedInUser(user);
+    updateWhoCard();
+    hideSignInGate();
+    toast("Welcome, " + user.name + "!", "success");
+  }
+  function signInWithMicrosoft(){
+    if(!msalInstance){ showGateError("Sign-in is still loading. Try again in a moment."); return; }
+    var btn = document.getElementById("msSignInBtn");
+    if(btn){ btn.disabled = true; btn.querySelector("span").textContent = "Signing in..."; }
+    var loginRequest = { scopes: ["User.Read"], prompt: "select_account" };
+    msalInstance.loginPopup(loginRequest).then(function(response){
+      if(response && response.account) acceptMsalAccount(response.account);
+    }).catch(function(err){
+      console.error("Sign-in failed:", err);
+      showGateError("Sign-in cancelled or failed. Please try again. (" + (err.errorCode || "error") + ")");
+    }).finally(function(){
+      if(btn){ btn.disabled = false; btn.querySelector("span").textContent = "Sign in with Microsoft"; }
+    });
+  }
 
   function getSignedInUser(){
     try{
@@ -677,7 +761,7 @@
     var email = document.getElementById("gateEmail").value.trim().toLowerCase();
     if(!name){ showGateError("Please enter your full name."); return; }
     if(name.length < 2){ showGateError("Please enter your full name (at least 2 characters)."); return; }
-    if(!email){ showGateError("Please enter your @1go.team email address."); return; }
+    if(!email){ showGateError("Please enter your @go.team email address."); return; }
     var emailRe = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
     if(!emailRe.test(email)){ showGateError("Please enter a valid email address."); return; }
     if(!email.endsWith(ALLOWED_DOMAIN)){
@@ -692,12 +776,20 @@
   function signOut(){
     customConfirm({
       title: "Sign out?",
-      body: "You'll be asked to identify yourself again to use the dashboard.<br><br><span style=\"color:var(--muted);font-size:12px\">Your dashboard data stays intact — only your identity is cleared.</span>",
+      body: "You'll be signed out of your Microsoft 365 session for this dashboard.<br><br><span style=\"color:var(--muted);font-size:12px\">Your dashboard data stays intact — only your identity is cleared.</span>",
       okText: "Sign out"
     }, function(ok){
       if(!ok) return;
+      var prev = getSignedInUser();
       clearSignedInUser();
       updateWhoCard();
+      if(msalInstance && prev && prev.authMethod === "microsoft"){
+        try{
+          var accounts = msalInstance.getAllAccounts();
+          var acc = accounts && accounts[0];
+          msalInstance.logoutPopup({ account: acc, postLogoutRedirectUri: window.location.href }).catch(function(){});
+        }catch(e){}
+      }
       showSignInGate();
       toast("Signed out.", "info");
     });
@@ -1753,12 +1845,12 @@
   document.getElementById("importXlsxBtn").addEventListener("click", function(){ document.getElementById("importXlsxFile").click(); });
   document.getElementById("importXlsxFile").addEventListener("change", function(e){ if(e.target.files[0]) importXlsx(e.target.files[0]); e.target.value=""; });
   document.getElementById("resetBtn").addEventListener("click", resetData);
-  // Sign-in gate wire-up
-  document.getElementById("gateSubmitBtn").addEventListener("click", attemptSignIn);
-  document.getElementById("gateName").addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); document.getElementById("gateEmail").focus(); } });
-  document.getElementById("gateEmail").addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); attemptSignIn(); } });
+  // Sign-in gate wire-up (Microsoft SSO)
+  var msBtn = document.getElementById("msSignInBtn");
+  if(msBtn) msBtn.addEventListener("click", signInWithMicrosoft);
   document.getElementById("signOutBtn").addEventListener("click", signOut);
   updateWhoCard();
+  initMsal();
   var navBtns = document.querySelectorAll(".sidebar-nav .nav-item");
   for(var v=0;v<navBtns.length;v++){
     (function(b){ b.addEventListener("click", function(){ setViewMode(b.getAttribute("data-view")); }); })(navBtns[v]);
@@ -1868,8 +1960,7 @@
   render();
   updateSaveIndicator();
 
-  // Show sign-in gate on first load if not signed in
-  if(!getSignedInUser()) showSignInGate();
+  // Sign-in gate is now handled by initMsal() which checks existing MSAL session first
 })();
 </script>
 </body>
