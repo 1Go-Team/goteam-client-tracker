@@ -493,8 +493,16 @@
   </div>
 
   <div id="usersView" class="users-view">
+    <div id="usersDeployBanner" style="display:none;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35);color:var(--text);border-radius:10px;padding:12px 14px;margin-bottom:14px;align-items:center;gap:12px;font-size:13px">
+      <span style="font-size:20px">⚠️</span>
+      <div style="flex:1">
+        <strong>Changes not yet shared with team.</strong>
+        <span id="usersDeployStatus">Click <strong>Export users.json</strong>, save it to your workspace folder, then run <code>deploy.bat</code>.</span>
+      </div>
+    </div>
     <div class="toolbar" style="margin-bottom:18px">
       <button class="primary" id="addUserBtn">+ Add User</button>
+      <button id="exportUsersBtn">💾 Export users.json</button>
       <span class="count" id="usersCount" style="margin-left:auto"></span>
     </div>
     <div class="users-table">
@@ -662,12 +670,18 @@
     <div class="pending-name" id="pendingName"></div>
     <div class="pending-email" id="pendingEmail"></div>
     <div class="pending-msg">
-      Your <strong>@go.team</strong> account is signed in, but your role hasn't been assigned yet by the GoTeam IT team.<br><br>
-      Click <strong>Request Access</strong> to send an email asking for access.
+      You're signed in but your role hasn't been assigned yet.<br><br>
+      <strong>Message Christian Esaga on Microsoft Teams</strong> to request access.
+      Click the button below to copy your details to your clipboard, then paste them in your Teams message.
     </div>
+    <div style="background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:12.5px;color:var(--text);text-align:left;margin-bottom:16px;line-height:1.6" id="pendingPreview"></div>
     <div class="pending-actions">
-      <button id="pendingRequestBtn" class="primary">📧 Request Access</button>
+      <button id="pendingCopyBtn" class="primary">📋 Copy request details</button>
       <button id="pendingSignOutBtn">Sign out</button>
+    </div>
+    <div style="margin-top:14px;font-size:11.5px;color:var(--muted);line-height:1.5">
+      Christian will add you as <strong>Viewer</strong>, <strong>Editor</strong>, or <strong>Administrator</strong> based on your needs.<br>
+      After you're approved, refresh this page to access the dashboard.
     </div>
   </div>
 </div>
@@ -755,18 +769,56 @@
   ];
   var currentUserRole = null;
 
+  var _usersFromServer = null;
+  var _usersFetchAttempted = false;
+
   function loadUsers(){
+    if(_usersFromServer) return _usersFromServer;
     try{
       var raw = localStorage.getItem(USERS_STORAGE_KEY);
       if(raw){ return JSON.parse(raw); }
     }catch(e){}
-    // Seed first time
     var u = SEED_USERS.slice();
     try{ localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(u)); }catch(e){}
     return u;
   }
   function saveUsers(users){
+    _usersFromServer = users; // also update in-memory copy
     try{ localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(users)); }catch(e){}
+    // Show banner that deploy is needed
+    var banner = document.getElementById("usersDeployBanner");
+    if(banner) banner.style.display = "flex";
+  }
+  function fetchUsersFromServer(){
+    if(_usersFetchAttempted) return Promise.resolve(null);
+    _usersFetchAttempted = true;
+    return fetch("users.json?_=" + Date.now(), { cache: "no-store" })
+      .then(function(r){ if(!r.ok) return null; return r.json(); })
+      .catch(function(){ return null; })
+      .then(function(data){
+        if(data && Array.isArray(data) && data.length > 0){
+          _usersFromServer = data;
+          try{ localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(data)); }catch(e){}
+          return data;
+        }
+        return null;
+      });
+  }
+  function exportUsersJson(){
+    var users = loadUsers();
+    var blob = new Blob([JSON.stringify(users, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "users.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    toast("users.json downloaded. Save to your 'Client Requirements' folder, then run deploy.bat.", "success");
+    var banner = document.getElementById("usersDeployBanner");
+    if(banner){
+      var status = document.getElementById("usersDeployStatus");
+      if(status) status.textContent = "Downloaded! Now place it in your workspace folder and run deploy.bat.";
+    }
   }
   function getUserRole(email){
     if(!email) return null;
@@ -810,31 +862,51 @@
   }
 
   // ===== Pending Access screen =====
+  function buildAccessRequestText(user){
+    return "Hi Christian, please grant me access to the GoTeam Client Tracker.\n" +
+           "Name: " + (user.name||"") + "\n" +
+           "Email: " + (user.email||"") + "\n" +
+           "Date: " + nowStr() + "\n" +
+           "Reason: [please describe why you need access]";
+  }
   function showPendingAccess(user){
     document.getElementById("pendingName").textContent = user.name || "";
     document.getElementById("pendingEmail").textContent = user.email || "";
+    var preview = document.getElementById("pendingPreview");
+    if(preview){
+      preview.textContent = buildAccessRequestText(user);
+    }
     document.getElementById("pendingGate").classList.add("active");
   }
   function hidePendingAccess(){
     document.getElementById("pendingGate").classList.remove("active");
   }
-  function requestAccess(){
+  function copyAccessRequest(){
     var user = getSignedInUser();
     if(!user) return;
-    var subject = "Access request: GoTeam Client Tracker";
-    var body =
-      "Hi Christian,\n\n" +
-      "Please grant me access to the GoTeam Client Tracker.\n\n" +
-      "Name: " + (user.name||"") + "\n" +
-      "Email: " + (user.email||"") + "\n" +
-      "Date: " + nowStr() + "\n\n" +
-      "Reason for access:\n[Please describe why you need access]\n\n" +
-      "Thanks!";
-    // Open Outlook on the Web compose window (works without desktop Outlook)
-    var url = "https://outlook.office.com/mail/deeplink/compose?to=" + encodeURIComponent(REQUEST_EMAIL) +
-              "&subject=" + encodeURIComponent(subject) +
-              "&body=" + encodeURIComponent(body);
-    window.open(url, "_blank", "noopener,noreferrer");
+    var text = buildAccessRequestText(user);
+    var btn = document.getElementById("pendingCopyBtn");
+    var done = function(){
+      if(btn){
+        var original = btn.textContent;
+        btn.textContent = "✓ Copied! Paste in Teams";
+        setTimeout(function(){ if(btn) btn.textContent = original; }, 2500);
+      }
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done).catch(function(){
+        // Fallback for older browsers / permission denied
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try{ document.execCommand("copy"); done(); }catch(e){ alert("Could not copy. Please select the text manually."); }
+        document.body.removeChild(ta);
+      });
+    } else {
+      var ta2 = document.createElement("textarea");
+      ta2.value = text; document.body.appendChild(ta2); ta2.select();
+      try{ document.execCommand("copy"); done(); }catch(e){ alert("Could not copy. Please select the text manually."); }
+      document.body.removeChild(ta2);
+    }
   }
 
   // ===== Users & Roles view =====
@@ -965,16 +1037,20 @@
     }
     try{
       msalInstance = new msal.PublicClientApplication(MSAL_CONFIG);
+      var ready = function(){
+        // Fetch users.json before processing role
+        fetchUsersFromServer().then(function(){ handleMsalReady(); });
+      };
       if(msalInstance.initialize){
         msalInstance.initialize().then(function(){
-          handleMsalReady();
+          ready();
         }).catch(function(err){
           console.error("MSAL initialize() failed:", err);
           showGateError("Microsoft sign-in failed to initialize: " + (err.message || err));
           showSignInGate();
         });
       } else {
-        handleMsalReady();
+        ready();
       }
     }catch(err){
       console.error("MSAL setup failed:", err);
@@ -2204,13 +2280,14 @@
   if(msBtn) msBtn.addEventListener("click", signInWithMicrosoft);
   document.getElementById("signOutBtn").addEventListener("click", signOut);
   // Pending access screen wire-up
-  document.getElementById("pendingRequestBtn").addEventListener("click", requestAccess);
+  document.getElementById("pendingCopyBtn").addEventListener("click", copyAccessRequest);
   document.getElementById("pendingSignOutBtn").addEventListener("click", function(){
     hidePendingAccess();
     signOut();
   });
   // Users & Roles wire-up
   document.getElementById("addUserBtn").addEventListener("click", openAddUserModal);
+  document.getElementById("exportUsersBtn").addEventListener("click", exportUsersJson);
   document.getElementById("userCancelBtn").addEventListener("click", closeUserModal);
   document.getElementById("userSaveBtn").addEventListener("click", saveNewUser);
   document.getElementById("userModal").addEventListener("click", function(e){ if(e.target.id==="userModal") closeUserModal(); });
