@@ -1,0 +1,86 @@
+[
+  {
+    "email": "christian.esaga@go.team",
+    "name": "Christian Esaga",
+    "role": "Administrator",
+    "addedBy": "system",
+    "addedAt": "2026-05-14 10:00"
+  },
+  {
+    "email": "auto.pilot@go.team",
+    "name": "Auto Pilot",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:27"
+  },
+  {
+    "email": "olem.babia@go.team",
+    "name": "Olem Babia",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:27"
+  },
+  {
+    "email": "reylance.lacerna@go.team",
+    "name": "Reylance Lacerna",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "clint.gallentes@go.team",
+    "name": "Clint Gallentes",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "arnold.gaviola@go.team",
+    "name": "Arnold Gaviola",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "diether.gingoyon@go.team",
+    "name": "Diether Gingoyon",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "jhayson.navaja@go.team",
+    "name": "Jhayson Navaja",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "jhazer.andrade@go.team",
+    "name": "Jhazer Andrade",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "paul.vallecera@go.team",
+    "name": "Paul John Vallecera",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "rudy.maneja@go.team",
+    "name": "Rudy Maneja",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  },
+  {
+    "email": "russell.bual@go.team",
+    "name": "Russell Bual",
+    "role": "Editor",
+    "addedBy": "Christian Esaga",
+    "addedAt": "2026-05-15 14:42"
+  }
+]
