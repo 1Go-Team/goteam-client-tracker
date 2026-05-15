@@ -821,17 +821,20 @@
   function requestAccess(){
     var user = getSignedInUser();
     if(!user) return;
-    var subject = encodeURIComponent("Access request: GoTeam Client Tracker");
-    var body = encodeURIComponent(
+    var subject = "Access request: GoTeam Client Tracker";
+    var body =
       "Hi Christian,\n\n" +
       "Please grant me access to the GoTeam Client Tracker.\n\n" +
       "Name: " + (user.name||"") + "\n" +
       "Email: " + (user.email||"") + "\n" +
       "Date: " + nowStr() + "\n\n" +
       "Reason for access:\n[Please describe why you need access]\n\n" +
-      "Thanks!"
-    );
-    window.location.href = "mailto:" + REQUEST_EMAIL + "?subject=" + subject + "&body=" + body;
+      "Thanks!";
+    // Open Outlook on the Web compose window (works without desktop Outlook)
+    var url = "https://outlook.office.com/mail/deeplink/compose?to=" + encodeURIComponent(REQUEST_EMAIL) +
+              "&subject=" + encodeURIComponent(subject) +
+              "&body=" + encodeURIComponent(body);
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   // ===== Users & Roles view =====
