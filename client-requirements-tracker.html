@@ -281,6 +281,43 @@
   .ms-signin-btn svg{flex-shrink:0}
   .signin-footer{color:var(--muted);font-size:11px;text-align:center;margin-top:18px;line-height:1.55;padding-top:18px;border-top:1px solid var(--border)}
   .signin-footer strong{color:var(--text)}
+  /* Pending access screen (after signed in, no role) */
+  .pending-gate{position:fixed;inset:0;background:linear-gradient(135deg, #0a1f4d 0%, #1e3a8a 50%, #3b82f6 100%);display:none;align-items:center;justify-content:center;z-index:180;padding:20px}
+  .pending-gate.active{display:flex}
+  .pending-gate::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle, rgba(245,158,11,.2) 0%, transparent 70%);pointer-events:none}
+  .pending-box{background:var(--modal-bg);border:1px solid var(--border);border-radius:18px;padding:36px;max-width:480px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;z-index:1;text-align:center}
+  .pending-box .pending-icon{font-size:48px;margin-bottom:14px}
+  .pending-box h2{margin:0 0 8px;font-size:22px;color:var(--text);font-family:"Space Grotesk","Inter",sans-serif;font-weight:700;letter-spacing:-.3px}
+  .pending-box .pending-name{font-size:14px;color:var(--text);margin-bottom:4px;font-weight:600}
+  .pending-box .pending-email{font-size:12px;color:var(--muted);margin-bottom:20px}
+  .pending-box .pending-msg{color:var(--muted);font-size:13.5px;line-height:1.6;margin-bottom:22px}
+  .pending-box .pending-actions{display:flex;gap:10px;justify-content:center}
+  .pending-box .pending-actions button{flex:1;padding:11px 14px;font-size:13px}
+  /* Role badge in sidebar */
+  .role-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:6px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-top:3px}
+  .role-badge.admin{background:rgba(34,197,94,.2);color:#86efac}
+  .role-badge.editor{background:rgba(59,130,246,.22);color:#93c5fd}
+  .role-badge.viewer{background:rgba(156,163,175,.25);color:#d1d5db}
+  /* Hide elements based on role */
+  body:not(.role-admin):not(.role-editor) .role-edit{display:none !important}
+  body:not(.role-admin) .role-admin-only{display:none !important}
+  body.role-viewer .role-edit, body.role-viewer .role-admin-only{display:none !important}
+  /* Users & Roles tab */
+  .users-view{display:none}
+  .users-view.active{display:block}
+  .users-table{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .users-table table{width:100%;border-collapse:separate;border-spacing:0}
+  .users-table th{background:var(--tableHeader);color:var(--tableHeaderText);padding:14px 16px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.6px;font-weight:600;font-family:"Space Grotesk","Inter",sans-serif}
+  .users-table td{padding:14px 16px;font-size:14px;border-top:1px solid var(--border);vertical-align:middle}
+  .users-table tr:hover td{background:var(--row-hover)}
+  .users-table .user-avatar-cell{width:48px}
+  .users-table .user-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--brand-accent),var(--brand-purple));color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .users-table .user-name{font-weight:600;color:var(--text)}
+  .users-table .user-email{color:var(--muted);font-size:12px;margin-top:2px}
+  .users-table .user-meta{color:var(--muted);font-size:11.5px}
+  .users-table .user-role-select{background:var(--input-bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:8px;font-size:12.5px;font-family:inherit;font-weight:600}
+  .users-table .user-actions{text-align:right;white-space:nowrap}
+  .users-table .owner-tag{font-size:10px;color:var(--star);background:rgba(251,191,36,.15);padding:2px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-left:6px}
   /* Signed-in user display in sidebar */
   .who.signed-in{flex-direction:column;align-items:stretch;gap:6px}
   .who.signed-in .who-info{display:flex;align-items:center;gap:8px;padding:2px 4px}
@@ -360,6 +397,7 @@
         <button class="nav-item" data-view="analytics"><span class="nav-icon">📊</span><span>Analytics</span></button>
         <button class="nav-item active" data-view="active"><span class="nav-icon">📋</span><span>Active Clients</span><span class="nav-count" id="countActive">0</span></button>
         <button class="nav-item danger" data-view="trash"><span class="nav-icon">🗑</span><span>Recycle Bin</span><span class="nav-count" id="countTrash">0</span></button>
+        <button class="nav-item role-admin-only" data-view="users"><span class="nav-icon">👥</span><span>Users &amp; Roles</span><span class="nav-count" id="countUsers">1</span></button>
       </nav>
 
       <div class="sidebar-spacer"></div>
@@ -372,6 +410,7 @@
             <div class="who-details">
               <div class="who-name" id="whoName">Not signed in</div>
               <div class="who-email" id="whoEmail">—</div>
+              <span class="role-badge" id="userRoleBadge" style="display:none"></span>
             </div>
           </div>
           <button class="signout-btn" id="signOutBtn" title="Sign out">Sign out</button>
@@ -426,13 +465,13 @@
       <option value="empty">Missing data</option>
       <option value="configured">Configured</option>
     </select>
-    <button class="primary" id="addBtn" title="Add client (n)">+ Add Client</button>
-    <button id="autoTagBtn" title="Auto-categorize clients based on names">✨ Auto-tag</button>
+    <button class="primary role-edit" id="addBtn" title="Add client (n)">+ Add Client</button>
+    <button class="role-admin-only" id="autoTagBtn" title="Auto-categorize clients based on names">✨ Auto-tag</button>
     <button id="exportXlsxBtn">Export Excel</button>
-    <button id="importXlsxBtn">Import Excel</button>
+    <button class="role-admin-only" id="importXlsxBtn">Import Excel</button>
     <button id="exportJsonBtn">Backup (JSON)</button>
-    <button id="importBtn">Restore (JSON)</button>
-    <button id="resetBtn">Reset</button>
+    <button class="role-admin-only" id="importBtn">Restore (JSON)</button>
+    <button class="role-admin-only" id="resetBtn">Reset</button>
     <span class="count" id="resultCount"></span>
   </div>
 
@@ -450,6 +489,34 @@
     <div class="pagination" id="pagination">
       <div class="pinfo" id="pageInfo">-</div>
       <div class="pages" id="pageButtons"></div>
+    </div>
+  </div>
+
+  <div id="usersView" class="users-view">
+    <div class="toolbar" style="margin-bottom:18px">
+      <button class="primary" id="addUserBtn">+ Add User</button>
+      <span class="count" id="usersCount" style="margin-left:auto"></span>
+    </div>
+    <div class="users-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="user-avatar-cell"></th>
+            <th>User</th>
+            <th>Role</th>
+            <th>Added</th>
+            <th style="text-align:right">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="usersTbody"></tbody>
+      </table>
+    </div>
+    <div style="margin-top:14px;padding:14px 18px;background:var(--panel);border:1px solid var(--border);border-radius:12px;color:var(--muted);font-size:12.5px;line-height:1.55">
+      <strong style="color:var(--text)">Roles:</strong>
+      <span style="margin-left:10px"><strong style="color:var(--text)">Administrator</strong> — Full access. Manages users.</span> &nbsp;•&nbsp;
+      <span><strong style="color:var(--text)">Editor</strong> — Add/edit clients. Cannot delete or manage users.</span> &nbsp;•&nbsp;
+      <span><strong style="color:var(--text)">Viewer</strong> — Read-only access.</span>
+      <br><span style="font-size:11.5px;opacity:.8">Changes save to your browser. Run <code>deploy.bat</code> to share with the team.</span>
     </div>
   </div>
 
@@ -555,6 +622,27 @@
   </div>
 </div>
 
+<!-- Add/Edit User Modal -->
+<div class="modal-bg" id="userModal">
+  <div class="modal" style="max-width:520px">
+    <h2 id="userModalTitle">Add User</h2>
+    <div class="form-row"><label>Name *</label><input type="text" id="uName" placeholder="e.g. John Doe" /></div>
+    <div class="form-row"><label>@go.team Email *</label><input type="email" id="uEmail" placeholder="firstname.lastname@go.team" /></div>
+    <div class="form-row"><label>Role *</label>
+      <select id="uRole">
+        <option value="Viewer">Viewer (read-only)</option>
+        <option value="Editor">Editor (edit clients, no delete)</option>
+        <option value="Administrator">Administrator (full access)</option>
+      </select>
+    </div>
+    <div class="modal-info" style="font-size:12.5px">⚠️ Adding a user here grants them a role in this dashboard. Make sure they are also <strong>assigned in Entra</strong> (Enterprise apps → GoTeam Client Tracker → Users and groups) so they can actually sign in.</div>
+    <div class="modal-actions">
+      <button id="userCancelBtn">Cancel</button>
+      <button class="primary" id="userSaveBtn">Save</button>
+    </div>
+  </div>
+</div>
+
 <!-- Generic Confirm Modal -->
 <div class="modal-bg" id="confirmModal">
   <div class="modal" style="max-width:480px">
@@ -563,6 +651,23 @@
     <div class="modal-actions">
       <button id="confirmCancelBtn">Cancel</button>
       <button class="primary" id="confirmOkBtn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="pending-gate" id="pendingGate">
+  <div class="pending-box">
+    <div class="pending-icon">⏳</div>
+    <h2>Access Pending</h2>
+    <div class="pending-name" id="pendingName"></div>
+    <div class="pending-email" id="pendingEmail"></div>
+    <div class="pending-msg">
+      Your <strong>@go.team</strong> account is signed in, but your role hasn't been assigned yet by the GoTeam IT team.<br><br>
+      Click <strong>Request Access</strong> to send an email asking for access.
+    </div>
+    <div class="pending-actions">
+      <button id="pendingRequestBtn" class="primary">📧 Request Access</button>
+      <button id="pendingSignOutBtn">Sign out</button>
     </div>
   </div>
 </div>
@@ -638,6 +743,210 @@
   };
   var msalInstance = null;
   var msalInitAttempts = 0;
+
+  // ===== User Roles =====
+  var USERS_STORAGE_KEY = "goteam_client_tracker_users_v1";
+  var ROLE = { ADMIN: "Administrator", EDITOR: "Editor", VIEWER: "Viewer" };
+  var OWNER_EMAIL = "christian.esaga@go.team"; // Always Administrator, can never be removed
+  var REQUEST_EMAIL = "christian.esaga@go.team"; // Where access requests are sent
+  // Embedded baseline user list (deployed via repo). Christian is always Admin.
+  var SEED_USERS = [
+    { email: "christian.esaga@go.team", name: "Christian Esaga", role: "Administrator", addedBy: "system", addedAt: "2026-05-14 10:00" }
+  ];
+  var currentUserRole = null;
+
+  function loadUsers(){
+    try{
+      var raw = localStorage.getItem(USERS_STORAGE_KEY);
+      if(raw){ return JSON.parse(raw); }
+    }catch(e){}
+    // Seed first time
+    var u = SEED_USERS.slice();
+    try{ localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(u)); }catch(e){}
+    return u;
+  }
+  function saveUsers(users){
+    try{ localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(users)); }catch(e){}
+  }
+  function getUserRole(email){
+    if(!email) return null;
+    email = email.toLowerCase();
+    if(email === OWNER_EMAIL.toLowerCase()) return ROLE.ADMIN; // owner is always admin
+    var users = loadUsers();
+    for(var i=0;i<users.length;i++){
+      if((users[i].email||"").toLowerCase() === email) return users[i].role;
+    }
+    return null; // no access
+  }
+  function isAdmin(){ return currentUserRole === ROLE.ADMIN; }
+  function isEditor(){ return currentUserRole === ROLE.EDITOR; }
+  function isViewer(){ return currentUserRole === ROLE.VIEWER; }
+  function canEdit(){ return isAdmin() || isEditor(); }
+  function canDelete(){ return isAdmin(); }
+  function canManageUsers(){ return isAdmin(); }
+  function canImport(){ return isAdmin(); }
+
+  function applyRoleGates(){
+    var body = document.body;
+    body.classList.remove("role-admin","role-editor","role-viewer");
+    if(isAdmin()) body.classList.add("role-admin");
+    else if(isEditor()) body.classList.add("role-editor");
+    else if(isViewer()) body.classList.add("role-viewer");
+    // Update role badge in sidebar
+    var roleBadge = document.getElementById("userRoleBadge");
+    if(roleBadge){
+      var r = currentUserRole;
+      if(r){
+        var slug = r === "Administrator" ? "admin" : r === "Editor" ? "editor" : "viewer";
+        roleBadge.className = "role-badge " + slug;
+        roleBadge.textContent = r;
+        roleBadge.style.display = "inline-flex";
+      } else {
+        roleBadge.style.display = "none";
+      }
+    }
+    // Re-render to apply role-based hiding in table rows
+    if(typeof render === "function") render();
+  }
+
+  // ===== Pending Access screen =====
+  function showPendingAccess(user){
+    document.getElementById("pendingName").textContent = user.name || "";
+    document.getElementById("pendingEmail").textContent = user.email || "";
+    document.getElementById("pendingGate").classList.add("active");
+  }
+  function hidePendingAccess(){
+    document.getElementById("pendingGate").classList.remove("active");
+  }
+  function requestAccess(){
+    var user = getSignedInUser();
+    if(!user) return;
+    var subject = encodeURIComponent("Access request: GoTeam Client Tracker");
+    var body = encodeURIComponent(
+      "Hi Christian,\n\n" +
+      "Please grant me access to the GoTeam Client Tracker.\n\n" +
+      "Name: " + (user.name||"") + "\n" +
+      "Email: " + (user.email||"") + "\n" +
+      "Date: " + nowStr() + "\n\n" +
+      "Reason for access:\n[Please describe why you need access]\n\n" +
+      "Thanks!"
+    );
+    window.location.href = "mailto:" + REQUEST_EMAIL + "?subject=" + subject + "&body=" + body;
+  }
+
+  // ===== Users & Roles view =====
+  function renderUsersView(){
+    var users = loadUsers();
+    var ownerInList = false;
+    for(var i=0;i<users.length;i++){
+      if((users[i].email||"").toLowerCase() === OWNER_EMAIL.toLowerCase()){ ownerInList = true; break; }
+    }
+    if(!ownerInList){
+      users.unshift({ email: OWNER_EMAIL, name: "Christian Esaga", role: "Administrator", addedBy: "system", addedAt: nowStr() });
+      saveUsers(users);
+    }
+    document.getElementById("usersCount").textContent = users.length + " user" + (users.length===1?"":"s");
+    document.getElementById("countUsers").textContent = users.length;
+    var tbody = document.getElementById("usersTbody");
+    tbody.innerHTML = users.map(function(u){
+      var initial = (u.name||"?").charAt(0).toUpperCase();
+      var slug = u.role === "Administrator" ? "admin" : u.role === "Editor" ? "editor" : "viewer";
+      var isOwner = (u.email||"").toLowerCase() === OWNER_EMAIL.toLowerCase();
+      var roleSelect = isOwner
+        ? '<span class="role-badge admin">Administrator <span class="owner-tag">Owner</span></span>'
+        : '<select class="user-role-select" data-role-email="'+escapeHtml(u.email)+'">'
+          + '<option value="Viewer"'+(u.role==="Viewer"?" selected":"")+'>Viewer</option>'
+          + '<option value="Editor"'+(u.role==="Editor"?" selected":"")+'>Editor</option>'
+          + '<option value="Administrator"'+(u.role==="Administrator"?" selected":"")+'>Administrator</option>'
+          + '</select>';
+      var actions = isOwner ? '' : '<button class="icon-only danger" data-remove-user="'+escapeHtml(u.email)+'" title="Remove user"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg></button>';
+      return '<tr>'
+        + '<td class="user-avatar-cell"><div class="user-avatar">'+initial+'</div></td>'
+        + '<td><div class="user-name">'+escapeHtml(u.name||"")+'</div><div class="user-email">'+escapeHtml(u.email||"")+'</div></td>'
+        + '<td>'+roleSelect+'</td>'
+        + '<td class="user-meta">'+escapeHtml(u.addedAt||"")+'<br>by '+escapeHtml(u.addedBy||"")+'</td>'
+        + '<td class="user-actions">'+actions+'</td>'
+        + '</tr>';
+    }).join("");
+    // Wire role changes
+    var selects = tbody.querySelectorAll("[data-role-email]");
+    for(var s=0;s<selects.length;s++){
+      (function(sel){
+        sel.addEventListener("change", function(){
+          var email = sel.getAttribute("data-role-email");
+          var newRole = sel.value;
+          var us = loadUsers();
+          for(var i=0;i<us.length;i++){
+            if((us[i].email||"").toLowerCase() === email.toLowerCase()){
+              us[i].role = newRole;
+              us[i].addedBy = (getSignedInUser()||{}).name || "you";
+              us[i].addedAt = nowStr();
+              break;
+            }
+          }
+          saveUsers(us);
+          toast("Role updated for " + email, "success");
+        });
+      })(selects[s]);
+    }
+    // Wire remove buttons
+    var removes = tbody.querySelectorAll("[data-remove-user]");
+    for(var r=0;r<removes.length;r++){
+      (function(btn){
+        btn.addEventListener("click", function(){
+          var email = btn.getAttribute("data-remove-user");
+          customConfirm({
+            title: "Remove user?",
+            body: 'Remove access for <strong>'+escapeHtml(email)+'</strong>?<br><br><span style="color:var(--muted);font-size:12px">They will see the "Pending Access" screen the next time they sign in. To fully block, also remove them from Entra (Enterprise apps → GoTeam Client Tracker → Users and groups).</span>',
+            okText: "Remove",
+            danger: true
+          }, function(ok){
+            if(!ok) return;
+            var us = loadUsers().filter(function(x){ return (x.email||"").toLowerCase() !== email.toLowerCase(); });
+            saveUsers(us);
+            renderUsersView();
+            toast("Removed: " + email, "info");
+          });
+        });
+      })(removes[r]);
+    }
+  }
+  function openAddUserModal(){
+    document.getElementById("userModalTitle").textContent = "Add User";
+    document.getElementById("uName").value = "";
+    document.getElementById("uEmail").value = "";
+    document.getElementById("uRole").value = "Viewer";
+    document.getElementById("userModal").classList.add("active");
+    setTimeout(function(){ document.getElementById("uName").focus(); }, 50);
+  }
+  function closeUserModal(){
+    document.getElementById("userModal").classList.remove("active");
+  }
+  function saveNewUser(){
+    var name = document.getElementById("uName").value.trim();
+    var email = document.getElementById("uEmail").value.trim().toLowerCase();
+    var role = document.getElementById("uRole").value;
+    if(!name){ toast("Name is required.", "error"); return; }
+    if(!email.endsWith(ALLOWED_DOMAIN)){ toast("Email must end with " + ALLOWED_DOMAIN, "error"); return; }
+    var us = loadUsers();
+    for(var i=0;i<us.length;i++){
+      if((us[i].email||"").toLowerCase() === email){
+        toast("User already exists. Change their role from the table.", "warn");
+        return;
+      }
+    }
+    us.push({
+      email: email,
+      name: name,
+      role: role,
+      addedBy: (getSignedInUser()||{}).name || "you",
+      addedAt: nowStr()
+    });
+    saveUsers(us);
+    closeUserModal();
+    renderUsersView();
+    toast("Added: " + name + " (" + role + ")", "success");
+  }
   function initMsal(){
     if(typeof msal === "undefined"){
       msalInitAttempts++;
@@ -704,10 +1013,22 @@
       signedInAt: nowStr(),
       authMethod: "microsoft"
     };
+    // Check role
+    var role = getUserRole(email);
+    user.role = role;
     setSignedInUser(user);
+    currentUserRole = role;
     updateWhoCard();
+    if(!role){
+      // Signed in but no role assigned - show pending screen
+      hideSignInGate();
+      showPendingAccess(user);
+      return;
+    }
     hideSignInGate();
-    toast("Welcome, " + user.name + "!", "success");
+    hidePendingAccess();
+    applyRoleGates();
+    toast("Welcome, " + user.name + "! (" + role + ")", "success");
   }
   function signInWithMicrosoft(){
     if(!msalInstance){ showGateError("Sign-in is still loading. Try again in a moment."); return; }
@@ -1127,7 +1448,8 @@
     var titles = {
       active: {h:"Active Clients", s:"Track every client and the apps required for setup"},
       trash: {h:"Recycle Bin", s:"Deleted clients you can restore or purge permanently"},
-      analytics: {h:"Analytics", s:"Live insights from your client data"}
+      analytics: {h:"Analytics", s:"Live insights from your client data"},
+      users: {h:"Users & Roles", s:"Manage who has access and what they can do"}
     };
     var t = titles[mode] || titles.active;
     document.getElementById("pageTitle").textContent = t.h;
@@ -1138,17 +1460,27 @@
     var toolbar = document.querySelector(".toolbar");
     var analyticsView = document.getElementById("analyticsView");
     var stats = document.querySelector(".stats");
+    var usersView = document.getElementById("usersView");
     if(mode === "analytics"){
       tableWrap.style.display = "none";
       toolbar.style.display = "none";
       stats.style.display = "none";
       analyticsView.style.display = "block";
+      if(usersView) usersView.classList.remove("active");
       renderAnalytics();
+    } else if(mode === "users"){
+      tableWrap.style.display = "none";
+      toolbar.style.display = "none";
+      stats.style.display = "none";
+      analyticsView.style.display = "none";
+      if(usersView) usersView.classList.add("active");
+      renderUsersView();
     } else {
       tableWrap.style.display = "";
       toolbar.style.display = "";
       stats.style.display = "";
       analyticsView.style.display = "none";
+      if(usersView) usersView.classList.remove("active");
       if(mode === "trash"){ addBtn.style.display = "none"; autoBtn.style.display = "none"; }
       else { addBtn.style.display = ""; autoBtn.style.display = ""; }
       render();
@@ -1307,13 +1639,20 @@
         var rowCls = (locked ? "locked " : "") + (pinned ? "pinned" : "");
         var star = pinned ? "★" : "☆";
         var starCls = pinned ? "star-btn starred" : "star-btn";
-        var editBtn = locked
-          ? '<button class="icon-only edit" disabled title="Unlock to edit">'+editSvg+'</button>'
-          : '<button class="icon-only edit" data-edit="'+c.id+'" title="Edit">'+editSvg+'</button>';
-        var lockBtn = '<button class="icon-only lock" data-lock="'+c.id+'" title="'+(locked?"Unlock":"Lock")+'">'+(locked?lockSvg:unlockSvg)+'</button>';
-        var delBtn = locked
-          ? '<button class="icon-only danger" disabled title="Unlock to delete">'+trashSvg+'</button>'
-          : '<button class="icon-only danger" data-del="'+c.id+'" title="Move to Recycle Bin">'+trashSvg+'</button>';
+        var editBtn = '';
+        var lockBtn = '';
+        var delBtn = '';
+        if(canEdit()){
+          editBtn = locked
+            ? '<button class="icon-only edit" disabled title="Unlock to edit">'+editSvg+'</button>'
+            : '<button class="icon-only edit" data-edit="'+c.id+'" title="Edit">'+editSvg+'</button>';
+          lockBtn = '<button class="icon-only lock" data-lock="'+c.id+'" title="'+(locked?"Unlock":"Lock")+'">'+(locked?lockSvg:unlockSvg)+'</button>';
+        }
+        if(canDelete()){
+          delBtn = locked
+            ? '<button class="icon-only danger" disabled title="Unlock to delete">'+trashSvg+'</button>'
+            : '<button class="icon-only danger" data-del="'+c.id+'" title="Move to Recycle Bin">'+trashSvg+'</button>';
+        }
         var viewBtn = '<button class="icon-only view" data-view="'+c.id+'" title="Quick view">'+eyeSvg+'</button>';
         return '<tr class="'+rowCls+'">'
           + '<td class="client-name">'
@@ -1659,7 +1998,7 @@
     var c = clients[i];
     c.starred = !c.starred;
     save(); render();
-    toast(c.starred ? "⭐ Pinned: " + c.name : "Unpinned: " + c.name, "info");
+    toast(c.starred ? "Pinned: " + c.name : "Unpinned: " + c.name, "info");
   }
 
   function exportJson(){
@@ -1697,6 +2036,7 @@
       toast("Reset to defaults", "info");
     });
   }
+
   function exportXlsx(){
     if(typeof XLSX === "undefined"){ toast("Excel library still loading. Try again.", "warn"); return; }
     var active = clients.filter(function(c){return !c.deleted;});
@@ -1718,9 +2058,8 @@
     ws1["!cols"] = [{wch:6},{wch:42},{wch:10},{wch:12},{wch:24},{wch:38},{wch:38},{wch:30},{wch:8},{wch:8},{wch:18},{wch:18}];
     var wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws1, "Active Clients");
-
     var rowsBin = [
-      ["GoTeam Client Tracker — Recycle Bin / Audit Log", "", "", "", "", "", "", "", "", "", ""],
+      ["GoTeam Client Tracker - Recycle Bin / Audit Log", "", "", "", "", "", "", "", "", "", ""],
       ["#", "Client Name", "Shift", "Tags", "Client Instructions", "App Requirements", "Pre-installed", "Deleted By", "Deleted At", "Reason", "Was Last Edited By"]
     ];
     deleted.forEach(function(c, i){
@@ -1734,7 +2073,6 @@
     ws2["!merges"] = [{s:{r:0,c:0}, e:{r:0,c:10}}];
     ws2["!cols"] = [{wch:6},{wch:36},{wch:10},{wch:24},{wch:36},{wch:36},{wch:28},{wch:18},{wch:18},{wch:36},{wch:18}];
     XLSX.utils.book_append_sheet(wb, ws2, "Recycle Bin");
-
     XLSX.writeFile(wb, "GoTeam_Client_Requirements_Tracker_" + new Date().toISOString().slice(0,10) + ".xlsx");
     toast("Excel exported (with Recycle Bin sheet)", "success");
   }
@@ -1800,13 +2138,11 @@
             });
           }
         }
-        // Try to find sheets
         var hasActive = wb.SheetNames.indexOf("Active Clients") >= 0;
         var hasBin = wb.SheetNames.indexOf("Recycle Bin") >= 0;
         if(hasActive){ readSheet("Active Clients", false); }
         if(hasBin){ readSheet("Recycle Bin", true); }
         if(!hasActive && !hasBin){
-          // Single sheet fallback - find first one with Client Name header
           for(var i=0;i<wb.SheetNames.length;i++){
             readSheet(wb.SheetNames[i], false);
             if(imported.length) break;
@@ -1864,6 +2200,17 @@
   var msBtn = document.getElementById("msSignInBtn");
   if(msBtn) msBtn.addEventListener("click", signInWithMicrosoft);
   document.getElementById("signOutBtn").addEventListener("click", signOut);
+  // Pending access screen wire-up
+  document.getElementById("pendingRequestBtn").addEventListener("click", requestAccess);
+  document.getElementById("pendingSignOutBtn").addEventListener("click", function(){
+    hidePendingAccess();
+    signOut();
+  });
+  // Users & Roles wire-up
+  document.getElementById("addUserBtn").addEventListener("click", openAddUserModal);
+  document.getElementById("userCancelBtn").addEventListener("click", closeUserModal);
+  document.getElementById("userSaveBtn").addEventListener("click", saveNewUser);
+  document.getElementById("userModal").addEventListener("click", function(e){ if(e.target.id==="userModal") closeUserModal(); });
   updateWhoCard();
   initMsal();
   var navBtns = document.querySelectorAll(".sidebar-nav .nav-item");
@@ -1876,12 +2223,12 @@
   }
 
   document.addEventListener("keydown", function(e){
-    if(e.key==="Escape"){ closeModal(); closeDeleteModal(); closeViewModal(); closePurgeModal(); closeConfirm(false); return; }
+    if(e.key==="Escape"){ closeModal(); closeDeleteModal(); closeViewModal(); closePurgeModal(); closeConfirm(false); closeUserModal(); return; }
     var t = e.target;
     var typing = t && (t.tagName==="INPUT" || t.tagName==="TEXTAREA" || t.isContentEditable);
     if(typing) return;
     if(e.key === "/"){ e.preventDefault(); document.getElementById("searchInput").focus(); }
-    else if(e.key === "n" || e.key === "N"){ e.preventDefault(); openModal(null); }
+    else if(e.key === "n" || e.key === "N"){ if(canEdit()){ e.preventDefault(); openModal(null); } }
   });
 
   // Keyboard hint show/hide (persistent) + dragging
