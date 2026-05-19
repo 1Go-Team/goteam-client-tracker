@@ -475,6 +475,7 @@
       <option value="configured">Configured</option>
     </select>
     <button class="primary role-edit" id="addBtn" title="Add client (n)">+ Add Client</button>
+    <button class="role-admin-only" id="exportClientsTopBtn" title="Export clients.json (for deploy)">💾 Export for Deploy</button>
     <button class="role-admin-only" id="autoTagBtn" title="Auto-categorize clients based on names">✨ Auto-tag</button>
     <button id="exportXlsxBtn">Export Excel</button>
     <button class="role-admin-only" id="importXlsxBtn">Import Excel</button>
@@ -1405,6 +1406,16 @@
       .catch(function(){ return null; })
       .then(function(data){
         if(data && Array.isArray(data) && data.length > 0){
+          // Compare with local — if server matches local, clear pending state (deploy succeeded)
+          try{
+            var localRaw = localStorage.getItem(STORAGE_KEY);
+            if(localRaw){
+              var local = JSON.parse(localRaw);
+              if(local.length === data.length){
+                clearPendingExport();
+              }
+            }
+          }catch(e){}
           clients = data.map(normalizeClient);
           try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(clients)); }catch(e){}
           if(typeof render === "function") render();
@@ -1413,6 +1424,7 @@
         return null;
       });
   }
+  var CLIENTS_PENDING_KEY = "goteam_clients_pending_export";
   function exportClientsJson(){
     var blob = new Blob([JSON.stringify(clients, null, 2)], { type: "application/json" });
     var url = URL.createObjectURL(blob);
@@ -1422,15 +1434,31 @@
     a.click();
     URL.revokeObjectURL(url);
     toast("clients.json downloaded. Save to your 'Client Requirements' folder, then run deploy.bat.", "success");
+    try{ localStorage.setItem(CLIENTS_PENDING_KEY, "exported"); }catch(e){}
     var banner = document.getElementById("clientsDeployBanner");
     if(banner){
       var status = document.getElementById("clientsDeployStatus");
-      if(status) status.textContent = "Downloaded! Now place it in your workspace folder and run deploy.bat.";
+      if(status) status.textContent = "✓ Downloaded! Now place clients.json in your workspace folder and run deploy.bat.";
     }
   }
   function markClientsDeployPending(){
+    try{ localStorage.setItem(CLIENTS_PENDING_KEY, "pending"); }catch(e){}
     var banner = document.getElementById("clientsDeployBanner");
     if(banner) banner.style.display = "flex";
+  }
+  function checkPendingExport(){
+    try{
+      var state = localStorage.getItem(CLIENTS_PENDING_KEY);
+      if(state === "pending"){
+        var banner = document.getElementById("clientsDeployBanner");
+        if(banner) banner.style.display = "flex";
+      }
+    }catch(e){}
+  }
+  function clearPendingExport(){
+    try{ localStorage.removeItem(CLIENTS_PENDING_KEY); }catch(e){}
+    var banner = document.getElementById("clientsDeployBanner");
+    if(banner) banner.style.display = "none";
   }
   function seedFromEmbedded(){
     clients = SEED_DATA.map(normalizeClient);
@@ -2326,6 +2354,7 @@
   document.getElementById("importXlsxFile").addEventListener("change", function(e){ if(e.target.files[0]) importXlsx(e.target.files[0]); e.target.value=""; });
   document.getElementById("resetBtn").addEventListener("click", resetData);
   document.getElementById("exportClientsBtn").addEventListener("click", exportClientsJson);
+  document.getElementById("exportClientsTopBtn").addEventListener("click", exportClientsJson);
   // Sign-in gate wire-up (Microsoft SSO)
   var msBtn = document.getElementById("msSignInBtn");
   if(msBtn) msBtn.addEventListener("click", signInWithMicrosoft);
@@ -2452,6 +2481,7 @@
   load();
   render();
   updateSaveIndicator();
+  checkPendingExport();
 
   // Sign-in gate is now handled by initMsal() which checks existing MSAL session first
 })();
