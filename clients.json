@@ -1,0 +1,5772 @@
+[
+  {
+    "id": "xz4pwepcsgeb",
+    "name": "Digital Dealer (Front End, Back End and Web Developer)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Git - https://gitforwindows.org/",
+      "Microsoft Visual Studio Code - https://code.visualstudio.com/download",
+      "Oracle VM Virtualbox 7.0.6 - https://www.virtualbox.org/wiki/Downloads",
+      "Vagrant -  https://www.vagrantup.com/Downloads",
+      "Sourcetree - https://www.sourcetreeapp.com/",
+      "VS Code or Sublime",
+      "MySQL Workbench",
+      "Slack",
+      "Chrome (Firefox Developer Edition)",
+      "DevBox",
+      "Ubuntu 20.04 LTS on Windows via Microsoft Store",
+      "Docker:https://docs.docker.com/desktop/install/windows-install/"
+    ],
+    "instructions": "Devices should have admin account intended for Digital Dealer\nUN:  .\\Digital Dealer  PW:  Welcome1\nNeed to install the application required\nGOTEAM TOOLS and TERAMIND STEALTH",
+    "preinstalled": [
+      "GoTeam Standard tools"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 21:01",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "fsg4043msgec",
+    "name": "Digital Dealer (VA Role)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "GoTeam Basic Tools",
+      "SLACK AND CHROME",
+      "TERAMIND STEALTH"
+    ],
+    "instructions": "SLACK AND CHROME",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:50",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "eqme8q68sgec",
+    "name": "1 Medical",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client IT will be the one to install the applications needed"
+    ],
+    "instructions": "Once the basic goteam tools are installed you will need to update the email of the IT client support they will install the applications needed\n(Don't forget to give the temporary admin access so they can install the tools)",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Revealed VA AI)"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 10:08",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ghc903qmsgec",
+    "name": "Wavelength",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client",
+      "IT will be the one to install the applications needed (GoTeam Tools and Teramind Stealth) Cetrix App."
+    ],
+    "instructions": "Once the laptop are installed with basic goteam tools you need to share teamviewer details to client IT (Don't forget to give the temporary admin access so they can install the tools)\nIf the device from the client (Note: No GoTeam Tools they have own domain)",
+    "preinstalled": [
+      "GoTeam Tools and Teramind Stealth"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 11:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "mb3jfbxwsgec",
+    "name": "QATTRO",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "Client provided device",
+    "preinstalled": [
+      "No GoTeam tools"
+    ],
+    "tags": [],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:50",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "y3giutnosgec",
+    "name": "FST Media",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Aircall",
+      "teramind stealth",
+      "visual accessAi"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:50",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "a0bp4q42sgec",
+    "name": "Olitek",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No instructions"
+    ],
+    "instructions": "Client VPN (will be install by client IT) TM will be the one to reach out",
+    "preinstalled": [
+      "GoTeam Standard tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "r5b32fmcsgec",
+    "name": "EarthCheck",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No app requirements"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "GoTeam Standard tools"
+    ],
+    "tags": [],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ikbkwacqsgec",
+    "name": "Form Direct",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "Client will install the tools",
+    "preinstalled": [
+      "Client Provided devices"
+    ],
+    "tags": [],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "v92qqfy3sgec",
+    "name": "The Eventful Group",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "Client will install the tools",
+    "preinstalled": [
+      "Client Provided devices"
+    ],
+    "tags": [
+      "Hospitality",
+      "Publishing & Events"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 11:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "iwn4ciupsgec",
+    "name": "THE ZOO REPUBLIC",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "Client will install the tools",
+    "preinstalled": [
+      "Client provided device"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "hn51ufn4sgec",
+    "name": "STEP CHANGE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "Client will install the tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ftxfsu6jsgec",
+    "name": "Prudential Real Estate - Michael Sullivan",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No app requirements"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "GoTeam standard tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xpqcy6ansgec",
+    "name": "The Community Co",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Foxit Reader - https://www.foxit.com/pdf-reader/",
+      "Bria - installer will be provide by Jonas Heredia",
+      "Google Chat - https://chat.google.com/download/",
+      "WPS - https://www.wps.com/download/"
+    ],
+    "instructions": "No Teramind App",
+    "preinstalled": [
+      "GoTeam standard tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "zq8bf6hvsgec",
+    "name": "Hitch Advisory Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App requirements"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "GoTeam Standard tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "eqyznmwksgec",
+    "name": "SIMPLERENT",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Sublime.txt",
+      "slack",
+      "picpick (screen capture tool)",
+      "zoom",
+      "teams (ms chat)"
+    ],
+    "instructions": "microsip (softphone app) for CSR position only",
+    "preinstalled": [
+      "GoTeam Standard tools (VA AI & Teramind Stealth)"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "btgx5f4isgec",
+    "name": "BOLINDA PUBLISHING",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Teamviewer Only"
+    ],
+    "instructions": "Username will be set to below details, No other job to do\nUN:  Bolinda\nPW:  Bolinda!",
+    "preinstalled": [
+      "Teamviewer only no goteam tools"
+    ],
+    "tags": [
+      "Publishing & Events"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "bpfu4xc5sgec",
+    "name": "Collab IT / Blue Zinc IT Australia",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "nqijbwnhsgec",
+    "name": "Upbooks",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": true,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "sxdriwpwsgec",
+    "name": "Market Track LLC (DBA Numerator)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:35",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6kmahitdsgec",
+    "name": "PGV Consulting",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:36",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "tumi3ci9sgec",
+    "name": "Macqperry Partners / McCarthy Salked",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Client will install the tools"
+    ],
+    "instructions": "Client provided devices",
+    "preinstalled": [
+      "Client will install the tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:39",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9jw87g5usgec",
+    "name": "Ashton Media",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:39",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9gxllcn2sgec",
+    "name": "Merlo Coffee",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:45",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "dlsph59msgec",
+    "name": "Scentia",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Adobe Pro - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html"
+    ],
+    "instructions": "No Client Tools",
+    "preinstalled": [
+      "GoTeam Standard tools (Teramind Revealed)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:48",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "djz419g9sgec",
+    "name": "BTA Sales",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:48",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "3s06qc3fsgec",
+    "name": "ENERGY EASE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "After installation of GoTeam Tools share the teamviewer with IT client Rob Williams  (Don't forget to give the temporary admin access so they can install the tools)",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Energy"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:50",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "k9z5yvxvsgec",
+    "name": "Prudential - Simon Perri",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "GoTeam VPN with configuration"
+    ],
+    "instructions": "No Client Instruction",
+    "preinstalled": [
+      "GoTeam Standard Tools and No Teramind"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 14:54",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "q7qifkm3sgec",
+    "name": "Belinda Brosnan / Marketing Junction Pty",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 15:01",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1fh00hcssgec",
+    "name": "Cloverdale",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 15:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "dczjv06jsgec",
+    "name": "THE MARKETING LAB",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 15:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "x4y4ne45sgec",
+    "name": "Volat Enterprise (The Marketing Lab)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 15:03",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "rl0t27nksgec",
+    "name": "ZENITH SEARCH",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-06 15:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lwicikt7sgec",
+    "name": "APRICUS AUSTRALIA",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Energy"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 10:33",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1v3lzf4tsgec",
+    "name": "WILKEN SERVICE PTY LTD",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instruction",
+    "preinstalled": [
+      "GoTeam Standard Tools (Visual Access AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 10:35",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "dv148256sgec",
+    "name": "NET FOCUS MEDIA LLC / VOCATIONAL MEDIA LLC",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 10:47",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "5luf2u42sgec",
+    "name": "CEO COACHING INTERNATIONAL",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instrcitions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 10:48",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4f8gstcgsgec",
+    "name": "Navigate Financial Group - Manly",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Visual Access AI)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 11:16",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "eo8z8tvisgec",
+    "name": "Brighton Office",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:19",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ijat1064sgec",
+    "name": "CONSTRUCTIVE COLLECTIVE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:20",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "bl72la33sgec",
+    "name": "THE ALTERNATIVE BOARD",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:22",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "kyx91b70sgec",
+    "name": "RESEARCH-IP",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:22",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "33yk3vk4sgec",
+    "name": "RADIX GROUP",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:23",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "2pypiakusgec",
+    "name": "THE GROWTH FACULTY",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting",
+      "Education"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:23",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "24xnvacwsgec",
+    "name": "MINIMAX",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:23",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1vv77d2hsgec",
+    "name": "LAING + SIMMONS",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:24",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "br8ntbu3sgec",
+    "name": "DNA MEDICAL RECRUITMENT",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "CC: cj@dnarecruit.com.au",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Revealed)"
+    ],
+    "tags": [
+      "Healthcare",
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:25",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "554gir8osgec",
+    "name": "BUILDERS OF ARCHITECTURE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Eyebeam configuration"
+    ],
+    "instructions": "VOIP account  should be configure for the new starters, once account is created , configure the eyebeam for their softphone using the VOIP details",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Revealed)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 11:37",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "alwxjumisgec",
+    "name": "TSA MANAGEMENT",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Exclaimer - https://support.exclaimer.com/hc/en-gb/p/outlook-client",
+      "Exlaimer (Knowledge Base) - https://support.exclaimer.com/hc/en-gb/articles/4406429578269-Install-Exclaimer-Signature-Update-Agent-Windows"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "pqkrijk6sgec",
+    "name": "LYNX RECRUITMENT",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "dhckgy0fsgec",
+    "name": "AUSTRALIAN PREMIER LEAGUE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Sports & Fitness"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:03",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7fe2sko5sgec",
+    "name": "INSKA",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "u9wy5w5usgec",
+    "name": "Black Moth",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "pvyqav8csgec",
+    "name": "MAVEN DENTAL GROUP",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9ug4c8o7sgec",
+    "name": "RECMATE",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "hmttk56nsgec",
+    "name": "HSC Technology Group",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:07",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "75rg6piksgec",
+    "name": "CLEANWORKS",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:07",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "zu3wmtx9sgec",
+    "name": "ZEN ONE SIX NINE LIMITED / BOB COONEY",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:08",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ll4urrumsgec",
+    "name": "GEFCO",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:08",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "j36a1f9lsgec",
+    "name": "Spring St Bondi Junction / LJ Hooker Bondi Junction",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:08",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "s1duorqzsgec",
+    "name": "East From The City / LJ Hooker Bondi Junction",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "yvlvq57psgec",
+    "name": "INNOVA SERVICES GROUP",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0unhocoqsgec",
+    "name": "MIND STREET",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "wjjxqm3qsgec",
+    "name": "ARCADIA RECRUITMENT",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:10",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8ft5kqfbsgec",
+    "name": "AEROTRUTH",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Trello and Zoom"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (VA AI to register and No Teramind)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:11",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9iy4yb2gsgec",
+    "name": "THE DETOX MARKET",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools 9Teramind Stealth)"
+    ],
+    "tags": [
+      "Beauty"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:11",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "o9xifdynsgec",
+    "name": "CONVERSION LOGIX",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:12",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "5axcffessgec",
+    "name": "YPO",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:12",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "51hbzxcisgec",
+    "name": "MMS Group",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:13",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "h72if60hsgec",
+    "name": "Mortgagehq",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Intercom: https://intercom.help/gettrail/en/collections/6946138-pathfinder-training-program",
+      "Slack"
+    ],
+    "instructions": "Coordinate with IT to configure Zoomphone to the TM's equipment",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:15",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "wfni2uacsgec",
+    "name": "Nuvho",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:16",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "s7p47709sgec",
+    "name": "REE Medical",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "RingCentral - https://www.ringcentral.com/download.html",
+      "Zoho WorkDrive TrueSync - https://www.zoho.com/workdrive/truesync.html      Zscaler",
+      "Adobe Acrobat - https://get.adobe.com/reader/",
+      "Slack app - https://slack.com/downloads/windows"
+    ],
+    "instructions": "Note: Install MS Teams app ONLY",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth and VA AI)"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:18",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6qbwsn30sgec",
+    "name": "The Wiggles Holdings Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Education"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:19",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "w3k9mdi8sgec",
+    "name": "Alowishus Delicious",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:20",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "y3yrlp0asgec",
+    "name": "Strata Sphere",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:22",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "47d5vjjmsgec",
+    "name": "United Ag & Turf",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Citrix Workspaces app - https://www.citrix.com/downloads/workspace-app/legacy-workspace-app-for-windows/workspace-app-for-windows-latest5.html",
+      "Atera - https://solutionzsecurity.servicedesk.atera.com/GetAgent/Msi/?customerId=32&integratorLogin=FredDunegan%40unitedagt.com",
+      "Malwarebytes - https://cloud.malwarebytes.com/download?t=Vz857INqbGcMctTX3Oan1vvXoI4E29ZWFULailJqre2zBZ867hOk5rAT6wRej19mkGbAAsXkxe7oUSp79p7rGNObMF_0O_zu-wS8ZXyI_i1P&via=copy&source=OV_downloadsPage",
+      "Splashtop - https://pettitmachinery-my.sharepoint.com/:u:/g/personal/freddunegan_unitedagt_com/EdWoQu8ZfMxLrk_TGcUTy3UBu6Z2EnrGtHwhKy0MjNek_g?e=4fbGPU",
+      "Anydesk - https://anydesk.com/en"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:25",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lgkg1nl0sgec",
+    "name": "INFOSCOUT / NUMERATOR",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:28",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "gwb0d70hsgec",
+    "name": "THE SIMPLE FOLK",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Beauty"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:29",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "gvxfalwysgec",
+    "name": "The General Store",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Auto Cad"
+    ],
+    "instructions": "December New Hire will use Auto Cad coordinate with client for the account and installer",
+    "preinstalled": [
+      "GoTeam Standard Tools (VA AI Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:30",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "qv6om3a4sgec",
+    "name": "Bitt'n",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Aircall"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:31",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "src3h4kgsgec",
+    "name": "ZMR Capital",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Slack"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "d4mwawslsgec",
+    "name": "Hamilton Elevators",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:43",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "96hmfb76sgec",
+    "name": "Artemide Law - New Client",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Microsoft Word",
+      "Excel",
+      "Power Point",
+      "Outlook",
+      "teams (ms chat)",
+      "Zoom"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Legal"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:44",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "nrr6mpfbsgec",
+    "name": "GOA Billboards",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (VA AI)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:45",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "m3ba7vhfsgec",
+    "name": "Femtek",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:46",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "jhcq3u75sgec",
+    "name": "SGC Constructions Specialties, LLC",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "BlueBeam"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:47",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4m37ilsssgec",
+    "name": "ONE10",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:49",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "oesv3lrnsgec",
+    "name": "ZEUS LIVING",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "",
+    "lastEditedAt": "",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-08 13:54",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "ynckivdrsgec",
+    "name": "CEO COACHING INTERNATIONAL",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 21:20",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "b775de5bsgec",
+    "name": "INCHARGE ELECTRICAL SERVICES, LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Cisco AnyConnect VPN Installer Link: https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EqgiRaBexHhCtUMSNvzqc3kBvEbwvA9Ax3ZQWYPVl6b8Dg?e=CpKWu3",
+      "(Estimating Roles) - Cisco AnyConnect VPN Client",
+      "Bluebeam Revu (v21) https://www.bluebeam.com/download/",
+      "New Serial Number : 9848622",
+      "Product Key : D2AU3-6667YF8",
+      "Buzzsaw-EN",
+      "SetupDesignReview2013_bundle(True View)",
+      "Box App - https://www.box.com/resources/downloads",
+      "(CSA and Netsuite Developer Roles)",
+      "Netsuite Website: https://system.netsuite.com/pages/customerlogin.jsp",
+      "Cisco AnyConnect VPN Client",
+      "Box App - https://www.box.com/resources/downloads",
+      "ScreenConnect - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/In-Charge%20Installers/Cebu-In_Charge_Electrical_Services_Windows_OS_ITSPlatform_TKNd24075f6-9470-49ed-be69-af33ceb088a4.msi?csf=1&web=1&e=i0folf"
+    ],
+    "instructions": "Time Zone: Central Standard Time (CST)\n\nMap Network Drive\n- \\\\192.168.1.22\\Austin Shared\\Print Jobs",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 21:48",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lzt3bx75sgec",
+    "name": "CONVERSION LOGIX",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 21:49",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "mrrl45uksgec",
+    "name": "ASHA SAXENA",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 21:57",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "k8bjp6jfsgec",
+    "name": "SITE IMPACT",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Dreamweaver (Need login credentials to download the app)",
+      "Adobe Photoshop (Need login credentials to download the app)",
+      "Sublime Text : https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe",
+      "Forticlient VPN : https://links.fortinet.com/forticlient/win/vpnagent"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "74vmtd3rsgec",
+    "name": "SCAN123",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ww33uyw1sgec",
+    "name": "B & B",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9vwej6n9sgec",
+    "name": "NUTEK",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:06",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "td4xjtlbsgec",
+    "name": "PREFERRED CFO",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Activate the MS 365 Apps using the license of Preferred CFO - https://goteam1-my.sharepoint.com/:x:/r/personal/matt_go_team1/_layouts/15/Doc.aspx?sourcedoc=%7BF9817755-9D45-46F7-9A6F-358CE9F77A74%7D&file=O365%20Desktop%20App%20License.xlsx&action=default&mobileredirect=true"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:14",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7zg7pqf9sgec",
+    "name": "WORKPLACE SAFETY SCREENINGS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Nitro Pro 13 : https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EWAXANescLtIoKLwikF-WYgBNtIa5ymuXh2DszBLZBDcFA?e=a8DwMS",
+      "Right Networks (Applicable if the position is accountant) : https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/Ea1eAVjKCEtEk1EIXn2u8TMBOv09x8KxwBW8q1cIe0NYng?e=gUfsav",
+      "RightNetworks Server: rncloud2.rightnetworks.com",
+      "Spotify",
+      "Active Presenter App - https://atomisystems.com/download/",
+      "Web VPN Set-up"
+    ],
+    "instructions": "(Note: Please disable the the AI Noise Reduction in the Acer Purified Voice Console)\nNote: Please include or CC MO SHAIKH\n(Right Networks App - For Accounting Position ONLY)\nNitro Pro ver 12.16.9.574 instead of 13",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Cloud)"
+    ],
+    "tags": [
+      "Security"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:27",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "y06p4rg4sgec",
+    "name": "BETTS COMPANY",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Cato Networks VPN - https://clientdownload.catonetworks.com/",
+      "Adobe Acrobat Pro - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html"
+    ],
+    "instructions": "Client's IT will be remoting the machine once done configuring the laptop and installed.\nNote: TM will reach out to the client for the tools installation. (Need GoTeam IT to assist with the admin credentials.)",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:37",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "n8i0z61lsgec",
+    "name": "PREMIER PROTECTIVE SECURITY INC.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Construction",
+      "Security"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:38",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "wi1z9my1sgec",
+    "name": "JOHNSONS CONSULTING GROUP",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:38",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ocbtvabdsgec",
+    "name": "HGREG",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "TimeDoctor"
+    ],
+    "instructions": "Remove Teramind",
+    "preinstalled": [
+      "GoTeam Standard Tools (No Teramind)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "pmit7q8jsgec",
+    "name": "WAREHOUSE CINEMAS & HIGHROCK",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:43",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lzoziz34sgec",
+    "name": "GF IMMIGRATION LAW, PA.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Legal"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:46",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4kd2lq0psgec",
+    "name": "M&A CAPITAL",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:47",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "mjpy56nxsgec",
+    "name": "COMMERCIAL FLEET FINANCING",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "New ScreenConnect: https://cffnationwide.screenconnect.com/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest&c=GoTeam&c=&c=Operations&c=&c=&c=&c=&c="
+    ],
+    "instructions": "Install ScreenConnect",
+    "preinstalled": [
+      "GoTeam Standard Tools (No Teramind",
+      "NinjaRMM and Teamviewer)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xzy9zvghsgec",
+    "name": "THE GREENSPAN CO. / ADJUSTERS INTERNATIONAL",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Winscribe VPN",
+      "Acrobat Reader"
+    ],
+    "instructions": "Ensure that all client requirements apps are installed.",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:58",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "47lpo1kwsgec",
+    "name": "NAKED NUTRITION",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Healthcare",
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 22:59",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "um40d0bksgec",
+    "name": "THE FRICKS COMPANY",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Azure VPN - https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/Ef8mNQb7QR1As8trgx-sPVEB19dqN-qX9Is_I82vn4CLUw?e=rgLy0u",
+      "Azure VPN Configuration - https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/ERvSQATydJtIpvxFyGAIIroB36rZQZte3oxOTB4Pfgn7jg?e=9JLFmU",
+      "CRRuntime (Crystal Report) - https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EQsGWzqU3FtBkT9sPhDIO2QBxGSyG99gZq3FrULoeJTXGg?e=mTaJ1u",
+      "VistaClient - https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EcuVw6jBY5tPjfqJl9-F5akBJKRHM_S9G-HwGM6eNohHCQ?e=bTlJCZ"
+    ],
+    "instructions": "Please install the CRRuntime before before installing the VistaClient",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1rwqwn4dsgec",
+    "name": "GLOBAL HOME FINANCE",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "3CX"
+    ],
+    "instructions": "3CX - User needs to login before we can install the app",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:06",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "o70f9xcjsgec",
+    "name": "E-FURNISHED / DACTYLON",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Chrome Extension - https://goteam1-my.sharepoint.com/:f:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Dactylon%20App%20Installers/Chrome%20Extension?csf=1&web=1&e=JAi9S1",
+      "ExpressVPN - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Dactylon%20App%20Installers/expressvpn_windows_12.44.0.72_release.exe?csf=1&web=1&e=nCthug",
+      "Picpick - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Dactylon%20App%20Installers/picpick_inst.exe?csf=1&web=1&e=9EH8hA",
+      "TopazGigaPixelAI - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Dactylon%20App%20Installers/TopazGigapixelAI-Full-Installer.exe?csf=1&web=1&e=aqSGu7",
+      "VMARK - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Dactylon%20App%20Installers/vmark-installer-41.exe?csf=1&web=1&e=ppyf93"
+    ],
+    "instructions": "",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:12",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "yw3jzrvfsgec",
+    "name": "CAMP GLADIATOR",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Education",
+      "Sports & Fitness"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:13",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "kgpb7efxsgec",
+    "name": "LOJISTICS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Filezilla - https://filezilla-project.org/",
+      "Google Chrome",
+      "Loom (Desktop App)",
+      "Text Pad - Enhanced Text Editor",
+      "Putty - SSH Telnet",
+      "Express VPN: https://www.expressvpn.com/vpn-download",
+      "Norton VPN - https://my.norton.com/extspa/guestdownload?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL3d3dy5ub3J0b24uY29tIiwiaXNzIjoiTm9ydG9uOk5HUC5JbnZpdGUuU3RvcmUiLCJleHAiOjE3NzMxNzUzMTQsIm5iZiI6MTc3MTk2NTcxNCwiSW52aXRlRGF0YSI6IntcIlBTTlwiOlwiUFZQNk1GRzc3N0ZDXCIsXCJJbnZpdGVUeXBlXCI6XCJOR1BfQUREX0RFVklDRV9HRU5FUklDXCIsXCJDcmVhdGVkRGF0ZVRpbWVcIjpcIjAyLzI0LzIwMjYgMjA6NDE6NTRcIn0iLCJpYXQiOjE3NzE5NjU3MTR9.yozKOgAYIOwNUQNICvtyZed9ZO3L7kvgUagzF8B_QpU&om_em_cid=ext_copylink_mynorton_setup_ngp"
+    ],
+    "instructions": "CLIENT SPECIFIC NOTE: MacBook Laptop only for the Developer position\nNo Ninjaone RMM                  Add user to Lojistic security group intune\nInstruction: Close the Norton VPN app 1st after the installation and re-open it to make sure that the VPN will be added to the dashboard. Go to Settings > VPN Preferences and select Mimic. Disable the IKS/KS (Internet Kill Switch/Kill Switch)\nCLIENT SPECIFIC NOTE: For Accounts Payable Specialist - Norton VPN",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth) No NinjaOne RMM"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:30",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "gcb2683psgec",
+    "name": "THE NINJA ZONE",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Education",
+      "Sports & Fitness"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:33",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8ajthbrnsgec",
+    "name": "SANTE REALTY INVESTMENTS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "( NextivaONE)  (Proton)"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:33",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6d9ac7f1sgec",
+    "name": "CITY HEALTH URGENT CARE",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ec07atjtsgec",
+    "name": "POWER PERSONNEL",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Client will provide"
+    ],
+    "instructions": "Client owned devices",
+    "preinstalled": [
+      "No GoTeam tools"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:35",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0y0mitdjsgec",
+    "name": "STAR BUILDING SUPPLIES",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:35",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "y1j1xgeosgec",
+    "name": "BARSALA",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:36",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xlgzpsxwsgec",
+    "name": "ASI SECURITY",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Security"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:36",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "gi9udfgysgec",
+    "name": "CONVERSION LOGIX",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Zoom",
+      "Adobe Creative Cloud",
+      "Filezillla"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:49",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "vc9g5nuhsgec",
+    "name": "HIREBETTER",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:57",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "umuv6v8fsgec",
+    "name": "PEERLESS EVENTS & TENTS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Publishing & Events"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-09 23:57",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "jvuo3rucsgec",
+    "name": "PIVOT CULINARY",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "a5z79x7rsgec",
+    "name": "TOTAL NEGOTIATION GROUP UK",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6tncytzvsgec",
+    "name": "THE HERB BOX",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stalth)"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "svzxsh3vsgec",
+    "name": "E-FURNISHED / DACTYLON (Chrome Extensions)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Google Chrome Extension (Norton Safe Web) : https://chrome.google.com/webstore/detail/norton-safe-web/fnpbeacklnhmkkilekogeiekaglbmmka",
+      "Google Chrome Extension (Grammarly) : https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en",
+      "Google Chrome Extension (Open Multiple URLs) : https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh?hl=en",
+      "Google Chrome Extension (Copy All URLs) : https://chromewebstore.google.com/detail/copy-all-urls/djdmadneanknadilpjiknlnanaolmbfk",
+      "7-Zip : https://www.7-zip.org/download.html",
+      "ExpressVPN : https://www.expressvpn.com/vpn-software/vpn-windows",
+      "Microsoft PowerBI : https://www.microsoft.com/en-us/download/details.aspx?id=58494",
+      "PicPick : https://picpick.app/en/download/",
+      "Topaz Photo AI : https://www.topazlabs.com/downloads",
+      "Visual Watermark version 5.40 : https://www.visualwatermark.com/download/"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:09",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xu9ncbpnsgec",
+    "name": "JACOBY & MEYERS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Legal"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:11",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "d6mol8rgsgec",
+    "name": "MASTERS WHOLESALE",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Client IT will remote the machine and will install the client apps needed"
+    ],
+    "instructions": "Install the GoTeam Standard Tools and inform the Client's IT to remote the machine for client apps installation.",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:15",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "eiq7t9ftsgec",
+    "name": "METRO DG",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 00:17",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "o5qje91zsgec",
+    "name": "OBERG & ASSO.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Legal"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 01:54",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0hs859kmsgec",
+    "name": "BARRATT ASSET MANAGEMENT",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth) on hold for Teramind"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 01:55",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ncus8nj3sgec",
+    "name": "TANGRAM INSURANCE SERVICES",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Zoom",
+      "Okta - https://heffgroup.okta.com/app/UserHome?session_hint=AUTHENTICATED",
+      "Epic extension - https://chromewebstore.google.com/detail/applied-epic-extension/jmigehagkgopllnhcjngjgfblmjladih",
+      "Epic Connection Suite installation - https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EYX1Ki0DTmRFpEg4p3n0vusBIdjnwHuWmT8CqBE97rOaRw?e=CnW56h",
+      "Epic browser login - https://heffe02.appliedepic.com",
+      "Acrobat - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html",
+      "ActivTrak - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Heffernan/ATAcct673688(8.6.6.0)_1MAV8G4vnefp_12526125910.msi?csf=1&web=1&e=WsL8RW"
+    ],
+    "instructions": "IMPORTANT NOTICE: PLEASE INCLUDE YUBIKEY DEVICE WHEN DELIVERING OUTSIDE CEBU",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth) MS Office"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "elut0oassgec",
+    "name": "AIC VENTURES",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Lastpass",
+      "Adobe DC",
+      "Sharefile – Citrix - https://www.citrix.com/downloads/citrix-content-collaboration/product-software/citrix-files-for-windows.html",
+      "Set her Homepage to AIC’s intranet - https://aicventures.sharepoint.com/SitePages"
+    ],
+    "instructions": "Please pin TEAMS to her taskbar",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:10",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "dhofr90xsgec",
+    "name": "ADRETREAVER",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:13",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "hmcpjpwhsgec",
+    "name": "HALLECK VINEYARD",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:15",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9uvwilgosgec",
+    "name": "TERRA EXPORTS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:15",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "h54jfkkysgec",
+    "name": "BAM-UK",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Sophos Agent",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:16",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0z1jhskvsgec",
+    "name": "MUUVMENT",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:17",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "05w2q5y7sgec",
+    "name": "FURNITUBES",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:17",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "mr5tnz0ksgec",
+    "name": "ACCOUNTING DEPARTMENT COM",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Pro - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html",
+      "Yubico Authenticator - https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-win64.msi",
+      "Yubikey Manager - https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-win64.exe",
+      "Right Tool - https://righttool.app/",
+      "Right Tool - https://righttool.app/",
+      "Windows App (Windows 365 / Remote Desktop client) - https://apps.microsoft.com/detail/9n1f85v9t8bn?hl=en-US&gl=AW",
+      "Zoom VDI Plugin (for optimized audio/video within Cloud PCs) - https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810#collapseVDI6614"
+    ],
+    "instructions": "Install Citrix app and  Keeper Browser Extension",
+    "preinstalled": [
+      "GoTeam Standard Tools (No Teramind and LastPass)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "d5o3ffowsgec",
+    "name": "GENUINE FOODS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 02:43",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "2tdwh79zsgec",
+    "name": "BELKORP AG",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Screenconnect: https://prod.setup.itsupport247.net/windows/BareboneAgent/32/Belkorp_Ag_-_Modesto-Belkorp_Ag_-_Modesto_Windows_OS_ITSPlatform_TKN92438126-cdf1-4c8c-affc-df6f30f8a57f/MSI/setup",
+      "Crowdstrike:   FalconSensor_Windows.exe = https://belkorpagllc-my.sharepoint.com/:u:/g/personal/dreed_belkorpag_com/EWx6mQ-u971Ji8Z9SR5h71oBv5Ou7MC_yQt7O0zrZFuyoQ?e=ecXJSR"
+    ],
+    "instructions": "For ScreenConnect Note: (installer can be run with all default options, no additional input needed, just yes/next through everything)\nFor Crowdstrike Note: When prompted, please paste in the Customer ID: 6DEBD360E2D6403E8C24558F6775B8B0-67\nSend an email to: Dash Reed <dreed@belkorpag.com> = \"Let me know if you have any questions about install.  I will additionally need to add our VPN to her computer.  I would prefer to set that up directly if possible, but we may need local admin access to complete that step.\"",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Finance",
+      "Manufacturing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4phfx3alsgec",
+    "name": "BCC ENGINEERING",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:03",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "81ke140lsgec",
+    "name": "ELIZABETH COLE JEWELRY",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Acrobat -https://get.adobe.com/uk/reader/"
+    ],
+    "instructions": "Need to install Adobe Acrobat Free version",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "talt36rwsgec",
+    "name": "AEROTRUTH",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Trello",
+      "Zoom"
+    ],
+    "instructions": "Visual Access AI to register\nNo Teramind App",
+    "preinstalled": [
+      "GoTeam Standard Tools (No Teramind app)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7b7j1ilgsgec",
+    "name": "YPO",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:06",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "88tjvmn3sgec",
+    "name": "YPO PACIFIC WEST",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:16",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lezp57ftsgec",
+    "name": "ASURE SOFTWARE",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Screen Connect: https://asure.screenconnect.com/Bin/ScreenConnect.ClientSetup.exe?e=Access&y=Guest&c=Remote&c=&c=&c=&c=&c=&c=&c=",
+      "AWS App: https://d2td7dqidlhjx7.cloudfront.net/prod/global/windows/Amazon+WorkSpaces.msi"
+    ],
+    "instructions": "Keeper Browser extension(removed lastpass)\nAWS Registration Code will be sent to the TMs email",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "u5vwrjupsgec",
+    "name": "MADDIEBRIT PRODUCTS, LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "e9hqx25fsgec",
+    "name": "ONE WEEK BATH",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Teramind Steath",
+      "Microsoft Publisher",
+      "NORD VPN",
+      "ZOOM PHONE"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 03:58",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7j25n7czsgec",
+    "name": "RANDY'S (Slap N Tickle)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 04:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "05reghgpsgec",
+    "name": "HEFFERNAN INSURANCE BROKERS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Zoom",
+      "Okta - https://heffgroup.okta.com/app/UserHome?session_hint=AUTHENTICATED",
+      "Epic extension - https://chromewebstore.google.com/detail/applied-epic-extension/jmigehagkgopllnhcjngjgfblmjladih",
+      "Epic Connection Suite installation - https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EhtCt3rGAQROj4W5GZqzEdABkWufKUIgbEfILE4Rko5f-w?e=FrRgyE",
+      "Epic browser login - https://heffe02.appliedepic.com",
+      "Acrobat - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html",
+      "ActivTrak - https://goteam1-my.sharepoint.com/:u:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Heffernan/ATAcct673688(8.6.6.0)_1MAV8G4vnefp_12526125910.msi?csf=1&web=1&e=WsL8RW",
+      "Harmony SASE VPN - https://goteam1-my.sharepoint.com/:f:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Heffernan/Harmony%20SASE?csf=1&web=1&e=99B7eG",
+      "Cloud Drive Mapper - https://goteam1-my.sharepoint.com/:f:/r/personal/matt_go_team1/Documents/GT%20IT/Installers/Client%20Installers/Heffernan/Cloud%20Drive%20Mapper%20V3?csf=1&web=1&e=ZxGWHU",
+      "Grammarly Desktop - https://www.grammarly.com/desktop/windows"
+    ],
+    "instructions": "",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth",
+      "GoTeam VPN & MS Office)"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-10 04:29",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4p1n14zisgec",
+    "name": "HEFFERNAN INSURANCE BROKERS (Petaluma Benefits Dept.)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Microsoft Publisher"
+    ],
+    "instructions": "IMPORTANT NOTICE: PLEASE INCLUDE YUBIKEY DEVICE WHEN DELIVERING OUTSIDE CEBU\nRemove MS Teams (Uninstall)\nClients Microsoft Licenses include Publisher\nPOC: Sheryl Martinez",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-11 14:52",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "d1dwva4wsgec",
+    "name": "Heffernan Networks Insurance Brokers",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "AWS: https://clients.amazonworkspaces.com/"
+    ],
+    "instructions": "For QuieTrack only: Client's IT (Boots - bootsd@quietrack.com) will remote the machine to install the tools.\nPoint of Contact: Tara Johnson \nFor other POC: No Client Instructions\nDO NOT INSTALL MS OFFICE and MS TEAMS\nAdvised the TM to use the Google Chrome for their GoTeam email and only use MS Edge for the client email",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:40",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "24c8dn0jsgec",
+    "name": "JNF / JOHN N FEHLINGER",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Legal"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:40",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "e4pc4ex6sgec",
+    "name": "LINKAGE, INC.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:41",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8nipdiuzsgec",
+    "name": "ODELL STUDNER GROUP",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:41",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "juuhoh1ksgec",
+    "name": "ROSE BATTERIES",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Energy"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xoia2xxesgec",
+    "name": "ZEUS LIVING (ACCOUNT MANAGEMENT / B2B CORP SALES)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 12:04",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-08 14:48",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "qj07aciasgec",
+    "name": "ZEUS LIVING (ResEX)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [
+      "Front - https://front.com/download",
+      "Slack - https://slack.com/downloads/instructions/windows"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:44",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:48",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "n2jzvkicsgec",
+    "name": "ZEUS LIVING (OWNER SUPPORT)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "",
+    "lastEditedAt": "",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-08 14:48",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "23usievrsgec",
+    "name": "ZEUS LIVING (QUALITY TEAM)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 15:13",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:48",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "8rj622mosgec",
+    "name": "ZEUS LIVING (BOOKINGS)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:52",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:48",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "96db72xcsgec",
+    "name": "ZEUS LIVING (CAPERS TEAM)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:52",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:49",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "opr74820sgec",
+    "name": "ZEUS LIVING (CONTRACT COORDINATOR)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:53",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:49",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "uy1cb4vssgec",
+    "name": "ZEUS LIVING (OPS COORDINATOR)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:54",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:49",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "xyrkb59isgec",
+    "name": "ZEUS LIVING (TRUST AND SAFETY)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Security",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:54",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:51",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "8ox1dbfjsgec",
+    "name": "ZEUS LIVING (FINANCE)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Finance",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:54",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:51",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "9a2r4u1ssgec",
+    "name": "ZEUS LIVING (FINANCE - AP TEAM)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Finance",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:54",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:51",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "h11ie6iasgec",
+    "name": "ZEUS LIVING (FINANCE - AP/AR TEAM)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Finance",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:55",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:51",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "8ysufxe4sgec",
+    "name": "ZEUS LIVING (FINANCE - AR TEAM)",
+    "shift": "Night",
+    "status": "Offboarded",
+    "apps": [],
+    "instructions": "",
+    "preinstalled": [],
+    "tags": [
+      "Real Estate",
+      "Finance",
+      "Hospitality"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-08 14:55",
+    "deleted": true,
+    "deletedBy": "Chan",
+    "deletedAt": "2026-05-12 08:51",
+    "deletedReason": "Client Exit / Pull-Out"
+  },
+  {
+    "id": "y0mgqfnbsgec",
+    "name": "Gaynor Minden",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "NetExtender: https://software.sonicwall.com/NetExtender/NetExtender-x64-10.3.1.msi"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 08:55",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4indhgt4sgec",
+    "name": "Great Western Trailer",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Remote Desktop",
+      "Local Office",
+      "GoTo App: https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EWsd85qTz6VLsgWGxAh6WcYB42JHlhj3eJ5ArGFoeptkMA?e=ScWRUc",
+      "Cisco Secure Connect Client VPN",
+      "Datto RMM tool - https://zinfandel.centrastage.net/csm/profile/downloadAgent/97ed1445-7e62-430a-994b-632bfcbe0a08"
+    ],
+    "instructions": "Client's IT will be remoting the machine once done configuring the laptop and installed GoTeam Standard Tools\nBerkShire LockBox (For Accountants)\nPlease CC: helpdesk@wtcvet.com",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 09:01",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "x2vk6v15sgec",
+    "name": "Reveal Technology",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 09:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6nqnjdl0sgec",
+    "name": "Trinity Packaging Supply",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 09:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "wga66le4sgec",
+    "name": "Fuse Recruitment Pty Ltd",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Reader",
+      "Aircall",
+      "Chrome"
+    ],
+    "instructions": "IMPORTANT: Ensure the user is added to the Fuse Recruitment Pty Ltd web control policy in Sophos.\nClient's IT will be remoting the machine once done configuring the laptop and installed GoTeam Standard Tools\nSend TeamViewer details to:  alexander.ngo@novigi.com.au  | membleton@fuserecruitment.com\nAdditional Notes: Once the setup is completed by the client, ensure that the data on the Chrome browser is backed up. -https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EtUZK6_yDQ9CkgfZ5iFSRnMBFRRuAH_Zb1-Zkq_sE61zqA?e=u2xqS8",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Recruitment"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 09:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "roisuk3esgec",
+    "name": "Revelation Pharmacy LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Microsoft Office Suite",
+      "Google Chrome",
+      "Adobe Reader",
+      "Dropbox - https://www.dropbox.com/scl/fo/qfzaxol0yh3w7p71dzx6t/h?rlkey=yqmtc6m1k6td2ujzqrup44s3h&dl=0"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth VA AI)"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:40",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "n37eubx8sgec",
+    "name": "Juara Skin Care",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Whatsapp",
+      "Basecamp"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Healthcare",
+      "Hospitality",
+      "Beauty"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:41",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6wrn4g0bsgec",
+    "name": "Danny Wimmer Presents",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Acrobat",
+      "Excel"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:41",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7u3xjdnnsgec",
+    "name": "ONEPOINT FRANCHISE ACCOUNTING",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "Please add TMs account to the Sophos OnePoint Allowed Website Policy the upcoming TMs",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "g201cybdsgec",
+    "name": "National Flood Experts",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Energy"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:43",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0nuspjj0sgec",
+    "name": "MSNW",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Logistics"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:44",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "z8pm13bvsgec",
+    "name": "Legendairy Milk",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:45",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "jg3mvg75sgec",
+    "name": "Exclusive Wireless Inc.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Reader DC",
+      "Google Chrome Enterprise",
+      "Visual Ai Access",
+      "Microsoft Office 365 Enterprise (client will activate)",
+      "VPN client (to be determined)",
+      "Screen Connect: https://ew.screenconnect.com/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest&c=Offsite&c=&c=&c=&c=&c=&c=&c="
+    ],
+    "instructions": "Optional Applications: \"ScreenConnect and Level RMM\" if allowed, client will provide private installers\nNote: Exclude Level RMM",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "z9rdks53sgec",
+    "name": "Water Resources Group Inc",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Sonicwall - https://www.sonicwall.com/products/remote-access/vpn-clients/"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Energy"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:52",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6af8v77nsgec",
+    "name": "ZOVANTI",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Zoom -  https://zoom.us/download",
+      "FileCloud Drive - https://www.filecloud.com/additional-downloads/#drive"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "5oz0mvkcsgec",
+    "name": "EKSO BIONICS",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Tech",
+      "Healthcare"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "f1pa4wjssgec",
+    "name": "Brilliant PR & M",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Google Chrome",
+      "Adobe Acrobat or Reader",
+      "The Zoom desktop app",
+      "Slack Desktop App"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 13:54",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "iavpuso7sgec",
+    "name": "Tarlton and Son, Inc",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Pre-installed Excel/Word/Outlook",
+      "Adobe Acrobat Pro",
+      "Please Download: https://www.898.tv/esphelp"
+    ],
+    "instructions": "Send the TeamViewer details to CJ Bowerman cj@esp-cc.net / marciano@esp-cc.net",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "kjzq5uk2sgec",
+    "name": "MILHAUS LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Vista by Viewpoint: https://milhaus.sharepoint.com/IT/Shared%20Documents/Forms/Gallery.aspx?id=%2FIT%2FShared%20Documents%2FInternal%20Support%20Division%2F3%2E0%20Software%2FVista&p=true&ga=1",
+      "OpenVPN Connect - https://openvpn.net/client/"
+    ],
+    "instructions": "Note: Pre-Installed Applications Email please cc Matt Kekar - matt.kekar@milhaus.com",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Real Estate",
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "94kturnqsgec",
+    "name": "CYBRA Corporation",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Global VPN - https://www.sonicwall.com/products/remote-access/vpn-clients/",
+      "java - https://www.java.com/download/ie_manual.jsp",
+      "Jmagic Designer 9.5 - http://www.cybra.com/downloads/JMagic95_200115.zip",
+      "JMagic Designer 10.0 - http://www.cybra.com/downloads/JMagic10_230831.zip",
+      "JMagic Designer 11.0 - http://www.cybra.com/downloads/JMagic11_231110.zip"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:10",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xfjrjpa2sgec",
+    "name": "One Technologies",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Cisco VPN: https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EQc3idk_b6hLoTXLkW07CL8BZw7nZDQLhvkMiHwyIVscqw?e=mz2EqK",
+      "AWS: https://clients.amazonworkspaces.com/"
+    ],
+    "instructions": "Microsoft office suite, PDF, Teams and VPN from their client",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:12",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8xjfgv5lsgec",
+    "name": "Schnackel Engineers, Inc.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Please make sure to follow this instruction before installing the VMware Horizon Client",
+      "- Enter vx-vcxs-01.schnackel.com for Default connection server",
+      "- Uncheck Log in as current user and Virtualization Pack for Skype for Business",
+      "Client Tools: https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/IgCdQ44uC5fhTKWb2_A6nsQ9AVPAyh32QcJahyszbPngElo?e=mlzX5Q"
+    ],
+    "instructions": "Follow the VPN Remote Access through this link:\nhttps://goteam1-my.sharepoint.com/:b:/g/personal/matt_go_team1/Eb4gb23oWwBFmsTohVxVVjkBoIuV-XdVHLlKsi4umko2-w?e=knXOiz",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Consulting",
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:13",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "l4vi17masgec",
+    "name": "Elite Team Offices",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Velixo Help Center: https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/IQA8c-T15d9BR5zA2EFQfpVDAd9t4jQzVGJEcog_OOmNa3Y?e=LbYUeu",
+      "Cloudflare Warp:",
+      "https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/download-warp/"
+    ],
+    "instructions": "They will then be prompted to sign into their CloudFlare tenant which will be eliteteamoffices.cloudflareaccess.com. Afterwards they will be prompted to sign into their ETO Microsoft account. Afterwards they will be able to toggle CloudFlare on and connect to the Y-Drive with the path: \\\\elite-fs02\\company data",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:14",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8g8eolzdsgec",
+    "name": "MLJ Environmental",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Office 365 Apps",
+      "Microsoft SSMS - https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms",
+      "OpenVpn Connect",
+      "under the section 'Connect to OpenVPN' https://openvpn.net/",
+      "Visual Studio 2022 and Visual Studio Code",
+      "Postman https://www.postman.com/downloads/"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:20",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "yy85iqvisgec",
+    "name": "Wild Electrical",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth &VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "qijf2s6lsgec",
+    "name": "Schnackel Engineers Inc. (2024)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "VPN Remote Access 2024-04 - https://goteam1-my.sharepoint.com/:b:/g/personal/matt_go_team1/EQxx9P6S339PuV4bnvEhsn0BWe-MeaJqOVvqi_KxjUjSwQ?e=3SutOu"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Consulting",
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "taabnyz5sgec",
+    "name": "DRG Technologies, Inc",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "SophosConnect: https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/ETcbevwqGIxPn9OFTbsN7-UBu4FMjxE-IExKHc2J_-Mz5g?e=bcWzL1"
+    ],
+    "instructions": "Send an email to jschumacher@partnersystems.com; marc@partnersystems.com\nCC: roger.popovec@drgtech.com; holly.flaniken@drgtech.com\nThe client will provide the configuration of the SophosConnect and the RDP credentials\nDRG Remote Desktop Domain - DRE\\",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:23",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "yxa8tx4lsgec",
+    "name": "Letap Group, Inc. (LRE & Companies)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:23",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "c3md76gssgec",
+    "name": "Cornerstone First Mortgage, LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Download Encompass here: https://www.elliemae.com/getencompass360",
+      "Adobe: https://get.adobe.com/reader/"
+    ],
+    "instructions": "Ensure Adobe Acrobat Reader is installed before installing Encompass\nFollow the Encompass installer all the way through, and once it is complete, open Encompass on the desktop and enter the client ID: BE11145449\nYou can speed up that process by running this command in an elevated command prompt:\n\"DISM /Online /Enable-Feature /FeatureName:NetFx3 /All\"",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth &VA AI)"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:29",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1e13pzbnsgec",
+    "name": "MUSE MODERN MARKETING",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Marketing"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:32",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "4e26yloqsgec",
+    "name": "Skycrest Roofing Co.",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind & VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:33",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "evypnuussgec",
+    "name": "Skycrest Roofing Co. (GSuite)",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "Do not install Microsoft Office as the client is utilizing GSuite",
+    "preinstalled": [
+      "GoTeam Standard Tools (Do not install Microsoft Office)",
+      "Teramind Stealth & VA AI"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "zyvtep8bsgec",
+    "name": "Earth Cubs",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Education"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:35",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "g6iupvtnsgec",
+    "name": "Imaco Underwriters",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Amazon Workspace",
+      "Ring Central",
+      "Whatsapp"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Insurance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:36",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "h58qmucssgec",
+    "name": "WING IT NORTH",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "BackOffice:  https://goteam1-my.sharepoint.com/personal/matt_go_team1/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmatt%5Fgo%5Fteam1%2FDocuments%2FGT%20IT%2FInstallers%2FClient%20Installers%2FWING%20IT%20NORTH%2FBackOfficeSwitchboardInstaller%2Eexe&parent=%2Fpersonal%2Fmatt%5Fgo%5Fteam1%2FDocuments%2FGT%20IT%2FInstallers%2FClient%20Installers%2FWING%20IT%20NORTH",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Construction"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:38",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8bqiha3ysgec",
+    "name": "Fox Three Partners",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:39",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7yvx9jbmsgec",
+    "name": "High Bar Brands",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Verus SimpleHelp URL: https://help.veruscorp.com",
+      "Foxit Reader: https://www.foxit.com/downloads/#"
+    ],
+    "instructions": "Send an email for client tools installation to: help@veruscorp.com \nProvide our temporary admin credentials in the email\nIf you could sign into the laptop with local admin rights, make sure it's in High Performance mode so it doesn't go to sleep, and join it to our SimpleHelp host, I can get her Office and other apps installed.\nClick the blue section \"Download Remote Support\" and run it, set the name to whatever you're assigning the hostname for her laptop to be, put in \"Go Team\" for the company name and submit it.",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Retail"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:43",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6hfyw4oqsgec",
+    "name": "Summer Discovery",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Google Chrome",
+      "Microsoft Office apps (Word",
+      "PowerPoint",
+      "Excel)"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Education"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:44",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "i5l22n8usgec",
+    "name": "GEA Consulting Engineers",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "GEA Installers: https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/IgBgDVVdXzPxS6eJhFE3a26QAeuOfsgel5QjzFV2TX0kHr4?e=CWWsRi",
+      "AutoCAD",
+      "MEP 2026",
+      "Revit"
+    ],
+    "instructions": "Download and install Banyan: Sonicwall CSE - Download App - https://getcseapp.sonicwall.com/download_app/#windows\nSecret: https://goteam1-my.sharepoint.com/:t:/g/personal/matt_go_team1/IQAzVKJgOdfVQprkOaHrHK9qAYFp5hRPKo3KspG3uPdB7wc?e=lY5QT9\nCopy the attached secret file to C:/RDE/Secret.txt\nNote the secret file has to be placed in that exact location, just create the RDE folder and pop it in there\n* During the Banyan set up, Enter the invite code: GEAPLLC\nIt will then open a browser, you will need to have the user log in with their GEA email and password.\nNext step in Banyan once logged in choose \"Employee Owned\" for device ownership type. and enter the code emailed to the user\nEnable the .NET Framework 3.5",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:47",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7e5xvwucsgec",
+    "name": "Mavrix",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "FortiClient VPN",
+      "Zoom",
+      "Okta - https://heffgroup.okta.com/app/UserHome?session_hint=AUTHENTICATED",
+      "Epic extension - https://chromewebstore.google.com/detail/applied-epic-extension/jmigehagkgopllnhcjngjgfblmjladih",
+      "Epic Connection Suite installation - https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EhtCt3rGAQROj4W5GZqzEdABkWufKUIgbEfILE4Rko5f-w?e=FrRgyE",
+      "Epic browser login - https://heffe02.appliedepic.com",
+      "Acrobat Pro - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html",
+      "Grammarly Desktop - https://www.grammarly.com/desktop/windows"
+    ],
+    "instructions": "IMPORTANT NOTICE: PLEASE INCLUDE YUBIKEY DEVICE WHEN DELIVERING OUTSIDE CEBU",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Publishing & Events"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "9ar04k5ysgec",
+    "name": "ALPACADB, INC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Gsuite",
+      "Confluence",
+      "Hubspot",
+      "Granola",
+      "Zoom"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:52",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "onhn59zosgec",
+    "name": "Katie White Consulting, LLC",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Standard - https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_DC_Web_x64_WWMUI.zip"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Consulting"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "0e5veuuysgec",
+    "name": "The Halal Shack",
+    "shift": "Night",
+    "status": "Active",
+    "apps": [
+      "Adobe Pro - https://helpx.adobe.com/acrobat/kb/acrobat-dc-downloads.html",
+      "Full Microsoft Suit",
+      "Full Google Suite"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Food & Beverage"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-12 14:54",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "3zhg0xyanpzq",
+    "name": "MSAP Community (Mastering SAP)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "Offshore IT from client will set up her/his MS365 with email and teams also cloud phone and salesfoce account",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ba14x9xrpi1z",
+    "name": "VERVE Fitness",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "https://www.ecdesign.se/update"
+    ],
+    "instructions": "Please install the tool only for 3d designer",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Sports & Fitness"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:52",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "tm4frb6dqto8",
+    "name": "Blueground",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "b6yco1zosfyp",
+    "name": "Systemology",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Slack",
+      "Vscode",
+      "Tableplus",
+      "Adobe reader",
+      "gdrive"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:55",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "q30aq88xte9e",
+    "name": "DRG Technologies",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools ( Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Tech"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:55",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "fu21iyw8v3vv",
+    "name": "Ember Wildfire Business Solutions",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Visualaccess AI",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:56",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "onb0kxv5w3sk",
+    "name": "Insulated Products Corp",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:57",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "tlele53fwzpg",
+    "name": "ScaleStation Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:58",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "pkumjve9yk5x",
+    "name": "Equity Books Australia",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Slack"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 14:59",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1vws1sc6zqrq",
+    "name": "ADG Engineers",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Windows App"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "hmmj8ep90ek7",
+    "name": "Compliant Cleaning Supplies & Systems",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:00",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "2j2ig5xk19cf",
+    "name": "Keystone Training Group",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:01",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "3tca25c02eo8",
+    "name": "Copper Electrical",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "WhatsApp (User Profile)"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:02",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "sr4w8qix3am2",
+    "name": "WT Finance Co Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Finance"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:03",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "emwlu4va559u",
+    "name": "Generate Property",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Outright Purchase (don't join to domain",
+      "no ninjaone",
+      "no scalefusion)"
+    ],
+    "instructions": "Send email to : helpdesk@itng.com.au CC: bianca@generatepropertygroup.com.au",
+    "preinstalled": [
+      "No GoTeam Tools"
+    ],
+    "tags": [
+      "Real Estate"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:04",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "km4we9516lln",
+    "name": "The Buchan Group Australia Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "MFA to the TM"
+    ],
+    "instructions": "Contact callum.knox@buchan.au for the remote desktop setting and make sure the TM has MFA installed on their phones",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ps0sy98p7gws",
+    "name": "Complete Construction",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Chan",
+    "lastEditedAt": "2026-05-07 15:06",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ld0rjlrqv7sb",
+    "name": "Grillex Pty Ltd (trading as GX Outdoors)",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 13:24",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ogu0cjs55d91",
+    "name": "LANTERN COMMUNICATIONS",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 13:32",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "a2eshdfbkrj5",
+    "name": "MTR Electrical Solutions",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 13:44",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "jwh2fam3xes3",
+    "name": "Build Magazine",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 13:54",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "24a4ylbt2u5o",
+    "name": "RUBICON BODY CORPORATE SERVICES",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Revealed)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 13:58",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ab14tdb8ayse",
+    "name": "Journey Earth Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "apps": [
+      "Bookmark the URL's on TMs browser profile"
+    ],
+    "instructions": "We also need these web based programs loaded to her favorite URL’s\n\nAXUS - https://axustravelapp.com/login\nVTO Ultimate – https://vto.cloud/login\nTravel Partners Home - https://app.hottehome.com",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-19 14:05",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  }
+]
