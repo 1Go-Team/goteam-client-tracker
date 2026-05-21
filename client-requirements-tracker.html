@@ -20,9 +20,8 @@
     --tableHeader:#0a1f4d;--tableHeaderText:#ffffff;
     --morning:#f59e0b;--night:#7c5cff;--total:#1e3a8a;--bad:#ef4444;--good:#22c55e;--warn:#f59e0b;--star:#fbbf24;
         --status-new:#3b82f6;--status-new-bg:#dbeafe;--status-new-text:#1e40af;
-    --status-setup:#f59e0b;--status-setup-bg:#fef3c7;--status-setup-text:#92400e;
     --status-active:#22c55e;--status-active-bg:#dcfce7;--status-active-text:#166534;
-    --status-hold:#f97316;--status-hold-bg:#ffedd5;--status-hold-text:#9a3412;
+    --status-notm:#f59e0b;--status-notm-bg:#fef3c7;--status-notm-text:#92400e;
     --status-off:#6b7280;--status-off-bg:#f3f4f6;--status-off-text:#374151;
     --shadow:0 1px 3px rgba(20,30,60,.05), 0 1px 2px rgba(20,30,60,.04);
     --shadow-md:0 4px 12px rgba(20,30,60,.08);
@@ -46,9 +45,8 @@
     --tableHeader:#1b2347;--tableHeaderText:#e6e9f5;--total:#7c5cff;
     --shadow:0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
     --status-new-bg:rgba(59,130,246,.18);--status-new-text:#93c5fd;
-    --status-setup-bg:rgba(245,158,11,.18);--status-setup-text:#fbbf24;
     --status-active-bg:rgba(34,197,94,.18);--status-active-text:#86efac;
-    --status-hold-bg:rgba(249,115,22,.18);--status-hold-text:#fdba74;
+    --status-notm-bg:rgba(245,158,11,.18);--status-notm-text:#fbbf24;
     --status-off-bg:rgba(107,114,128,.22);--status-off-text:#d1d5db;
     --shadow-md:0 4px 16px rgba(0,0,0,.45);--shadow-lg:0 12px 36px rgba(0,0,0,.55);
     --input-bg:#1b2347;--row-hover:rgba(124,92,255,.08);--modal-bg:#151c3b;
@@ -339,12 +337,10 @@
   @media (max-width:900px){.kbd-hint,.kbd-reopen{bottom:20px}}
   .badge.status-new{background:var(--status-new-bg);color:var(--status-new-text)}
   .badge.status-new::before{background:var(--status-new)}
-  .badge.status-setup{background:var(--status-setup-bg);color:var(--status-setup-text)}
-  .badge.status-setup::before{background:var(--status-setup)}
   .badge.status-active{background:var(--status-active-bg);color:var(--status-active-text)}
   .badge.status-active::before{background:var(--status-active)}
-  .badge.status-hold{background:var(--status-hold-bg);color:var(--status-hold-text)}
-  .badge.status-hold::before{background:var(--status-hold)}
+  .badge.status-notm{background:var(--status-notm-bg);color:var(--status-notm-text)}
+  .badge.status-notm::before{background:var(--status-notm)}
   .badge.status-off{background:var(--status-off-bg);color:var(--status-off-text)}
   .badge.status-off::before{background:var(--status-off)}
   td.status-cell{width:130px}
@@ -462,9 +458,8 @@
     <select id="filterStatusVal">
       <option value="">All Statuses</option>
       <option value="New">New</option>
-      <option value="In Setup">In Setup</option>
       <option value="Active">Active</option>
-      <option value="On Hold">On Hold</option>
+      <option value="No Active TM">No Active TM</option>
       <option value="Offboarded">Offboarded</option>
     </select>
     <select id="filterStatus">
@@ -586,10 +581,9 @@
     <div class="form-row"><label>Status *</label><select id="fStatus">
       <option value="Active">Active</option>
       <option value="New">New</option>
-      <option value="In Setup">In Setup</option>
-      <option value="On Hold">On Hold</option>
+      <option value="No Active TM">No Active TM</option>
       <option value="Offboarded">Offboarded</option>
-    </select></div>
+    </select><div class="hint">Use "No Active TM" for clients still with GoTeam but with no TM assigned (all resigned or not yet assigned).</div></div>
     <div class="form-row"><label>Tags (categories)</label><input type="text" id="fTags" placeholder="e.g. Real Estate, Healthcare, Finance" /><div class="hint">Separate tags with commas</div></div>
     <div class="form-row"><label>Client Instructions</label><textarea id="fInstr" placeholder="Special setup steps, credentials, reminders..."></textarea><div class="hint">Multiple lines render as bullets in the table</div></div>
     <div class="form-row"><label>App Requirements (Client-specific)</label><textarea id="fApps" placeholder="One app per line, or comma-separated"></textarea><div class="hint">Tip: 'AppName - https://download-url' formats the name in bold</div></div>
@@ -1310,15 +1304,18 @@
     if(!s) return [];
     return String(s).split(/[,;]+/).map(function(x){return x.trim();}).filter(Boolean);
   }
-  var STATUS_OPTIONS = ["New", "In Setup", "Active", "On Hold", "Offboarded"];
+  var STATUS_OPTIONS = ["New", "Active", "No Active TM", "Offboarded"];
   function normalizeStatus(s){
     if(!s) return "Active";
-    var t = String(s).trim();
-    for(var i=0;i<STATUS_OPTIONS.length;i++) if(STATUS_OPTIONS[i].toLowerCase() === t.toLowerCase()) return STATUS_OPTIONS[i];
+    var t = String(s).trim().toLowerCase();
+    // Backward compatibility: migrate retired statuses
+    if(t === "in setup") return "New";
+    if(t === "on hold") return "No Active TM";
+    for(var i=0;i<STATUS_OPTIONS.length;i++) if(STATUS_OPTIONS[i].toLowerCase() === t) return STATUS_OPTIONS[i];
     return "Active";
   }
   function statusSlug(s){
-    return ({"New":"new","In Setup":"setup","Active":"active","On Hold":"hold","Offboarded":"off"})[s] || "active";
+    return ({"New":"new","Active":"active","No Active TM":"notm","Offboarded":"off"})[s] || "active";
   }
   function statusBadge(s){
     var slug = statusSlug(s);
@@ -1867,9 +1864,8 @@
       bad: v("--bad","#ef4444"),
       accent: v("--brand-accent","#22d3ee"),
       sNew: v("--status-new","#3b82f6"),
-      sSetup: v("--status-setup","#f59e0b"),
       sActive: v("--status-active","#22c55e"),
-      sHold: v("--status-hold","#f97316"),
+      sNoTm: v("--status-notm","#f59e0b"),
       sOff: v("--status-off","#6b7280")
     };
   }
@@ -1899,7 +1895,7 @@
     var statusCounts = {};
     STATUS_OPTIONS.forEach(function(s){ statusCounts[s] = 0; });
     active.forEach(function(c){ var s = normalizeStatus(c.status); statusCounts[s] = (statusCounts[s]||0) + 1; });
-    var statusColors = {"New": col.sNew, "In Setup": col.sSetup, "Active": col.sActive, "On Hold": col.sHold, "Offboarded": col.sOff};
+    var statusColors = {"New": col.sNew, "Active": col.sActive, "No Active TM": col.sNoTm, "Offboarded": col.sOff};
     var slabels = STATUS_OPTIONS.filter(function(s){ return statusCounts[s] > 0; });
     var sdata = slabels.map(function(s){ return statusCounts[s]; });
     var scolors = slabels.map(function(s){ return statusColors[s]; });
