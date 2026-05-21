@@ -5774,7 +5774,6 @@
     "name": "Shape Architect",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5782,6 +5781,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Revealed)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5796,7 +5796,6 @@
     "name": "Talius Group Limited",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5804,6 +5803,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Revealed)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5818,7 +5818,6 @@
     "name": "Bookkeeping.Melbourne Pty Ltd",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5826,6 +5825,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Revealed)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5839,7 +5839,7 @@
     "id": "d9313o90ft14",
     "name": "Connected Accounts",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -5851,7 +5851,7 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-05-21 13:44",
+    "lastEditedAt": "2026-05-21 14:03",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -5862,6 +5862,160 @@
     "name": "i4books",
     "shift": "Morning",
     "status": "Offboarded",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 13:47",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "j5xkb3veky8p",
+    "name": "Trendsight",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:16",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "qrz1s735r4k8",
+    "name": "Kinetic Electrical and Data",
+    "shift": "Morning",
+    "status": "No Active TM",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "71v4hnmawu6u",
+    "name": "Grafton Projects",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:25",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "920gwsncztab",
+    "name": "Direct Lifts Australia",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:27",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "190c76z53vzz",
+    "name": "Moltec",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:31",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "tj486710b6va",
+    "name": "Kent Private Wealth",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-21 14:36",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "vtomhjj8tf6s",
+    "name": "One Agency C&P Group",
+    "shift": "Morning",
+    "status": "No Active TM",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -5873,7 +6027,7 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-05-21 13:47",
+    "lastEditedAt": "2026-05-21 14:50",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
