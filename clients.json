@@ -112,7 +112,6 @@
     "name": "QATTRO",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "Client will install the tools"
     ],
@@ -120,6 +119,7 @@
     "preinstalled": [
       "No GoTeam tools"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -226,16 +226,16 @@
     "name": "The Eventful Group",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [
-      "Hospitality",
-      "Publishing & Events"
-    ],
     "apps": [
       "Client will install the tools"
     ],
     "instructions": "Client will install the tools",
     "preinstalled": [
       "Client Provided devices"
+    ],
+    "tags": [
+      "Hospitality",
+      "Publishing & Events"
     ],
     "locked": false,
     "starred": false,
@@ -251,15 +251,15 @@
     "name": "THE ZOO REPUBLIC",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [
-      "Marketing"
-    ],
     "apps": [
       "Client will install the tools"
     ],
     "instructions": "Client will install the tools",
     "preinstalled": [
       "Client provided device"
+    ],
+    "tags": [
+      "Marketing"
     ],
     "locked": false,
     "starred": false,
@@ -275,15 +275,15 @@
     "name": "STEP CHANGE",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [
-      "Consulting"
-    ],
     "apps": [
       "Client will install the tools"
     ],
     "instructions": "No Client instructions",
     "preinstalled": [
       "Client will install the tools"
+    ],
+    "tags": [
+      "Consulting"
     ],
     "locked": false,
     "starred": false,
@@ -1155,9 +1155,10 @@
   },
   {
     "id": "alwxjumisgec",
-    "name": "TSA MANAGEMENT",
+    "name": "TSA Riley MANAGEMENT",
     "shift": "Morning",
     "status": "Active",
+    "tags": [],
     "apps": [
       "Exclaimer - https://support.exclaimer.com/hc/en-gb/p/outlook-client",
       "Exlaimer (Knowledge Base) - https://support.exclaimer.com/hc/en-gb/articles/4406429578269-Install-Exclaimer-Signature-Update-Agent-Windows"
@@ -1166,11 +1167,10 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
-    "tags": [],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-07 14:00",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:37",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -6028,6 +6028,94 @@
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-05-21 14:50",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "uk143tfi8yvp",
+    "name": "Youngster.co",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:41",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "sy1vl31nizwc",
+    "name": "Alexia Pettenon Pty Limited T/A Bid and Borrow Finance",
+    "shift": "Morning",
+    "status": "Offboarded",
+    "tags": [],
+    "apps": [
+      "MS Desktop app"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:49",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "b6kzy6ifo4fh",
+    "name": "Captegra",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:53",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "a8di17qtrw20",
+    "name": "Southern HVAC",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:56",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
