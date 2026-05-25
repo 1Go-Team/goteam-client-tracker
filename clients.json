@@ -111,7 +111,8 @@
     "id": "mb3jfbxwsgec",
     "name": "QATTRO",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [],
     "apps": [
       "Client will install the tools"
     ],
@@ -119,11 +120,10 @@
     "preinstalled": [
       "No GoTeam tools"
     ],
-    "tags": [],
-    "locked": true,
+    "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 11:50",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 11:36",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -225,7 +225,11 @@
     "id": "v92qqfy3sgec",
     "name": "The Eventful Group",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [
+      "Hospitality",
+      "Publishing & Events"
+    ],
     "apps": [
       "Client will install the tools"
     ],
@@ -233,14 +237,10 @@
     "preinstalled": [
       "Client Provided devices"
     ],
-    "tags": [
-      "Hospitality",
-      "Publishing & Events"
-    ],
-    "locked": true,
+    "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 11:51",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 11:37",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -250,7 +250,10 @@
     "id": "iwn4ciupsgec",
     "name": "THE ZOO REPUBLIC",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [
+      "Marketing"
+    ],
     "apps": [
       "Client will install the tools"
     ],
@@ -258,13 +261,10 @@
     "preinstalled": [
       "Client provided device"
     ],
-    "tags": [
-      "Marketing"
-    ],
-    "locked": true,
+    "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 15:09",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 11:37",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -274,7 +274,10 @@
     "id": "hn51ufn4sgec",
     "name": "STEP CHANGE",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [
+      "Consulting"
+    ],
     "apps": [
       "Client will install the tools"
     ],
@@ -282,13 +285,10 @@
     "preinstalled": [
       "Client will install the tools"
     ],
-    "tags": [
-      "Consulting"
-    ],
-    "locked": true,
+    "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 15:09",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 11:36",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -5840,7 +5840,6 @@
     "name": "Connected Accounts",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5848,6 +5847,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Revealed)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5884,7 +5884,6 @@
     "name": "Trendsight",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5892,6 +5891,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5906,7 +5906,6 @@
     "name": "Kinetic Electrical and Data",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5914,6 +5913,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5928,7 +5928,6 @@
     "name": "Grafton Projects",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5936,6 +5935,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5950,7 +5950,6 @@
     "name": "Direct Lifts Australia",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5958,6 +5957,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5972,7 +5972,6 @@
     "name": "Moltec",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -5980,6 +5979,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -5994,7 +5994,6 @@
     "name": "Kent Private Wealth",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6002,6 +6001,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6016,7 +6016,6 @@
     "name": "One Agency C&P Group",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6024,6 +6023,7 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
