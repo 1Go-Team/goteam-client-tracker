@@ -350,20 +350,20 @@
     "name": "Hitch Advisory Pty Ltd",
     "shift": "Morning",
     "status": "Active",
+    "tags": [
+      "Consulting"
+    ],
     "apps": [
       "No App requirements"
     ],
     "instructions": "No Client instructions",
     "preinstalled": [
-      "GoTeam Standard tools"
-    ],
-    "tags": [
-      "Consulting"
+      "GoTeam Standard tools (Teramind Stealth)"
     ],
     "locked": true,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 15:09",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 14:17",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -402,20 +402,20 @@
     "name": "BOLINDA PUBLISHING",
     "shift": "Morning",
     "status": "Active",
+    "tags": [
+      "Publishing & Events"
+    ],
     "apps": [
       "Teamviewer Only"
     ],
     "instructions": "Username will be set to below details, No other job to do\nUN:  Bolinda\nPW:  Bolinda!",
     "preinstalled": [
-      "Teamviewer only no goteam tools"
+      "Teamviewer only no goteam tools (Client provided device)"
     ],
-    "tags": [
-      "Publishing & Events"
-    ],
-    "locked": true,
+    "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-08 15:09",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 10:43",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -1158,7 +1158,6 @@
     "name": "TSA Riley MANAGEMENT",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "Exclaimer - https://support.exclaimer.com/hc/en-gb/p/outlook-client",
       "Exlaimer (Knowledge Base) - https://support.exclaimer.com/hc/en-gb/articles/4406429578269-Install-Exclaimer-Signature-Update-Agent-Windows"
@@ -1167,6 +1166,7 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -1746,6 +1746,9 @@
     "name": "Alowishus Delicious",
     "shift": "Morning",
     "status": "Active",
+    "tags": [
+      "Food & Beverage"
+    ],
     "apps": [
       "No App Requirements"
     ],
@@ -1753,13 +1756,10 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
-    "tags": [
-      "Food & Beverage"
-    ],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-07 14:20",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 11:11",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -1937,7 +1937,10 @@
     "id": "d4mwawslsgec",
     "name": "Hamilton Elevators",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [
+      "Construction"
+    ],
     "apps": [
       "No App Requirements"
     ],
@@ -1945,13 +1948,10 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth VA AI)"
     ],
-    "tags": [
-      "Construction"
-    ],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-07 14:43",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 11:08",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -3131,18 +3131,18 @@
     "name": "METRO DG",
     "shift": "Night",
     "status": "Active",
+    "tags": [],
     "apps": [
       "No App Requirements"
     ],
-    "instructions": "No Client Instructions",
+    "instructions": "Client will remote the device for VPN and RDP setup",
     "preinstalled": [
-      "GoTeam Standard Tools"
+      "GoTeam Standard Tools (Remove Sophos)"
     ],
-    "tags": [],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-10 00:17",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 08:33",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -6038,7 +6038,6 @@
     "name": "Youngster.co",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6046,6 +6045,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6060,7 +6060,6 @@
     "name": "Alexia Pettenon Pty Limited T/A Bid and Borrow Finance",
     "shift": "Morning",
     "status": "Offboarded",
-    "tags": [],
     "apps": [
       "MS Desktop app"
     ],
@@ -6068,6 +6067,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6082,7 +6082,6 @@
     "name": "Captegra",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6090,6 +6089,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6104,6 +6104,28 @@
     "name": "Southern HVAC",
     "shift": "Morning",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-25 14:56",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "jjjvc4rd9ycr",
+    "name": "JB Paper Trading Pty Ltd",
+    "shift": "Morning",
+    "status": "No Active TM",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6115,7 +6137,183 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-05-25 14:56",
+    "lastEditedAt": "2026-05-26 08:26",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "64zzo61ycf39",
+    "name": "Generate Property Group Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 08:28",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "zwsiyfsrqgx4",
+    "name": "Eden Textile",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 10:30",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "v4b7sr7r2g4g",
+    "name": "Bolinda Publishing",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "Teamviewer"
+    ],
+    "instructions": "Username will be set to below details, No other job to do",
+    "preinstalled": [
+      "No GoTeam tools (Client provided device)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 10:42",
+    "deleted": true,
+    "deletedBy": "Christian Esaga",
+    "deletedAt": "2026-05-26 10:43",
+    "deletedReason": "Duplicate"
+  },
+  {
+    "id": "07m97p3nrmxq",
+    "name": "Sunscape Landscaping",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 10:59",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "nophxila6vk2",
+    "name": "OurLifeByDesign Pty Ltd",
+    "shift": "Morning",
+    "status": "No Active TM",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 11:11",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "6uldk6cfg88m",
+    "name": "Electric Bikes Brisbane",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 11:19",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lebb1vy5you4",
+    "name": "Ace InfoTech",
+    "shift": "Morning",
+    "status": "No Active TM",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 14:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "1i1cb6lrg4lv",
+    "name": "Specialists in Dermatology (Linda Lin, Xiao Fu)",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "3CX App"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-05-26 14:34",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
