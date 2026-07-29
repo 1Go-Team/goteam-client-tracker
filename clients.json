@@ -4744,9 +4744,6 @@
     "name": "MLJ Environmental",
     "shift": "Night",
     "status": "Active",
-    "tags": [
-      "Construction"
-    ],
     "apps": [
       "Office 365 Apps",
       "Microsoft SSMS - https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms",
@@ -4758,6 +4755,9 @@
     "instructions": "Install Microsoft SQL Server Management Studio (SSMS) Version 18 above",
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth & VA AI)"
+    ],
+    "tags": [
+      "Construction"
     ],
     "locked": false,
     "starred": false,
@@ -6314,6 +6314,28 @@
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-05-26 14:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "nh415gb1rr45",
+    "name": "Down To Earth Diesel Pty Ltd",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-29 08:34",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
