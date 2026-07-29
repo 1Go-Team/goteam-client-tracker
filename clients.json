@@ -3825,7 +3825,10 @@
     "id": "8nipdiuzsgec",
     "name": "ODELL STUDNER GROUP",
     "shift": "Night",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [
+      "Insurance"
+    ],
     "apps": [
       "No App Requirements"
     ],
@@ -3833,13 +3836,10 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
-    "tags": [
-      "Insurance"
-    ],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-12 08:41",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-29 10:16",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
