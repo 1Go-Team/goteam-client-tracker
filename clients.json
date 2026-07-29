@@ -6324,6 +6324,28 @@
     "name": "Down To Earth Diesel Pty Ltd",
     "shift": "Morning",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-29 08:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ywm1m4ytbpsw",
+    "name": "Selborne Properties Inc.",
+    "shift": "Night",
+    "status": "Active",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6335,7 +6357,7 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-07-29 08:34",
+    "lastEditedAt": "2026-07-29 09:18",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
