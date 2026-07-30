@@ -1594,10 +1594,10 @@
     "starred": false,
     "lastEditedBy": "Chan",
     "lastEditedAt": "2026-05-07 14:12",
-    "deleted": false,
-    "deletedBy": "",
-    "deletedAt": "",
-    "deletedReason": ""
+    "deleted": true,
+    "deletedBy": "Christian Esaga",
+    "deletedAt": "2026-07-30 13:44",
+    "deletedReason": "Duplicate"
   },
   {
     "id": "5axcffessgec",
@@ -2176,10 +2176,10 @@
     "starred": false,
     "lastEditedBy": "Chan",
     "lastEditedAt": "2026-05-09 21:49",
-    "deleted": false,
-    "deletedBy": "",
-    "deletedAt": "",
-    "deletedReason": ""
+    "deleted": true,
+    "deletedBy": "Christian Esaga",
+    "deletedAt": "2026-07-30 13:45",
+    "deletedReason": "Duplicate"
   },
   {
     "id": "mrrl45uksgec",
@@ -2405,9 +2405,12 @@
   },
   {
     "id": "wi1z9my1sgec",
-    "name": "JOHNSONS CONSULTING GROUP",
+    "name": "JOHNSON CONSULTING GROUP",
     "shift": "Night",
     "status": "Active",
+    "tags": [
+      "Consulting"
+    ],
     "apps": [
       "No App Requirements"
     ],
@@ -2415,13 +2418,10 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
-    "tags": [
-      "Consulting"
-    ],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-09 22:38",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 11:55",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -3128,9 +3128,10 @@
   },
   {
     "id": "eiq7t9ftsgec",
-    "name": "METRO DG",
+    "name": "METRO Development Group",
     "shift": "Night",
     "status": "Active",
+    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -3138,11 +3139,10 @@
     "preinstalled": [
       "GoTeam Standard Tools (Remove Sophos)"
     ],
-    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-05-26 08:33",
+    "lastEditedAt": "2026-07-30 11:46",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -3826,15 +3826,15 @@
     "name": "ODELL STUDNER GROUP",
     "shift": "Night",
     "status": "No Active TM",
-    "tags": [
-      "Insurance"
-    ],
     "apps": [
       "No App Requirements"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
       "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Insurance"
     ],
     "locked": false,
     "starred": false,
@@ -6346,6 +6346,28 @@
     "name": "Selborne Properties Inc.",
     "shift": "Night",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-29 09:18",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "5vi8ontuo3fb",
+    "name": "Ken C. Arakawa, M.D. Inc",
+    "shift": "Morning",
+    "status": "Active",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6357,7 +6379,95 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-07-29 09:18",
+    "lastEditedAt": "2026-07-30 13:27",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "2rvim7ubuchg",
+    "name": "Anthem Partners",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 13:32",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "mj6608t4eko0",
+    "name": "KCG Companies",
+    "shift": "Morning",
+    "status": "No Active TM",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 13:48",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ny28132ew3gg",
+    "name": "Hylant Group, Inc.",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 14:01",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "ir67prb296sm",
+    "name": "Sixpenny",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 14:12",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
