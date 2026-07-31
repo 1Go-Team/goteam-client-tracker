@@ -2408,15 +2408,15 @@
     "name": "JOHNSON CONSULTING GROUP",
     "shift": "Night",
     "status": "Active",
-    "tags": [
-      "Consulting"
-    ],
     "apps": [
       "No App Requirements"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
       "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Consulting"
     ],
     "locked": false,
     "starred": false,
@@ -3131,7 +3131,6 @@
     "name": "METRO Development Group",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -3139,6 +3138,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Remove Sophos)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -4933,10 +4933,10 @@
     "starred": false,
     "lastEditedBy": "Chan",
     "lastEditedAt": "2026-05-12 14:33",
-    "deleted": false,
-    "deletedBy": "",
-    "deletedAt": "",
-    "deletedReason": ""
+    "deleted": true,
+    "deletedBy": "Christian Esaga",
+    "deletedAt": "2026-07-31 09:44",
+    "deletedReason": "Duplicate"
   },
   {
     "id": "evypnuussgec",
@@ -6368,7 +6368,6 @@
     "name": "Ken C. Arakawa, M.D. Inc",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6376,6 +6375,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6390,7 +6390,6 @@
     "name": "Anthem Partners",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6398,6 +6397,7 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6412,7 +6412,6 @@
     "name": "KCG Companies",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6420,6 +6419,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6434,7 +6434,6 @@
     "name": "Hylant Group, Inc.",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6442,6 +6441,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6456,6 +6456,50 @@
     "name": "Sixpenny",
     "shift": "Night",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-30 14:12",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8m3kkq4ddry4",
+    "name": "Clifton Blake Asset Management",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-07-31 09:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "lie8y1h1mu5m",
+    "name": "Pool and Spa Depot",
+    "shift": "Night",
+    "status": "Active",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6467,7 +6511,7 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-07-30 14:12",
+    "lastEditedAt": "2026-07-31 09:58",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
