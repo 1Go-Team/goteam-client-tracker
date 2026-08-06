@@ -2329,9 +2329,6 @@
     "name": "WORKPLACE SAFETY SCREENINGS (Old setup)",
     "shift": "Night",
     "status": "Active",
-    "tags": [
-      "Security"
-    ],
     "apps": [
       "Nitro Pro 13 : https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/EWAXANescLtIoKLwikF-WYgBNtIa5ymuXh2DszBLZBDcFA?e=a8DwMS",
       "Right Networks (Applicable if the position is accountant) : https://goteam1-my.sharepoint.com/:u:/g/personal/matt_go_team1/Ea1eAVjKCEtEk1EIXn2u8TMBOv09x8KxwBW8q1cIe0NYng?e=gUfsav",
@@ -2343,6 +2340,9 @@
     "instructions": "(Note: Please disable the the AI Noise Reduction in the Acer Purified Voice Console)\nNote: Please include or CC MO SHAIKH\n(Right Networks App - For Accounting Position ONLY)\nNitro Pro ver 12.16.9.574 instead of 13",
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Cloud)"
+    ],
+    "tags": [
+      "Security"
     ],
     "locked": false,
     "starred": false,
@@ -6522,7 +6522,6 @@
     "name": "Workplace Safety Screenings (New Setup)",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [],
     "instructions": "Join the device to WSS domain",
     "preinstalled": [
@@ -6530,10 +6529,55 @@
       "NinjaOne",
       "Multiplai App and Teramind Global"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-08-05 14:18",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "y7vi0ek7s8y8",
+    "name": "Magic Concept",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools(Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-07 07:40",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xm4kuiszv5k9",
+    "name": "Work Rehab Pty Ltd",
+    "shift": "Morning",
+    "status": "New",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-07 07:42",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
