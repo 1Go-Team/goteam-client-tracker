@@ -1869,7 +1869,8 @@
     "id": "gvxfalwysgec",
     "name": "The General Store",
     "shift": "Morning",
-    "status": "Active",
+    "status": "No Active TM",
+    "tags": [],
     "apps": [
       "Auto Cad"
     ],
@@ -1877,11 +1878,10 @@
     "preinstalled": [
       "GoTeam Standard Tools (VA AI Teramind Stealth)"
     ],
-    "tags": [],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-07 14:30",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-11 14:22",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -6696,6 +6696,28 @@
     "name": "Hateley Construct",
     "shift": "Morning",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-11 14:08",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "2cvzmp7z52b7",
+    "name": "Genera Energy Inc",
+    "shift": "Night",
+    "status": "Active",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6707,7 +6729,7 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-08-11 14:08",
+    "lastEditedAt": "2026-08-11 14:28",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
