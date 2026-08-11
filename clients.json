@@ -6610,16 +6610,38 @@
     "name": "Core Resources Pty Ltd",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [],
     "instructions": "MYOB AccountRight Premier AU 2026",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-11 10:58",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "3wihoo0nua00",
+    "name": "RJMS Corporation",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-08-11 10:58",
+    "lastEditedAt": "2026-08-11 11:32",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
