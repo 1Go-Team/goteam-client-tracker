@@ -6544,7 +6544,6 @@
     "name": "Magic Concept",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6552,6 +6551,7 @@
     "preinstalled": [
       "GoTeam Standard Tools(Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6566,7 +6566,6 @@
     "name": "Work Rehab Pty Ltd",
     "shift": "Morning",
     "status": "New",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6574,10 +6573,33 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-08-07 07:42",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "8l6w7gtqvgjo",
+    "name": "Plumbing & Heating Estimator",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-11 10:37",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
