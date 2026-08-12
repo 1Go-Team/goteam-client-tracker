@@ -1870,7 +1870,6 @@
     "name": "The General Store",
     "shift": "Morning",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "Auto Cad"
     ],
@@ -1878,6 +1877,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (VA AI Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6718,6 +6718,28 @@
     "name": "Genera Energy Inc",
     "shift": "Night",
     "status": "Active",
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-11 14:28",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "5e9rvt04rcc4",
+    "name": "Woman Up",
+    "shift": "Night",
+    "status": "Active",
     "tags": [],
     "apps": [
       "No App Requirements"
@@ -6729,7 +6751,73 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-08-11 14:28",
+    "lastEditedAt": "2026-08-12 08:30",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "xdl3d8otx97a",
+    "name": "Flexfire LEDs, Inc.",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-12 08:34",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "cvl07tug128e",
+    "name": "Mesa Verde Trading Company, Inc",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-12 08:37",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "avwi3ndnra69",
+    "name": "ProSolution Private Clients",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "Zoiper: https://www.zoiper.com/en/voip-softphone/download/current"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-12 10:21",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
