@@ -6740,7 +6740,6 @@
     "name": "Woman Up",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6748,6 +6747,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6762,7 +6762,6 @@
     "name": "Flexfire LEDs, Inc.",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6770,6 +6769,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6784,7 +6784,6 @@
     "name": "Mesa Verde Trading Company, Inc",
     "shift": "Night",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6792,6 +6791,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6806,9 +6806,31 @@
     "name": "ProSolution Private Clients",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "Zoiper: https://www.zoiper.com/en/voip-softphone/download/current"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-12 10:21",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "o0qa03793xy9",
+    "name": "Landscape workshop",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
@@ -6817,7 +6839,51 @@
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
-    "lastEditedAt": "2026-08-12 10:21",
+    "lastEditedAt": "2026-08-13 11:15",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "zlhc11e5mtmn",
+    "name": "Home Health Bay Area Inc.",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Requirements",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-13 13:22",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "7vx3ylutovrz",
+    "name": "Global CEO, LLC",
+    "shift": "Night",
+    "status": "No Active TM",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-08-13 13:51",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
