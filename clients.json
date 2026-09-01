@@ -6828,7 +6828,6 @@
     "name": "Landscape workshop",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6836,6 +6835,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6850,7 +6850,6 @@
     "name": "Home Health Bay Area Inc.",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6858,6 +6857,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -6872,7 +6872,6 @@
     "name": "Global CEO, LLC",
     "shift": "Night",
     "status": "No Active TM",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -6880,10 +6879,33 @@
     "preinstalled": [
       "GoTeam Standard Tools"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-08-13 13:51",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "i22tui4h0myn",
+    "name": "Underwriting Operations Specialist",
+    "shift": "Night",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "No App Requirements"
+    ],
+    "instructions": "No Client Instructions",
+    "preinstalled": [
+      "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-09-01 14:18",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
