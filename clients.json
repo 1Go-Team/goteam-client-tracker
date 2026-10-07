@@ -1556,15 +1556,15 @@
     "name": "THE DETOX MARKET",
     "shift": "Morning",
     "status": "Active",
-    "tags": [
-      "Beauty"
-    ],
     "apps": [
       "No App Requirements"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth)"
+    ],
+    "tags": [
+      "Beauty"
     ],
     "locked": false,
     "starred": false,
@@ -2383,16 +2383,16 @@
     "name": "PREMIER PROTECTIVE SECURITY INC.",
     "shift": "Night",
     "status": "Active",
-    "tags": [
-      "Construction",
-      "Security"
-    ],
     "apps": [
       "Verizon One Talk - https://v4b.verizonwireless.com/onetalk/downloads.html"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
       "GoTeam Standard Tools"
+    ],
+    "tags": [
+      "Construction",
+      "Security"
     ],
     "locked": false,
     "starred": false,
@@ -6906,6 +6906,28 @@
     "starred": false,
     "lastEditedBy": "Christian Esaga",
     "lastEditedAt": "2026-09-01 14:18",
+    "deleted": false,
+    "deletedBy": "",
+    "deletedAt": "",
+    "deletedReason": ""
+  },
+  {
+    "id": "kd189v93tbi0",
+    "name": "Vesta Project Solutions",
+    "shift": "Morning",
+    "status": "Active",
+    "tags": [],
+    "apps": [
+      "Need to confirm"
+    ],
+    "instructions": "Need to confirm",
+    "preinstalled": [
+      "Goteam Standard Tools (Teramind Stealth)"
+    ],
+    "locked": false,
+    "starred": false,
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-10-08 07:32",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
