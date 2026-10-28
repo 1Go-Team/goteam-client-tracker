@@ -1087,18 +1087,18 @@
     "name": "LAING + SIMMONS",
     "shift": "Morning",
     "status": "Active",
+    "tags": [],
     "apps": [
       "No App Requirements"
     ],
     "instructions": "No Client Instructions",
     "preinstalled": [
-      "GoTeam Standard Tools"
+      "GoTeam Standard Tools (Teramind Revealed)"
     ],
-    "tags": [],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-07 11:24",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-10-28 14:52",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
@@ -6916,7 +6916,6 @@
     "name": "Vesta Project Solutions",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "Need to confirm"
     ],
@@ -6924,6 +6923,7 @@
     "preinstalled": [
       "Goteam Standard Tools (Teramind Stealth)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
