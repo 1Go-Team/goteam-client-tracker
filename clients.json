@@ -1087,7 +1087,6 @@
     "name": "LAING + SIMMONS",
     "shift": "Morning",
     "status": "Active",
-    "tags": [],
     "apps": [
       "No App Requirements"
     ],
@@ -1095,6 +1094,7 @@
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Revealed)"
     ],
+    "tags": [],
     "locked": false,
     "starred": false,
     "lastEditedBy": "Christian Esaga",
@@ -4255,22 +4255,22 @@
     "name": "Fuse Recruitment Pty Ltd",
     "shift": "Night",
     "status": "Active",
+    "tags": [
+      "Recruitment"
+    ],
     "apps": [
       "Adobe Reader",
       "Aircall",
       "Chrome"
     ],
-    "instructions": "IMPORTANT: Ensure the user is added to the Fuse Recruitment Pty Ltd web control policy in Sophos.\nClient's IT will be remoting the machine once done configuring the laptop and installed GoTeam Standard Tools\nSend TeamViewer details to:  alexander.ngo@novigi.com.au  | membleton@fuserecruitment.com\nAdditional Notes: Once the setup is completed by the client, ensure that the data on the Chrome browser is backed up. -https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EtUZK6_yDQ9CkgfZ5iFSRnMBFRRuAH_Zb1-Zkq_sE61zqA?e=u2xqS8",
+    "instructions": "IMPORTANT: Ensure the user is added to the Fuse Recruitment Pty Ltd web control policy in Sophos.\nClient's IT will remote the machine once done configuring the laptop and installed GoTeam Standard Tools\nSend TeamViewer details to:  alexander.ngo@novigi.com.au  | membleton@fuserecruitment.com\nAdditional Notes: Once the setup is completed by the client, ensure that the data on the Chrome browser is backed up. -https://goteam1-my.sharepoint.com/:f:/g/personal/matt_go_team1/EtUZK6_yDQ9CkgfZ5iFSRnMBFRRuAH_Zb1-Zkq_sE61zqA?e=u2xqS8",
     "preinstalled": [
       "GoTeam Standard Tools (Teramind Stealth & VA AI)"
     ],
-    "tags": [
-      "Recruitment"
-    ],
     "locked": false,
     "starred": false,
-    "lastEditedBy": "Chan",
-    "lastEditedAt": "2026-05-12 09:05",
+    "lastEditedBy": "Christian Esaga",
+    "lastEditedAt": "2026-10-29 13:02",
     "deleted": false,
     "deletedBy": "",
     "deletedAt": "",
